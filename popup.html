@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+<head>
+  <title>YOURLS Shortener</title>
+  <link rel="stylesheet" href="css/popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="images/icon48.png" alt="YOURLS Icon" class="header-icon">
+      <h2 data-i18n="popupTitle">YOURLS Link Shortener</h2>
+    </div>
+    
+    <div id="urlContainer">
+      <p id="currentUrl"></p>
+    </div>
+    
+    <div id="keywordContainer" style="display: none;">
+      <input type="text" id="keyword" data-i18n-placeholder="keywordPlaceholder">
+    </div>
+    
+    <div id="buttonContainer">
+      <button id="shortenButton" data-i18n="shortenButton">Shorten URL</button>
+    </div>
+    
+    <div id="result" style="display: none;">
+      <p data-i18n="shortenedUrl">Shortened URL:</p>
+      <div class="result-container">
+        <input type="text" id="shortUrl" readonly>
+        <button id="copyButton" data-i18n="copyButton">Copy</button>
+      </div>
+    </div>
+    
+    <div id="error" style="display: none;" class="error">
+      <p id="errorMessage"></p>
+    </div>
+    
+    <div class="footer">
+      <a href="settings.html" target="_blank" class="footer-link">
+        ⚙️ <span data-i18n="configureSettings">Settings</span>
+      </a>
+      <a id="yourlsLink" href="#" target="_blank" class="footer-link footer-link-right">
+        🔗 <span>to YOURLS</span>
+      </a>
+    </div>
+  </div>
+  
+  <script src="js/i18n.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+{
+  "extensionName": {
+    "message": "YOURLS Link Shortener"
+  },
+  "extensionDescription": {
+    "message": "Shorten links using your YOURLS server. Specify host and key and start shortening."
+  },
+  "popupTitle": {
+    "message": "YOURLS Link Shortener"
+  },
+  "currentUrl": {
+    "message": "Current URL"
+  },
+  "keywordPlaceholder": {
+    "message": "Custom keyword (optional)"
+  },
+  "shortenButton": {
+    "message": "Shorten URL"
+  },
+  "shorteningButton": {
+    "message": "Shortening..."
+  },
+  "shortenedUrl": {
+    "message": "Shortened URL:"
+  },
+  "copyButton": {
+    "message": "Copy"
+  },
+  "copiedButton": {
+    "message": "Copied!"
+  },
+  "configureSettings": {
+    "message": "Settings"
+  },
+  "errorMissingSettings": {
+    "message": "Please configure your YOURLS settings first."
+  },
+  "errorNetwork": {
+    "message": "Network error. Please check your connection."
+  },
+  "errorCorsNetwork": {
+    "message": "Error connecting to YOURLS server. Please check:<br>1. Your YOURLS server URL is correct<br>2. Your YOURLS server is online and accessible<br>3. Your signature token is correct"
+  },
+  "settingsTitle": {
+    "message": "YOURLS Settings"
+  },
+  "serverUrlLabel": {
+    "message": "YOURLS Server URL"
+  },
+  "serverUrlPlaceholder": {
+    "message": "https://your-yourls-domain.com/"
+  },
+  "serverUrlHelp": {
+    "message": "Enter the URL to your YOURLS installation (e.g., https://your-yourls-domain.com/)"
+  },
+  "tokenLabel": {
+    "message": "YOURLS Signature Token"
+  },
+  "tokenPlaceholder": {
+    "message": "Your signature token"
+  },
+  "tokenHelp": {
+    "message": "Enter your YOURLS signature token for API access"
+  },
+  "askKeywordLabel": {
+    "message": "Always ask for a keyword"
+  },
+  "autoCopyLabel": {
+    "message": "Auto-copy shortened URL to clipboard"
+  },
+  "saveButton": {
+    "message": "Save Settings"
+  },
+  "testConnectionButton": {
+    "message": "Test Connection"
+  },
+  "testingConnection": {
+    "message": "Testing connection..."
+  },
+  "connectionSuccess": {
+    "message": "Connection successful!"
+  },
+  "connectionFailed": {
+    "message": "Connection failed: {{error}}"
+  },
+  "connectionFailedGeneric": {
+    "message": "Connection failed: Error connecting to YOURLS server. Please check:<br>1. URL is correct and includes http:// or https://<br>2. Your YOURLS server is online<br>3. Your signature token is correct"
+  },
+  "settingsSaved": {
+    "message": "Settings saved successfully"
+  },
+  "errorUrlRequired": {
+    "message": "Please enter your YOURLS server URL"
+  },
+  "errorTokenRequired": {
+    "message": "Please enter your YOURLS signature token"
+  },
+  "unexpectedFormat": {
+    "message": "Connection successful, but unexpected response format"
+  },
+  "languageLabel": {
+    "message": "Language"
+  },
+  "toYourls": {
+    "message": "to YOURLS"
+  },
+  "contextMenuShortenLink": {
+    "message": "Shorten Link"
+  },
+  "contextMenuShortenPage": {
+    "message": "Shorten Page"
+  },
+  "apiErrorMissingUrl": {
+    "message": "Missing or malformed URL"
+  },
+  "apiErrorKeywordExists": {
+    "message": "Keyword already exists"
+  },
+  "apiErrorUrlExists": {
+    "message": "URL has already been shortened"
+  },
+  "apiErrorUnknown": {
+    "message": "API Error: {{message}}"
+  }
+}

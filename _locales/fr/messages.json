@@ -1,0 +1,125 @@
+{
+  "extensionName": {
+    "message": "YOURLS Link Shortener"
+  },
+  "extensionDescription": {
+    "message": "Raccourcissez les liens en utilisant votre serveur YOURLS"
+  },
+  "popupTitle": {
+    "message": "YOURLS Link Shortener"
+  },
+  "currentUrl": {
+    "message": "URL actuelle"
+  },
+  "keywordPlaceholder": {
+    "message": "Mot-clé personnalisé (facultatif)"
+  },
+  "shortenButton": {
+    "message": "Raccourcir l'URL"
+  },
+  "shorteningButton": {
+    "message": "Raccourcissement..."
+  },
+  "shortenedUrl": {
+    "message": "URL raccourcie :"
+  },
+  "copyButton": {
+    "message": "Copier"
+  },
+  "copiedButton": {
+    "message": "Copié !"
+  },
+  "configureSettings": {
+    "message": "Paramètres"
+  },
+  "errorMissingSettings": {
+    "message": "Veuillez d'abord configurer vos paramètres YOURLS."
+  },
+  "errorNetwork": {
+    "message": "Erreur réseau. Veuillez vérifier votre connexion."
+  },
+  "errorCorsNetwork": {
+    "message": "Erreur de connexion au serveur YOURLS. Veuillez vérifier :<br>1. Votre URL de serveur YOURLS est correcte<br>2. Votre serveur YOURLS est en ligne et accessible<br>3. Votre jeton de signature est correct"
+  },
+  "settingsTitle": {
+    "message": "Paramètres YOURLS"
+  },
+  "serverUrlLabel": {
+    "message": "URL du Serveur YOURLS"
+  },
+  "serverUrlPlaceholder": {
+    "message": "https://votre-domaine-yourls.fr/"
+  },
+  "serverUrlHelp": {
+    "message": "Entrez l'URL de votre installation YOURLS (par ex. https://votre-domaine-yourls.fr/)"
+  },
+  "tokenLabel": {
+    "message": "Jeton de signature YOURLS"
+  },
+  "tokenPlaceholder": {
+    "message": "Votre jeton de signature"
+  },
+  "tokenHelp": {
+    "message": "Entrez votre jeton de signature YOURLS pour l'accès à l'API"
+  },
+  "askKeywordLabel": {
+    "message": "Toujours demander un mot-clé"
+  },
+  "autoCopyLabel": {
+    "message": "Copier automatiquement l'URL raccourcie dans le presse-papiers"
+  },
+  "saveButton": {
+    "message": "Enregistrer les paramètres"
+  },
+  "testConnectionButton": {
+    "message": "Tester la connexion"
+  },
+  "testingConnection": {
+    "message": "Test de la connexion..."
+  },
+  "connectionSuccess": {
+    "message": "Connexion réussie !"
+  },
+  "connectionFailed": {
+    "message": "Échec de la connexion : {{error}}"
+  },
+  "connectionFailedGeneric": {
+    "message": "Échec de la connexion : Erreur de connexion au serveur YOURLS. Veuillez vérifier :<br>1. L'URL est correcte et inclut http:// ou https://<br>2. Votre serveur YOURLS est en ligne<br>3. Votre jeton de signature est correct"
+  },
+  "settingsSaved": {
+    "message": "Paramètres enregistrés avec succès"
+  },
+  "errorUrlRequired": {
+    "message": "Veuillez entrer l'URL de votre serveur YOURLS"
+  },
+  "errorTokenRequired": {
+    "message": "Veuillez entrer votre jeton de signature YOURLS"
+  },
+  "unexpectedFormat": {
+    "message": "Connexion réussie, mais format de réponse inattendu"
+  },
+  "languageLabel": {
+    "message": "Langue"
+  },
+  "contextMenuShortenLink": {
+    "message": "Raccourcir le lien"
+  },
+  "contextMenuShortenPage": {
+    "message": "Raccourcir la page"
+  },
+  "toYourls": {
+    "message": "vers YOURLS"
+  },
+  "apiErrorMissingUrl": {
+    "message": "URL manquante ou mal formée"
+  },
+  "apiErrorKeywordExists": {
+    "message": "Le mot-clé existe déjà"
+  },
+  "apiErrorUrlExists": {
+    "message": "L'URL a déjà été raccourcie"
+  },
+  "apiErrorUnknown": {
+    "message": "Erreur API : {{message}}"
+  }
+}

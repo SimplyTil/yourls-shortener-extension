@@ -1,0 +1,125 @@
+{
+  "extensionName": {
+    "message": "YOURLS Link Shortener"
+  },
+  "extensionDescription": {
+    "message": "Kürze Links mit deinem YOURLS-Server. Host und Key angeben und loskürzen."
+  },
+  "popupTitle": {
+    "message": "YOURLS Link Shortener"
+  },
+  "currentUrl": {
+    "message": "Aktuelle URL"
+  },
+  "keywordPlaceholder": {
+    "message": "Eigenes Keyword (optional)"
+  },
+  "shortenButton": {
+    "message": "URL kürzen"
+  },
+  "shorteningButton": {
+    "message": "Wird gekürzt..."
+  },
+  "shortenedUrl": {
+    "message": "Gekürzte URL:"
+  },
+  "copyButton": {
+    "message": "Kopieren"
+  },
+  "copiedButton": {
+    "message": "Kopiert!"
+  },
+  "configureSettings": {
+    "message": "Einstellungen"
+  },
+  "errorMissingSettings": {
+    "message": "Bitte konfiguriere zuerst deine YOURLS-Einstellungen."
+  },
+  "errorNetwork": {
+    "message": "Netzwerkfehler. Bitte überprüfe deine Verbindung."
+  },
+  "errorCorsNetwork": {
+    "message": "Fehler bei der Verbindung zum YOURLS-Server. Bitte überprüfe ob:<br>1. Deine YOURLS-Server-URL korrekt ist<br>2. Dein YOURLS-Server online und zugänglich ist<br>3. Dein Signatur-Token korrekt ist"
+  },
+  "settingsTitle": {
+    "message": "YOURLS Einstellungen"
+  },
+  "serverUrlLabel": {
+    "message": "YOURLS Server URL"
+  },
+  "serverUrlPlaceholder": {
+    "message": "https://deine-yourls-domain.de/"
+  },
+  "serverUrlHelp": {
+    "message": "Gebe die URL zu deiner YOURLS-Installation ein (z.B. https://deine-yourls-domain.de/)"
+  },
+  "tokenLabel": {
+    "message": "YOURLS Signature-Token"
+  },
+  "tokenPlaceholder": {
+    "message": "Dein Signature-Token"
+  },
+  "tokenHelp": {
+    "message": "Gebe deinen YOURLS-Signature-Token für den API-Zugriff ein"
+  },
+  "askKeywordLabel": {
+    "message": "Immer nach einem Keyword fragen"
+  },
+  "autoCopyLabel": {
+    "message": "Gekürzte URL automatisch in die Zwischenablage kopieren"
+  },
+  "saveButton": {
+    "message": "Einstellungen speichern"
+  },
+  "testConnectionButton": {
+    "message": "Verbindung testen"
+  },
+  "testingConnection": {
+    "message": "Verbindung wird getestet..."
+  },
+  "connectionSuccess": {
+    "message": "Verbindung erfolgreich!"
+  },
+  "connectionFailed": {
+    "message": "Verbindung fehlgeschlagen: {{error}}"
+  },
+  "connectionFailedGeneric": {
+    "message": "Verbindung fehlgeschlagen: Fehler bei der Verbindung zum YOURLS-Server. Bitte überprüfen ob:<br>1. Die URL korrekt ist und http:// oder https:// enthält<br>2. Dein YOURLS-Server online ist<br>3. Dein Signature-Token korrekt ist"
+  },
+  "settingsSaved": {
+    "message": "Einstellungen erfolgreich gespeichert"
+  },
+  "errorUrlRequired": {
+    "message": "Bitte gebe die URL deines YOURLS-Servers ein"
+  },
+  "errorTokenRequired": {
+    "message": "Bitte gebe deinen YOURLS-Signature-Token ein"
+  },
+  "unexpectedFormat": {
+    "message": "Verbindung erfolgreich, aber unerwartetes Antwortformat"
+  },
+  "languageLabel": {
+    "message": "Sprache"
+  },
+  "contextMenuShortenLink": {
+    "message": "Link kürzen"
+  },
+  "contextMenuShortenPage": {
+    "message": "Seite kürzen"
+  },
+  "toYourls": {
+    "message": "zu YOURLS"
+  },
+  "apiErrorMissingUrl": {
+    "message": "Fehlende oder fehlerhafte URL"
+  },
+  "apiErrorKeywordExists": {
+    "message": "Keyword existiert bereits"
+  },
+  "apiErrorUrlExists": {
+    "message": "URL wurde bereits verkürzt"
+  },
+  "apiErrorUnknown": {
+    "message": "API-Fehler: {{message}}"
+  }
+}

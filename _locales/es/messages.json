@@ -1,0 +1,125 @@
+{
+  "extensionName": {
+    "message": "YOURLS Link Shortener"
+  },
+  "extensionDescription": {
+    "message": "Acorta enlaces usando tu servidor YOURLS. Especifique el host y la clave y comience a acortar."
+  },
+  "popupTitle": {
+    "message": "YOURLS Link Shortener"
+  },
+  "currentUrl": {
+    "message": "URL actual"
+  },
+  "keywordPlaceholder": {
+    "message": "Palabra clave personalizada (opcional)"
+  },
+  "shortenButton": {
+    "message": "Acortar URL"
+  },
+  "shorteningButton": {
+    "message": "Acortando..."
+  },
+  "shortenedUrl": {
+    "message": "URL acortada:"
+  },
+  "copyButton": {
+    "message": "Copiar"
+  },
+  "copiedButton": {
+    "message": "¡Copiado!"
+  },
+  "configureSettings": {
+    "message": "Ajustes"
+  },
+  "errorMissingSettings": {
+    "message": "Por favor, configura primero tus ajustes de YOURLS."
+  },
+  "errorNetwork": {
+    "message": "Error de red. Por favor, comprueba tu conexión."
+  },
+  "errorCorsNetwork": {
+    "message": "Error al conectar con el servidor YOURLS. Por favor, comprueba:<br>1. Si tu URL del servidor YOURLS es correcta<br>2. Si tu servidor YOURLS está en línea y accesible<br>3. Si tu token de firma es correcto"
+  },
+  "settingsTitle": {
+    "message": "Ajustes de YOURLS"
+  },
+  "serverUrlLabel": {
+    "message": "URL del servidor YOURLS"
+  },
+  "serverUrlPlaceholder": {
+    "message": "https://tu-dominio-yourls.es/"
+  },
+  "serverUrlHelp": {
+    "message": "Introduce la URL de tu instalación YOURLS (p.ej., https://tu-dominio-yourls.es/)"
+  },
+  "tokenLabel": {
+    "message": "Token de firma YOURLS"
+  },
+  "tokenPlaceholder": {
+    "message": "Tu token de firma"
+  },
+  "tokenHelp": {
+    "message": "Introduce tu token de firma YOURLS para acceso a la API"
+  },
+  "askKeywordLabel": {
+    "message": "Siempre pedir una palabra clave"
+  },
+  "autoCopyLabel": {
+    "message": "Copiar automáticamente la URL acortada al portapapeles"
+  },
+  "saveButton": {
+    "message": "Guardar ajustes"
+  },
+  "testConnectionButton": {
+    "message": "Probar conexión"
+  },
+  "testingConnection": {
+    "message": "Probando conexión..."
+  },
+  "connectionSuccess": {
+    "message": "¡Conexión exitosa!"
+  },
+  "connectionFailed": {
+    "message": "Conexión fallida: {{error}}"
+  },
+  "connectionFailedGeneric": {
+    "message": "Conexión fallida: Error al conectar con el servidor YOURLS. Por favor, comprueba:<br>1. Si la URL es correcta e incluye http:// o https://<br>2. Si tu servidor YOURLS está en línea<br>3. Si tu token de firma es correcto"
+  },
+  "settingsSaved": {
+    "message": "Ajustes guardados correctamente"
+  },
+  "errorUrlRequired": {
+    "message": "Por favor, introduce la URL de tu servidor YOURLS"
+  },
+  "errorTokenRequired": {
+    "message": "Por favor, introduce tu token de firma YOURLS"
+  },
+  "unexpectedFormat": {
+    "message": "Conexión exitosa, pero formato de respuesta inesperado"
+  },
+  "languageLabel": {
+    "message": "Idioma"
+  },
+  "contextMenuShortenLink": {
+    "message": "Acortar enlace"
+  },
+  "contextMenuShortenPage": {
+    "message": "Acortar página"
+  },
+  "toYourls": {
+    "message": "a YOURLS"
+  },
+  "apiErrorMissingUrl": {
+    "message": "URL faltante o mal formada"
+  },
+  "apiErrorKeywordExists": {
+    "message": "La palabra clave ya existe"
+  },
+  "apiErrorUrlExists": {
+    "message": "La URL ya ha sido acortada"
+  },
+  "apiErrorUnknown": {
+    "message": "Error de API: {{message}}"
+  }
+}

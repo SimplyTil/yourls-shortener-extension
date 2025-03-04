@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+<head>
+  <title>YOURLS Shortener Settings</title>
+  <link rel="stylesheet" href="css/settings.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="images/icon48.png" alt="YOURLS Icon" class="header-icon">
+      <h1 data-i18n="settingsTitle">YOURLS Settings</h1>
+    </div>
+    
+    <div class="form-group">
+      <label for="yourls_url" data-i18n="serverUrlLabel">YOURLS Server URL</label>
+      <input type="text" id="yourls_url" data-i18n-placeholder="serverUrlPlaceholder">
+      <p class="help-text" data-i18n="serverUrlHelp">Enter the URL to your YOURLS installation</p>
+    </div>
+    
+    <div class="form-group">
+      <label for="yourls_key" data-i18n="tokenLabel">YOURLS Signature Token</label>
+      <input type="password" id="yourls_key" data-i18n-placeholder="tokenPlaceholder">
+      <p class="help-text" data-i18n="tokenHelp">Enter your YOURLS signature token for API access</p>
+    </div>
+    
+    <div class="form-group toggle-container">
+      <label for="ask_for_keyword" data-i18n="askKeywordLabel">Always ask for a keyword</label>
+      <div class="toggle-switch">
+        <input type="checkbox" id="ask_for_keyword" class="toggle-input">
+        <label for="ask_for_keyword" class="toggle-label"></label>
+      </div>
+    </div>
+    
+    <div class="form-group toggle-container">
+      <label for="auto_copy" data-i18n="autoCopyLabel">Auto-copy shortened URL to clipboard</label>
+      <div class="toggle-switch">
+        <input type="checkbox" id="auto_copy" class="toggle-input">
+        <label for="auto_copy" class="toggle-label"></label>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="language" data-i18n="languageLabel">Language</label>
+      <select id="language">
+        <!-- Will be populated by JavaScript -->
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <button id="save_button" data-i18n="saveButton">Save Settings</button>
+      <div id="status"></div>
+    </div>
+    
+    <div class="form-group">
+      <button id="test_connection" data-i18n="testConnectionButton">Test Connection</button>
+      <div id="test_result"></div>
+    </div>
+  </div>
+  
+  <script src="js/i18n.js"></script>
+  <script src="settings.js"></script>
+</body>
+</html>

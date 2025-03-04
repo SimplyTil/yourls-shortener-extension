@@ -1,0 +1,125 @@
+{
+  "extensionName": {
+    "message": "YOURLS リンク短縮ツール"
+  },
+  "extensionDescription": {
+    "message": "YOURLSサーバーを使用してリンクを短縮"
+  },
+  "popupTitle": {
+    "message": "YOURLS リンク短縮ツール"
+  },
+  "currentUrl": {
+    "message": "現在のURL"
+  },
+  "keywordPlaceholder": {
+    "message": "カスタムキーワード（任意）"
+  },
+  "shortenButton": {
+    "message": "URLを短縮"
+  },
+  "shorteningButton": {
+    "message": "短縮中..."
+  },
+  "shortenedUrl": {
+    "message": "短縮されたURL:"
+  },
+  "copyButton": {
+    "message": "コピー"
+  },
+  "copiedButton": {
+    "message": "コピー完了！"
+  },
+  "configureSettings": {
+    "message": "設定"
+  },
+  "errorMissingSettings": {
+    "message": "YOURLSの設定を先に行ってください。"
+  },
+  "errorNetwork": {
+    "message": "ネットワークエラー。接続を確認してください。"
+  },
+  "errorCorsNetwork": {
+    "message": "YOURLSサーバーへの接続エラー。以下をご確認ください：<br>1. YOURLSサーバーのURLが正しいか<br>2. YOURLSサーバーがオンラインでアクセス可能か<br>3. 署名トークンが正しいか"
+  },
+  "settingsTitle": {
+    "message": "YOURLS設定"
+  },
+  "serverUrlLabel": {
+    "message": "YOURLSサーバーURL"
+  },
+  "serverUrlPlaceholder": {
+    "message": "https://your-yourls-domain.jp/"
+  },
+  "serverUrlHelp": {
+    "message": "YOURLSインストール先のURLを入力してください（例：https://your-yourls-domain.jp/）"
+  },
+  "tokenLabel": {
+    "message": "YOURLS署名トークン"
+  },
+  "tokenPlaceholder": {
+    "message": "あなたの署名トークン"
+  },
+  "tokenHelp": {
+    "message": "API利用のためのYOURLS署名トークンを入力してください"
+  },
+  "askKeywordLabel": {
+    "message": "常にキーワードを求める"
+  },
+  "autoCopyLabel": {
+    "message": "短縮URLを自動的にクリップボードにコピーする"
+  },
+  "saveButton": {
+    "message": "設定を保存"
+  },
+  "testConnectionButton": {
+    "message": "接続をテスト"
+  },
+  "testingConnection": {
+    "message": "接続テスト中..."
+  },
+  "connectionSuccess": {
+    "message": "接続成功！"
+  },
+  "connectionFailed": {
+    "message": "接続失敗：{{error}}"
+  },
+  "connectionFailedGeneric": {
+    "message": "接続失敗：YOURLSサーバーへの接続エラー。以下をご確認ください：<br>1. URLが正しくhttp://またはhttps://を含んでいるか<br>2. YOURLSサーバーがオンラインか<br>3. 署名トークンが正しいか"
+  },
+  "settingsSaved": {
+    "message": "設定が正常に保存されました"
+  },
+  "errorUrlRequired": {
+    "message": "YOURLSサーバーのURLを入力してください"
+  },
+  "errorTokenRequired": {
+    "message": "YOURLS署名トークンを入力してください"
+  },
+  "unexpectedFormat": {
+    "message": "接続は成功しましたが、予期しないレスポンス形式です"
+  },
+  "languageLabel": {
+    "message": "言語"
+  },
+  "contextMenuShortenLink": {
+    "message": "リンクを短縮"
+  },
+  "contextMenuShortenPage": {
+    "message": "ページを短縮"
+  },
+  "toYourls": {
+    "message": "YOURLSへ"
+  },
+  "apiErrorMissingUrl": {
+    "message": "URLが欠落しているか形式が正しくありません"
+  },
+  "apiErrorKeywordExists": {
+    "message": "キーワードは既に存在します"
+  },
+  "apiErrorUrlExists": {
+    "message": "URLは既に短縮されています"
+  },
+  "apiErrorUnknown": {
+    "message": "APIエラー: {{message}}"
+  }
+}
