@@ -58,6 +58,10 @@ If the "Ask for a keyword" option is enabled, you'll be prompted to enter a cust
 - Optional custom keywords for your shortened URLs
 - Copy shortened URLs to clipboard with a single click
 
+## Lastly
+
+Many thanks to @binfalse for the initial idea and some helpful code I had a look into and try to made my own out of it!
+
 ## License
     Copyright 2025  SimplyTil
     
