@@ -1,8 +1,6 @@
 # Chrome Extension for YOURLS
 
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-
-A Chrome extension for interacting with your [YOURLS](http://yourls.org/) (Your Own URL Shortener) instance.
+A Manifest V3 compatible Chrome extension for interacting with your [YOURLS](http://yourls.org/) (Your Own URL Shortener) instance.
 
 ## Setup Instructions
 
@@ -22,18 +20,18 @@ In the options page, you'll need to configure the following settings:
   - This can be found in your YOURLS admin dashboard under "Tools" → "API"
   - Using a signature token is more secure than using your admin credentials
 
-- **Request Timeout**: Set the maximum wait time (in seconds)
-  - Recommended: 5-10 seconds for most environments
-  - If you have a slow server connection, you may need to increase this value
-
 - **Keyword Prompt**: Toggle whether to prompt for custom keywords
   - When enabled: You'll be asked to provide a custom keyword each time you shorten a URL
   - When disabled: URLs will be shortened immediately using YOURLS' automatic keyword generation
 
+- **Auto-Copy**: Toggle wether to copy the short link automatically into clipboard
+  - When enabled: Short URL will always be safed in clipboard without clicking on copy manually
+  - When disabled: You'll have to click on copy manually
+
 ### Saving Your Settings
 After configuring all options, click the "Save" button. A confirmation message will appear when your settings are successfully saved.
 
-To verify your configuration, try shortening a URL using the extension - if successful, you'll receive a shortened URL in response.
+To verify your configuration, click on "Test Connection" or try shortening a URL using the extension - if successful, you'll receive a shortened URL in response.
 
 ## Usage
 
@@ -58,12 +56,15 @@ If the "Ask for a keyword" option is enabled, you'll be prompted to enter a cust
 - Optional custom keywords for your shortened URLs
 - Copy shortened URLs to clipboard with a single click
 
+## Planned Features:
+- QR-Code automation to generate a QR-Code in extension popup that contains the shortend URL with ability to download SVG QR Code     
+
 ## Lastly
 
-Many thanks to @binfalse for the initial idea and some helpful code I had a look into and try to made my own out of it!
+Many, many thanks to [binfalse](https://github.com/binfalse) for the initial idea and the helpful code, which I've looked at and am trying to make something of my own!
 
 ## License
-    Copyright 2025  SimplyTil
+    Copyright 2025 SimplyTil
     
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
