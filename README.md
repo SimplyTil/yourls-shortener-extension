@@ -5,7 +5,7 @@ A Manifest V3 compatible Chrome extension for interacting with your [YOURLS](htt
 ## Setup Instructions
 
 ### Installation
-1. Download the extension from the Chrome Web Store or install it manually by loading the unpacked extension in developer mode
+1. Download the extension from the [Chrome Web Store](https://leckerer.link/l4kzv) or install it manually by loading the unpacked extension in developer mode
 2. Click on the extension icon and select "Options" (or right-click the icon and choose "Options")
 
 ### Configuration
