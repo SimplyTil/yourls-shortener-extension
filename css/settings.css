@@ -291,6 +291,14 @@ button:hover::after {
   margin-bottom: 5px;
 }
 
+/* Version info styling */
+.version-info {
+  font-size: 0.8rem;
+  color: #adb5bd;
+  margin-left: 10px;
+  font-style: italic;
+}
+
 /* Animations */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-10px); }

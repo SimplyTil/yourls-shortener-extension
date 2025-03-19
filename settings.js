@@ -26,6 +26,19 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Apply translations immediately on page load
   applyTranslations();
   
+  // Get version from manifest and add to the footer
+  const versionInfoElement = document.getElementById('version-info');
+  if (versionInfoElement) {
+    fetch(chrome.runtime.getURL('manifest.json'))
+      .then(response => response.json())
+      .then(manifest => {
+        versionInfoElement.textContent = `v${manifest.version}`;
+      })
+      .catch(error => {
+        console.error('Error loading manifest:', error);
+      });
+  }
+  
   // Get form elements
   const yourlsUrlInput = document.getElementById('yourls_url');
   const yourlsKeyInput = document.getElementById('yourls_key');
