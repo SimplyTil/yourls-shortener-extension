@@ -228,3 +228,26 @@ button:active {
 #result, #error {
   animation: fadeIn 0.2s ease-out;
 }
+
+/* Add this if the file exists, or create it if it doesn't */
+
+.server-selector {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.server-selector select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  font-size: 14px;
+  color: #333;
+}
+
+.server-selector select:focus {
+  outline: none;
+  border-color: #026090;
+  box-shadow: 0 0 3px rgba(2, 96, 144, 0.3);
+}

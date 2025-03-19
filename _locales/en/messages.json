@@ -121,5 +121,56 @@
   },
   "apiErrorUnknown": {
     "message": "API Error: {{message}}"
+  },
+  "primaryServerOption": {
+    "message": "Primary Server"
+  },
+  "additionalServerOption": {
+    "message": "Additional Server"
+  },
+  "enableAdditionalServerLabel": {
+    "message": "Enable additional YOURLS server"
+  },
+  "additionalServerTitle": {
+    "message": "Additional Server Settings"
+  },
+  "additionalServerUrlLabel": {
+    "message": "Additional YOURLS Server URL"
+  },
+  "additionalServerUrlHelp": {
+    "message": "Enter the URL to your additional YOURLS installation"
+  },
+  "additionalTokenLabel": {
+    "message": "Additional YOURLS Signature Token"
+  },
+  "additionalTokenHelp": {
+    "message": "Enter your additional YOURLS signature token for API access"
+  },
+  "additionalServerNameLabel": {
+    "message": "Server Name (for display)"
+  },
+  "additionalServerNamePlaceholder": {
+    "message": "Additional server name"
+  },
+  "additionalServerNameHelp": {
+    "message": "Enter a name to identify this server in the dropdown"
+  },
+  "errorAdditionalUrlRequired": {
+    "message": "Please enter your additional YOURLS server URL"
+  },
+  "errorAdditionalTokenRequired": {
+    "message": "Please enter your additional YOURLS signature token"
+  },
+  "errorAdditionalServerNameRequired": {
+    "message": "Please enter a name for your additional server"
+  },
+  "errorMissingAdditionalSettings": {
+    "message": "Please configure your additional YOURLS server settings first."
+  },
+  "testAdditionalConnectionButton": {
+    "message": "Test Additional Connection"
+  },
+  "footerText": {
+    "message": "Proudly made with ❤ in Germany"
   }
 }

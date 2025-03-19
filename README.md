@@ -5,7 +5,7 @@ A Manifest V3 compatible Chrome extension for interacting with your [YOURLS](htt
 ## Setup Instructions
 
 ### Installation
-1. Download the extension from the [Chrome Web Store](https://leckerer.link/l4kzv) or install it manually by loading the unpacked extension in developer mode
+1. Download the extension from the [Chrome Web Store](https://lyxo.link/l4kzv) or install it manually by loading the unpacked extension in developer mode
 2. Click on the extension icon and select "Options" (or right-click the icon and choose "Options")
 
 ### Configuration
@@ -24,9 +24,17 @@ In the options page, you'll need to configure the following settings:
   - When enabled: You'll be asked to provide a custom keyword each time you shorten a URL
   - When disabled: URLs will be shortened immediately using YOURLS' automatic keyword generation
 
-- **Auto-Copy**: Toggle wether to copy the short link automatically into clipboard
-  - When enabled: Short URL will always be safed in clipboard without clicking on copy manually
+- **Auto-Copy**: Toggle whether to copy the short link automatically into clipboard
+  - When enabled: Short URL will always be saved in clipboard without clicking on copy manually
   - When disabled: You'll have to click on copy manually
+
+### Additional Server Configuration
+
+You can optionally configure a second YOURLS server:
+
+- Enable the "Enable additional YOURLS server" toggle
+- Configure the URL, signature token, and a display name for the second server
+- Use the server selector dropdown in the extension popup to choose which server to use when shortening URLs
 
 ### Saving Your Settings
 After configuring all options, click the "Save" button. A confirmation message will appear when your settings are successfully saved.
@@ -55,9 +63,10 @@ If the "Ask for a keyword" option is enabled, you'll be prompted to enter a cust
 - Shorten specific links via context menu
 - Optional custom keywords for your shortened URLs
 - Copy shortened URLs to clipboard with a single click
+- Support for multiple YOURLS servers
 
 ## Planned Features:
-- QR-Code automation to generate a QR-Code in extension popup that contains the shortend URL with ability to download SVG QR Code     
+- QR-Code automation to generate a QR-Code in extension popup that contains the shortened URL with ability to download SVG QR Code     
 
 ## Lastly
 

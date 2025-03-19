@@ -121,5 +121,56 @@
   },
   "apiErrorUnknown": {
     "message": "APIエラー: {{message}}"
+  },
+  "primaryServerOption": {
+    "message": "メインサーバー"
+  },
+  "additionalServerOption": {
+    "message": "追加サーバー"
+  },
+  "enableAdditionalServerLabel": {
+    "message": "追加のYOURLSサーバーを有効にする"
+  },
+  "additionalServerTitle": {
+    "message": "追加サーバー設定"
+  },
+  "additionalServerUrlLabel": {
+    "message": "追加YOURLSサーバーのURL"
+  },
+  "additionalServerUrlHelp": {
+    "message": "追加のYOURLSインストール先のURLを入力してください"
+  },
+  "additionalTokenLabel": {
+    "message": "追加YOURLS署名トークン"
+  },
+  "additionalTokenHelp": {
+    "message": "追加サーバーのAPI利用のためのYOURLS署名トークンを入力してください"
+  },
+  "additionalServerNameLabel": {
+    "message": "サーバー名（表示用）"
+  },
+  "additionalServerNamePlaceholder": {
+    "message": "追加サーバーの名前"
+  },
+  "additionalServerNameHelp": {
+    "message": "ドロップダウンメニューでこのサーバーを識別するための名前を入力してください"
+  },
+  "errorAdditionalUrlRequired": {
+    "message": "追加YOURLSサーバーのURLを入力してください"
+  },
+  "errorAdditionalTokenRequired": {
+    "message": "追加YOURLS署名トークンを入力してください"
+  },
+  "errorAdditionalServerNameRequired": {
+    "message": "追加サーバーの名前を入力してください"
+  },
+  "errorMissingAdditionalSettings": {
+    "message": "追加のYOURLSサーバー設定を先に構成してください。"
+  },
+  "testAdditionalConnectionButton": {
+    "message": "追加接続をテスト"
+  },
+  "footerText": {
+    "message": "ドイツで❤を込めて作成"
   }
 }

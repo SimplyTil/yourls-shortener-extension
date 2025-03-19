@@ -24,31 +24,41 @@ document.addEventListener('DOMContentLoaded', async () => {
   const errorContainer = document.getElementById('error');
   const errorMessage = document.getElementById('errorMessage');
   const yourlsLink = document.getElementById('yourlsLink');
+  const serverSelector = document.getElementById('serverSelector');
+  const serverSelect = document.getElementById('serverSelect');
+  const additionalServerOption = document.getElementById('additionalServerOption');
   
   let currentUrl = '';
   let selectedText = '';
+  let selectedServer = 'primary';
   
-  // Set up YOURLS link to admin page
-  chrome.storage.sync.get(['yourls_url'], function(items) {
-    if (items.yourls_url) {
-      // Create URL for admin page by adding /admin to the base URL
-      const baseUrl = items.yourls_url;
-      // Remove trailing slash if it exists, then add /admin
-      const adminUrl = baseUrl.endsWith('/') ? baseUrl + 'admin' : baseUrl + '/admin';
-      yourlsLink.href = adminUrl;
+  // Load settings
+  chrome.storage.sync.get([
+    'yourls_url', 
+    'yourls_key', 
+    'ask_for_keyword', 
+    'auto_copy', 
+    'enable_additional_server',
+    'additional_yourls_url',
+    'additional_yourls_key',
+    'additional_server_name'
+  ], (settings) => {
+    // Check if additional server is enabled
+    if (settings.enable_additional_server && settings.additional_yourls_url && settings.additional_yourls_key) {
+      // Setup server selector
+      serverSelector.style.display = 'block';
+      additionalServerOption.textContent = settings.additional_server_name || i18n.get('additionalServerOption');
       
-      // Set the text for "to YOURLS" link
-      const toYourlsSpan = yourlsLink.querySelector('span');
-      if (toYourlsSpan) {
-        toYourlsSpan.textContent = i18n.get('toYourls');
-      }
+      // Handle server selection change
+      serverSelect.addEventListener('change', function() {
+        selectedServer = this.value;
+        updateYourlsLink(settings);
+      });
     } else {
-      yourlsLink.style.display = 'none';
+      serverSelector.style.display = 'none';
     }
-  });
-  
-  // Load settings and display current page URL
-  chrome.storage.sync.get(['yourls_url', 'yourls_key', 'ask_for_keyword', 'auto_copy'], (settings) => {
+    
+    // Handle missing settings
     if (!settings.yourls_url || !settings.yourls_key) {
       showError(i18n.get('errorMissingSettings'));
       shortenButton.disabled = true;
@@ -58,6 +68,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (settings.ask_for_keyword) {
       keywordContainer.style.display = 'block';
     }
+    
+    updateYourlsLink(settings);
     
     // Get the current tab URL and any selected text
     chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
@@ -96,15 +108,67 @@ document.addEventListener('DOMContentLoaded', async () => {
     }, 2000);
   });
   
+  // Update the YOURLS admin link based on selected server
+  function updateYourlsLink(settings) {
+    const baseUrl = selectedServer === 'primary' ? 
+      settings.yourls_url : 
+      settings.additional_yourls_url;
+      
+    if (baseUrl) {
+      // Create URL for admin page by adding /admin to the base URL
+      // Remove trailing slash if it exists, then add /admin
+      const adminUrl = baseUrl.endsWith('/') ? baseUrl + 'admin' : baseUrl + '/admin';
+      yourlsLink.href = adminUrl;
+      
+      // Set the text for "to YOURLS" link
+      const toYourlsSpan = yourlsLink.querySelector('span');
+      if (toYourlsSpan) {
+        // Only show server name in parentheses if additional server is enabled
+        if (settings.enable_additional_server) {
+          const serverName = selectedServer === 'additional' ? 
+            (settings.additional_server_name || i18n.get('additionalServerOption')) : 
+            i18n.get('primaryServerOption');
+          
+          toYourlsSpan.textContent = i18n.get('toYourls') + ` (${serverName})`;
+        } else {
+          // Just show "to YOURLS" without server name when only primary server is enabled
+          toYourlsSpan.textContent = i18n.get('toYourls');
+        }
+      }
+    } else {
+      yourlsLink.style.display = 'none';
+    }
+  }
+  
   function shortenUrl(url, keyword = '') {
-    chrome.storage.sync.get(['yourls_url', 'yourls_key'], (settings) => {
-      // Prepare API request
-      const baseUrl = settings.yourls_url;
+    chrome.storage.sync.get([
+      'yourls_url', 
+      'yourls_key', 
+      'additional_yourls_url', 
+      'additional_yourls_key', 
+      'auto_copy'
+    ], (settings) => {
+      // Determine which server to use based on the selection
+      const baseUrl = selectedServer === 'primary' ? 
+        settings.yourls_url : 
+        settings.additional_yourls_url;
+        
+      const apiKey = selectedServer === 'primary' ? 
+        settings.yourls_key : 
+        settings.additional_yourls_key;
+      
+      if (!baseUrl || !apiKey) {
+        showError(i18n.get(selectedServer === 'primary' ? 
+          'errorMissingSettings' : 
+          'errorMissingAdditionalSettings'));
+        return;
+      }
+      
       const apiUrl = baseUrl + (baseUrl.endsWith('/') ? 'yourls-api.php' : '/yourls-api.php');
       
       // Create API request parameters
       const params = new URLSearchParams();
-      params.append('signature', settings.yourls_key);
+      params.append('signature', apiKey);
       params.append('action', 'shorturl');
       params.append('format', 'json');
       params.append('url', url);

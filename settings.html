@@ -26,17 +26,47 @@
     
     <div class="form-group toggle-container">
       <label for="ask_for_keyword" data-i18n="askKeywordLabel">Always ask for a keyword</label>
-      <div class="toggle-switch">
-        <input type="checkbox" id="ask_for_keyword" class="toggle-input">
-        <label for="ask_for_keyword" class="toggle-label"></label>
-      </div>
+      <label class="switch">
+        <input type="checkbox" id="ask_for_keyword">
+        <span class="slider round"></span>
+      </label>
     </div>
     
     <div class="form-group toggle-container">
       <label for="auto_copy" data-i18n="autoCopyLabel">Auto-copy shortened URL to clipboard</label>
-      <div class="toggle-switch">
-        <input type="checkbox" id="auto_copy" class="toggle-input">
-        <label for="auto_copy" class="toggle-label"></label>
+      <label class="switch">
+        <input type="checkbox" id="auto_copy">
+        <span class="slider round"></span>
+      </label>
+    </div>
+    
+    <div class="form-group toggle-container">
+      <label for="enable_additional_server" data-i18n="enableAdditionalServerLabel">Enable additional YOURLS server</label>
+      <label class="switch">
+        <input type="checkbox" id="enable_additional_server">
+        <span class="slider round"></span>
+      </label>
+    </div>
+    
+    <div id="additional_server_settings" style="display: none;">
+      <h2 data-i18n="additionalServerTitle">Additional Server Settings</h2>
+      
+      <div class="form-group">
+        <label for="additional_yourls_url" data-i18n="additionalServerUrlLabel">Additional YOURLS Server URL</label>
+        <input type="text" id="additional_yourls_url" data-i18n-placeholder="serverUrlPlaceholder">
+        <p class="help-text" data-i18n="additionalServerUrlHelp">Enter the URL to your additional YOURLS installation</p>
+      </div>
+      
+      <div class="form-group">
+        <label for="additional_yourls_key" data-i18n="additionalTokenLabel">Additional YOURLS Signature Token</label>
+        <input type="password" id="additional_yourls_key" data-i18n-placeholder="tokenPlaceholder">
+        <p class="help-text" data-i18n="additionalTokenHelp">Enter your additional YOURLS signature token for API access</p>
+      </div>
+      
+      <div class="form-group">
+        <label for="additional_server_name" data-i18n="additionalServerNameLabel">Server Name (for display)</label>
+        <input type="text" id="additional_server_name" data-i18n-placeholder="additionalServerNamePlaceholder">
+        <p class="help-text" data-i18n="additionalServerNameHelp">Enter a name to identify this server in the dropdown</p>
       </div>
     </div>
     
@@ -56,8 +86,13 @@
       <button id="test_connection" data-i18n="testConnectionButton">Test Connection</button>
       <div id="test_result"></div>
     </div>
+    
+    <div class="form-group" id="test_additional_connection_container" style="display: none;">
+      <button id="test_additional_connection" data-i18n="testAdditionalConnectionButton">Test Additional Connection</button>
+      <div id="test_additional_result"></div>
+    </div>
+    <p class="footer-text" data-i18n-html="footerText">Proudly made with <span style="color: red;">&#10084;</span> in Germany</p>
   </div>
-  
   <script src="js/i18n.js"></script>
   <script src="settings.js"></script>
 </body>
