@@ -1,0 +1,176 @@
+{
+  "extensionName": {
+    "message": "أداة تقصير الروابط YOURLS"
+  },
+  "extensionDescription": {
+    "message": "قم بتقصير الروابط باستخدام خادم YOURLS الخاص بك. حدد المضيف والمفتاح وابدأ التقصير."
+  },
+  "popupTitle": {
+    "message": "أداة تقصير الروابط YOURLS"
+  },
+  "currentUrl": {
+    "message": "الرابط الحالي"
+  },
+  "keywordPlaceholder": {
+    "message": "كلمة مفتاحية مخصصة (اختياري)"
+  },
+  "shortenButton": {
+    "message": "تقصير الرابط"
+  },
+  "shorteningButton": {
+    "message": "جارِ التقصير..."
+  },
+  "shortenedUrl": {
+    "message": "الرابط المقصّر:"
+  },
+  "copyButton": {
+    "message": "نسخ"
+  },
+  "copiedButton": {
+    "message": "تم النسخ!"
+  },
+  "configureSettings": {
+    "message": "الإعدادات"
+  },
+  "errorMissingSettings": {
+    "message": "يرجى تكوين إعدادات YOURLS أولاً."
+  },
+  "errorNetwork": {
+    "message": "خطأ في الشبكة. يرجى التحقق من اتصالك."
+  },
+  "errorCorsNetwork": {
+    "message": "خطأ في الاتصال بخادم YOURLS. يرجى التحقق من:<br>1. صحة عنوان URL لخادم YOURLS<br>2. أن خادم YOURLS متصل بالإنترنت ويمكن الوصول إليه<br>3. صحة رمز التوقيع الخاص بك"
+  },
+  "settingsTitle": {
+    "message": "إعدادات YOURLS"
+  },
+  "serverUrlLabel": {
+    "message": "عنوان URL لخادم YOURLS"
+  },
+  "serverUrlPlaceholder": {
+    "message": "https://your-yourls-domain.com/"
+  },
+  "serverUrlHelp": {
+    "message": "أدخل عنوان URL لتثبيت YOURLS (مثال: https://your-yourls-domain.com/)"
+  },
+  "tokenLabel": {
+    "message": "رمز توقيع YOURLS"
+  },
+  "tokenPlaceholder": {
+    "message": "رمز التوقيع الخاص بك"
+  },
+  "tokenHelp": {
+    "message": "أدخل رمز توقيع YOURLS للوصول إلى واجهة برمجة التطبيقات"
+  },
+  "askKeywordLabel": {
+    "message": "اطلب دائمًا كلمة مفتاحية"
+  },
+  "autoCopyLabel": {
+    "message": "نسخ الرابط المقصّر تلقائيًا إلى الحافظة"
+  },
+  "saveButton": {
+    "message": "حفظ الإعدادات"
+  },
+  "testConnectionButton": {
+    "message": "اختبار الاتصال"
+  },
+  "testingConnection": {
+    "message": "جارِ اختبار الاتصال..."
+  },
+  "connectionSuccess": {
+    "message": "تم الاتصال بنجاح!"
+  },
+  "connectionFailed": {
+    "message": "فشل الاتصال: {{error}}"
+  },
+  "connectionFailedGeneric": {
+    "message": "فشل الاتصال: خطأ في الاتصال بخادم YOURLS. يرجى التحقق من:<br>1. أن عنوان URL صحيح ويتضمن http:// أو https://<br>2. أن خادم YOURLS متصل<br>3. أن رمز التوقيع الخاص بك صحيح"
+  },
+  "settingsSaved": {
+    "message": "تم حفظ الإعدادات بنجاح"
+  },
+  "errorUrlRequired": {
+    "message": "يرجى إدخال عنوان URL لخادم YOURLS"
+  },
+  "errorTokenRequired": {
+    "message": "يرجى إدخال رمز توقيع YOURLS"
+  },
+  "unexpectedFormat": {
+    "message": "تم الاتصال بنجاح، ولكن تنسيق الاستجابة غير متوقع"
+  },
+  "languageLabel": {
+    "message": "اللغة"
+  },
+  "contextMenuShortenLink": {
+    "message": "تقصير الرابط"
+  },
+  "contextMenuShortenPage": {
+    "message": "تقصير الصفحة"
+  },
+  "toYourls": {
+    "message": "إلى YOURLS"
+  },
+  "apiErrorMissingUrl": {
+    "message": "عنوان URL مفقود أو غير صحيح"
+  },
+  "apiErrorKeywordExists": {
+    "message": "الكلمة المفتاحية موجودة بالفعل"
+  },
+  "apiErrorUrlExists": {
+    "message": "تم تقصير الرابط بالفعل"
+  },
+  "apiErrorUnknown": {
+    "message": "خطأ في API: {{message}}"
+  },
+  "primaryServerOption": {
+    "message": "الخادم الرئيسي"
+  },
+  "additionalServerOption": {
+    "message": "خادم إضافي"
+  },
+  "enableAdditionalServerLabel": {
+    "message": "تمكين خادم YOURLS إضافي"
+  },
+  "additionalServerTitle": {
+    "message": "إعدادات الخادم الإضافي"
+  },
+  "additionalServerUrlLabel": {
+    "message": "عنوان URL للخادم الإضافي YOURLS"
+  },
+  "additionalServerUrlHelp": {
+    "message": "أدخل عنوان URL لتثبيت YOURLS الإضافي"
+  },
+  "additionalTokenLabel": {
+    "message": "رمز توقيع YOURLS الإضافي"
+  },
+  "additionalTokenHelp": {
+    "message": "أدخل رمز توقيع YOURLS الإضافي للوصول إلى واجهة برمجة التطبيقات"
+  },
+  "additionalServerNameLabel": {
+    "message": "اسم الخادم (للعرض)"
+  },
+  "additionalServerNamePlaceholder": {
+    "message": "اسم الخادم الإضافي"
+  },
+  "additionalServerNameHelp": {
+    "message": "أدخل اسمًا لتعريف هذا الخادم في القائمة المنسدلة"
+  },
+  "errorAdditionalUrlRequired": {
+    "message": "يرجى إدخال عنوان URL لخادم YOURLS الإضافي"
+  },
+  "errorAdditionalTokenRequired": {
+    "message": "يرجى إدخال رمز توقيع YOURLS الإضافي"
+  },
+  "errorAdditionalServerNameRequired": {
+    "message": "يرجى إدخال اسم للخادم الإضافي"
+  },
+  "errorMissingAdditionalSettings": {
+    "message": "يرجى تكوين إعدادات خادم YOURLS الإضافي أولاً."
+  },
+  "testAdditionalConnectionButton": {
+    "message": "اختبار الاتصال الإضافي"
+  },
+  "footerText": {
+    "message": "صُنع بفخر مع ❤ في ألمانيا"
+  }
+}

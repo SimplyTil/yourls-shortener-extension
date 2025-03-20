@@ -2,6 +2,13 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Initialize i18n
   await i18n.init();
   
+  // Set RTL if needed
+  if (i18n.isRtl()) {
+    document.documentElement.setAttribute('dir', 'rtl');
+  } else {
+    document.documentElement.setAttribute('dir', 'ltr');
+  }
+  
   // Function to apply all translations
   function applyTranslations() {
     // Apply translations to elements with data-i18n attribute
@@ -82,6 +89,13 @@ document.addEventListener('DOMContentLoaded', async () => {
   languageSelect.addEventListener('change', async () => {
     const newLang = languageSelect.value;
     await i18n.changeLanguage(newLang);
+    
+    // Set RTL direction if needed
+    if (i18n.isRtl()) {
+      document.documentElement.setAttribute('dir', 'rtl');
+    } else {
+      document.documentElement.setAttribute('dir', 'ltr');
+    }
     
     // Re-apply all translations
     applyTranslations();

@@ -2,6 +2,13 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Initialize i18n
   await i18n.init();
   
+  // Set RTL if needed
+  if (i18n.isRtl()) {
+    document.documentElement.setAttribute('dir', 'rtl');
+  } else {
+    document.documentElement.setAttribute('dir', 'ltr');
+  }
+  
   // Apply translations to elements with data-i18n attribute
   document.querySelectorAll('[data-i18n]').forEach(element => {
     const key = element.getAttribute('data-i18n');

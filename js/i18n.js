@@ -105,8 +105,23 @@ class I18n {
       { code: 'de', name: 'Deutsch' },
       { code: 'fr', name: 'Français' },
       { code: 'es', name: 'Español' },
-      { code: 'ja', name: '日本語' }
+      { code: 'ja', name: '日本語' },
+      { code: 'zh_CN', name: '简体中文' },
+      { code: 'ar', name: 'العربية', rtl: true }
     ];
+  }
+  
+  /**
+   * Check if current language is RTL
+   */
+  isRtl() {
+    if (!this.initialized) {
+      return false;
+    }
+    
+    const languages = this.getAvailableLanguages();
+    const currentLang = languages.find(lang => lang.code === this.currentLanguage);
+    return currentLang && currentLang.rtl === true;
   }
 }
 

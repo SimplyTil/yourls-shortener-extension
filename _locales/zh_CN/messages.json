@@ -1,0 +1,176 @@
+{
+  "extensionName": {
+    "message": "YOURLS 链接缩短工具"
+  },
+  "extensionDescription": {
+    "message": "使用您的 YOURLS 服务器缩短链接。设置主机和密钥，开始缩短链接。"
+  },
+  "popupTitle": {
+    "message": "YOURLS 链接缩短工具"
+  },
+  "currentUrl": {
+    "message": "当前网址"
+  },
+  "keywordPlaceholder": {
+    "message": "自定义关键词（可选）"
+  },
+  "shortenButton": {
+    "message": "缩短网址"
+  },
+  "shorteningButton": {
+    "message": "缩短中..."
+  },
+  "shortenedUrl": {
+    "message": "已缩短的网址："
+  },
+  "copyButton": {
+    "message": "复制"
+  },
+  "copiedButton": {
+    "message": "已复制！"
+  },
+  "configureSettings": {
+    "message": "设置"
+  },
+  "errorMissingSettings": {
+    "message": "请先配置您的 YOURLS 设置。"
+  },
+  "errorNetwork": {
+    "message": "网络错误。请检查您的连接。"
+  },
+  "errorCorsNetwork": {
+    "message": "连接到 YOURLS 服务器时出错。请检查：<br>1. 您的 YOURLS 服务器 URL 是否正确<br>2. 您的 YOURLS 服务器是否在线且可访问<br>3. 您的签名令牌是否正确"
+  },
+  "settingsTitle": {
+    "message": "YOURLS 设置"
+  },
+  "serverUrlLabel": {
+    "message": "YOURLS 服务器 URL"
+  },
+  "serverUrlPlaceholder": {
+    "message": "https://your-yourls-domain.com/"
+  },
+  "serverUrlHelp": {
+    "message": "输入您的 YOURLS 安装 URL（例如，https://your-yourls-domain.com/）"
+  },
+  "tokenLabel": {
+    "message": "YOURLS 签名令牌"
+  },
+  "tokenPlaceholder": {
+    "message": "您的签名令牌"
+  },
+  "tokenHelp": {
+    "message": "输入您的 YOURLS 签名令牌用于 API 访问"
+  },
+  "askKeywordLabel": {
+    "message": "总是询问关键词"
+  },
+  "autoCopyLabel": {
+    "message": "自动复制缩短的 URL 到剪贴板"
+  },
+  "saveButton": {
+    "message": "保存设置"
+  },
+  "testConnectionButton": {
+    "message": "测试连接"
+  },
+  "testingConnection": {
+    "message": "正在测试连接..."
+  },
+  "connectionSuccess": {
+    "message": "连接成功！"
+  },
+  "connectionFailed": {
+    "message": "连接失败：{{error}}"
+  },
+  "connectionFailedGeneric": {
+    "message": "连接失败：连接到 YOURLS 服务器时出错。请检查：<br>1. URL 是否正确且包含 http:// 或 https://<br>2. 您的 YOURLS 服务器是否在线<br>3. 您的签名令牌是否正确"
+  },
+  "settingsSaved": {
+    "message": "设置保存成功"
+  },
+  "errorUrlRequired": {
+    "message": "请输入您的 YOURLS 服务器 URL"
+  },
+  "errorTokenRequired": {
+    "message": "请输入您的 YOURLS 签名令牌"
+  },
+  "unexpectedFormat": {
+    "message": "连接成功，但响应格式意外"
+  },
+  "languageLabel": {
+    "message": "语言"
+  },
+  "contextMenuShortenLink": {
+    "message": "缩短链接"
+  },
+  "contextMenuShortenPage": {
+    "message": "缩短页面"
+  },
+  "toYourls": {
+    "message": "到 YOURLS"
+  },
+  "apiErrorMissingUrl": {
+    "message": "缺少或格式错误的 URL"
+  },
+  "apiErrorKeywordExists": {
+    "message": "关键词已存在"
+  },
+  "apiErrorUrlExists": {
+    "message": "URL 已经被缩短"
+  },
+  "apiErrorUnknown": {
+    "message": "API 错误：{{message}}"
+  },
+  "primaryServerOption": {
+    "message": "主服务器"
+  },
+  "additionalServerOption": {
+    "message": "附加服务器"
+  },
+  "enableAdditionalServerLabel": {
+    "message": "启用附加 YOURLS 服务器"
+  },
+  "additionalServerTitle": {
+    "message": "附加服务器设置"
+  },
+  "additionalServerUrlLabel": {
+    "message": "附加 YOURLS 服务器 URL"
+  },
+  "additionalServerUrlHelp": {
+    "message": "输入您的附加 YOURLS 安装 URL"
+  },
+  "additionalTokenLabel": {
+    "message": "附加 YOURLS 签名令牌"
+  },
+  "additionalTokenHelp": {
+    "message": "输入您的附加 YOURLS 签名令牌用于 API 访问"
+  },
+  "additionalServerNameLabel": {
+    "message": "服务器名称（显示用）"
+  },
+  "additionalServerNamePlaceholder": {
+    "message": "附加服务器名称"
+  },
+  "additionalServerNameHelp": {
+    "message": "输入名称以在下拉菜单中标识此服务器"
+  },
+  "errorAdditionalUrlRequired": {
+    "message": "请输入您的附加 YOURLS 服务器 URL"
+  },
+  "errorAdditionalTokenRequired": {
+    "message": "请输入您的附加 YOURLS 签名令牌"
+  },
+  "errorAdditionalServerNameRequired": {
+    "message": "请输入您的附加服务器的名称"
+  },
+  "errorMissingAdditionalSettings": {
+    "message": "请先配置您的附加 YOURLS 服务器设置。"
+  },
+  "testAdditionalConnectionButton": {
+    "message": "测试附加连接"
+  },
+  "footerText": {
+    "message": "自豪地在德国用❤制作"
+  }
+}

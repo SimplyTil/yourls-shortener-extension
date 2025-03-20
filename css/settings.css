@@ -16,6 +16,39 @@
   --input-border: #e0e0e0;
 }
 
+/* RTL Support */
+html[dir="rtl"] .header-icon {
+  margin-right: 0;
+  margin-left: 15px;
+}
+
+html[dir="rtl"] .toggle-container label:first-child {
+  margin-right: 0;
+  margin-left: 15px;
+}
+
+html[dir="rtl"] select {
+  background-position: calc(0% + 12px) center;
+}
+
+html[dir="rtl"] #status, 
+html[dir="rtl"] #test_result, 
+html[dir="rtl"] #test_additional_result {
+  border-left: none;
+  border-right: 4px solid var(--success-color);
+}
+
+html[dir="rtl"] .error {
+  border-left: none;
+  border-right: 4px solid var(--error-color);
+}
+
+html[dir="rtl"] #test_connection, 
+html[dir="rtl"] #test_additional_connection {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
 body {
   font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
   margin: 0;

@@ -23,6 +23,32 @@ body {
   font-size: 14px;
 }
 
+/* RTL Support */
+html[dir="rtl"] .header-icon {
+  margin-left: 5px;
+  margin-right: 0;
+}
+
+html[dir="rtl"] .footer-link svg {
+  margin-right: 0;
+  margin-left: 5px;
+}
+
+html[dir="rtl"] #keywordContainer::before {
+  left: auto;
+  right: 10px;
+}
+
+html[dir="rtl"] #keywordContainer input {
+  padding-left: 10px;
+  padding-right: 22px;
+}
+
+html[dir="rtl"] #copyButton {
+  margin-right: 6px;
+  margin-left: 0;
+}
+
 /* Layout */
 .container {
   display: flex;
