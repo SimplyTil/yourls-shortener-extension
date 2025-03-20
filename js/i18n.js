@@ -101,10 +101,10 @@ class I18n {
    */
   getAvailableLanguages() {
     return [
-      { code: 'en', name: 'English' },
       { code: 'de', name: 'Deutsch' },
-      { code: 'fr', name: 'Français' },
+      { code: 'en', name: 'English' },
       { code: 'es', name: 'Español' },
+      { code: 'fr', name: 'Français' },
       { code: 'ja', name: '日本語' },
       { code: 'zh_CN', name: '简体中文' },
       { code: 'ar', name: 'العربية', rtl: true }
