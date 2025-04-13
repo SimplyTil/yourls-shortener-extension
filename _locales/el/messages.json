@@ -1,0 +1,176 @@
+{
+  "extensionName": {
+    "message": "YOURLS Συντόμευση Συνδέσμων"
+  },
+  "extensionDescription": {
+    "message": "Συντόμευση συνδέσμων χρησιμοποιώντας τον διακομιστή YOURLS. Ορίστε τον διακομιστή και το κλειδί και ξεκινήστε τις συντομεύσεις."
+  },
+  "popupTitle": {
+    "message": "YOURLS Συντόμευση Συνδέσμων"
+  },
+  "currentUrl": {
+    "message": "Τρέχουσα διεύθυνση URL"
+  },
+  "keywordPlaceholder": {
+    "message": "Προσαρμοσμένη λέξη-κλειδί (προαιρετικά)"
+  },
+  "shortenButton": {
+    "message": "Συντόμευση URL"
+  },
+  "shorteningButton": {
+    "message": "Συντόμευση..."
+  },
+  "shortenedUrl": {
+    "message": "Συντομευμένο URL:"
+  },
+  "copyButton": {
+    "message": "Αντιγραφή"
+  },
+  "copiedButton": {
+    "message": "Αντιγράφηκε!"
+  },
+  "configureSettings": {
+    "message": "Ρυθμίσεις"
+  },
+  "errorMissingSettings": {
+    "message": "Παρακαλώ διαμορφώστε πρώτα τις ρυθμίσεις YOURLS."
+  },
+  "errorNetwork": {
+    "message": "Σφάλμα δικτύου. Παρακαλώ ελέγξτε τη σύνδεσή σας."
+  },
+  "errorCorsNetwork": {
+    "message": "Σφάλμα σύνδεσης με τον διακομιστή YOURLS. Παρακαλώ ελέγξτε:<br>1. Η διεύθυνση URL του διακομιστή YOURLS είναι σωστή<br>2. Ο διακομιστής YOURLS είναι σε λειτουργία και προσβάσιμος<br>3. Το διακριτικό υπογραφής είναι σωστό"
+  },
+  "settingsTitle": {
+    "message": "Ρυθμίσεις YOURLS"
+  },
+  "serverUrlLabel": {
+    "message": "URL διακομιστή YOURLS"
+  },
+  "serverUrlPlaceholder": {
+    "message": "https://o-yourls-tomeas-sas.com/"
+  },
+  "serverUrlHelp": {
+    "message": "Εισάγετε τη διεύθυνση URL της εγκατάστασης YOURLS (π.χ., https://o-yourls-tomeas-sas.com/)"
+  },
+  "tokenLabel": {
+    "message": "Διακριτικό Υπογραφής YOURLS"
+  },
+  "tokenPlaceholder": {
+    "message": "Το διακριτικό υπογραφής σας"
+  },
+  "tokenHelp": {
+    "message": "Εισάγετε το διακριτικό υπογραφής YOURLS για πρόσβαση στο API"
+  },
+  "askKeywordLabel": {
+    "message": "Να ζητείται πάντα λέξη-κλειδί"
+  },
+  "autoCopyLabel": {
+    "message": "Αυτόματη αντιγραφή συντομευμένου URL στο πρόχειρο"
+  },
+  "saveButton": {
+    "message": "Αποθήκευση Ρυθμίσεων"
+  },
+  "testConnectionButton": {
+    "message": "Δοκιμή Σύνδεσης"
+  },
+  "testingConnection": {
+    "message": "Δοκιμή σύνδεσης..."
+  },
+  "connectionSuccess": {
+    "message": "Επιτυχής σύνδεση!"
+  },
+  "connectionFailed": {
+    "message": "Η σύνδεση απέτυχε: {{error}}"
+  },
+  "connectionFailedGeneric": {
+    "message": "Η σύνδεση απέτυχε: Σφάλμα σύνδεσης με τον διακομιστή YOURLS. Παρακαλώ ελέγξτε:<br>1. Η διεύθυνση URL είναι σωστή και περιλαμβάνει http:// ή https://<br>2. Ο διακομιστής YOURLS είναι σε λειτουργία<br>3. Το διακριτικό υπογραφής σας είναι σωστό"
+  },
+  "settingsSaved": {
+    "message": "Οι ρυθμίσεις αποθηκεύτηκαν με επιτυχία"
+  },
+  "errorUrlRequired": {
+    "message": "Εισάγετε τη διεύθυνση URL του διακομιστή YOURLS"
+  },
+  "errorTokenRequired": {
+    "message": "Εισάγετε το διακριτικό υπογραφής YOURLS"
+  },
+  "unexpectedFormat": {
+    "message": "Επιτυχής σύνδεση, αλλά μη αναμενόμενη μορφή απάντησης"
+  },
+  "languageLabel": {
+    "message": "Γλώσσα"
+  },
+  "toYourls": {
+    "message": "στο YOURLS"
+  },
+  "contextMenuShortenLink": {
+    "message": "Συντόμευση Συνδέσμου"
+  },
+  "contextMenuShortenPage": {
+    "message": "Συντόμευση Σελίδας"
+  },
+  "apiErrorMissingUrl": {
+    "message": "Λείπει ή είναι εσφαλμένο το URL"
+  },
+  "apiErrorKeywordExists": {
+    "message": "Η λέξη-κλειδί υπάρχει ήδη"
+  },
+  "apiErrorUrlExists": {
+    "message": "Το URL έχει ήδη συντομευθεί"
+  },
+  "apiErrorUnknown": {
+    "message": "Σφάλμα API: {{message}}"
+  },
+  "primaryServerOption": {
+    "message": "Κύριος Διακομιστής"
+  },
+  "additionalServerOption": {
+    "message": "Πρόσθετος Διακομιστής"
+  },
+  "enableAdditionalServerLabel": {
+    "message": "Ενεργοποίηση πρόσθετου διακομιστή YOURLS"
+  },
+  "additionalServerTitle": {
+    "message": "Ρυθμίσεις Πρόσθετου Διακομιστή"
+  },
+  "additionalServerUrlLabel": {
+    "message": "URL Πρόσθετου Διακομιστή YOURLS"
+  },
+  "additionalServerUrlHelp": {
+    "message": "Εισάγετε τη διεύθυνση URL της πρόσθετης εγκατάστασης YOURLS"
+  },
+  "additionalTokenLabel": {
+    "message": "Πρόσθετο Διακριτικό Υπογραφής YOURLS"
+  },
+  "additionalTokenHelp": {
+    "message": "Εισάγετε το πρόσθετο διακριτικό υπογραφής YOURLS για πρόσβαση στο API"
+  },
+  "additionalServerNameLabel": {
+    "message": "Όνομα Διακομιστή (για εμφάνιση)"
+  },
+  "additionalServerNamePlaceholder": {
+    "message": "Όνομα πρόσθετου διακομιστή"
+  },
+  "additionalServerNameHelp": {
+    "message": "Εισάγετε ένα όνομα για την αναγνώριση αυτού του διακομιστή στο αναπτυσσόμενο μενού"
+  },
+  "errorAdditionalUrlRequired": {
+    "message": "Εισάγετε τη διεύθυνση URL του πρόσθετου διακομιστή YOURLS"
+  },
+  "errorAdditionalTokenRequired": {
+    "message": "Εισάγετε το πρόσθετο διακριτικό υπογραφής YOURLS"
+  },
+  "errorAdditionalServerNameRequired": {
+    "message": "Εισάγετε ένα όνομα για τον πρόσθετο διακομιστή σας"
+  },
+  "errorMissingAdditionalSettings": {
+    "message": "Παρακαλώ διαμορφώστε πρώτα τις ρυθμίσεις του πρόσθετου διακομιστή YOURLS."
+  },
+  "testAdditionalConnectionButton": {
+    "message": "Δοκιμή Πρόσθετης Σύνδεσης"
+  },
+  "footerText": {
+    "message": "Φτιαγμένο με ❤ στη Γερμανία"
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "extensionName": {
+    "message": "YOURLS Link Verkorter"
+  },
+  "extensionDescription": {
+    "message": "Verkort links met behulp van je YOURLS-server. Stel host en sleutel in en begin met verkorten."
+  },
+  "popupTitle": {
+    "message": "YOURLS Link Verkorter"
+  },
+  "currentUrl": {
+    "message": "Huidige URL"
+  },
+  "keywordPlaceholder": {
+    "message": "Aangepast trefwoord (optioneel)"
+  },
+  "shortenButton": {
+    "message": "URL Verkorten"
+  },
+  "shorteningButton": {
+    "message": "Verkorten..."
+  },
+  "shortenedUrl": {
+    "message": "Verkorte URL:"
+  },
+  "copyButton": {
+    "message": "Kopiëren"
+  },
+  "copiedButton": {
+    "message": "Gekopieerd!"
+  },
+  "configureSettings": {
+    "message": "Instellingen"
+  },
+  "errorMissingSettings": {
+    "message": "Configureer eerst je YOURLS-instellingen."
+  },
+  "errorNetwork": {
+    "message": "Netwerkfout. Controleer je verbinding."
+  },
+  "errorCorsNetwork": {
+    "message": "Fout bij verbinding met YOURLS-server. Controleer:<br>1. Je YOURLS-server URL is correct<br>2. Je YOURLS-server is online en toegankelijk<br>3. Je handtekeningtoken is correct"
+  },
+  "settingsTitle": {
+    "message": "YOURLS Instellingen"
+  },
+  "serverUrlLabel": {
+    "message": "YOURLS Server URL"
+  },
+  "serverUrlPlaceholder": {
+    "message": "https://jouw-yourls-domein.com/"
+  },
+  "serverUrlHelp": {
+    "message": "Voer de URL in naar je YOURLS-installatie (bijv. https://jouw-yourls-domein.com/)"
+  },
+  "tokenLabel": {
+    "message": "YOURLS Handtekeningtoken"
+  },
+  "tokenPlaceholder": {
+    "message": "Jouw handtekeningtoken"
+  },
+  "tokenHelp": {
+    "message": "Voer je YOURLS handtekeningtoken in voor API-toegang"
+  },
+  "askKeywordLabel": {
+    "message": "Altijd naar een trefwoord vragen"
+  },
+  "autoCopyLabel": {
+    "message": "Verkorte URL automatisch naar klembord kopiëren"
+  },
+  "saveButton": {
+    "message": "Instellingen Opslaan"
+  },
+  "testConnectionButton": {
+    "message": "Verbinding Testen"
+  },
+  "testingConnection": {
+    "message": "Verbinding testen..."
+  },
+  "connectionSuccess": {
+    "message": "Verbinding succesvol!"
+  },
+  "connectionFailed": {
+    "message": "Verbinding mislukt: {{error}}"
+  },
+  "connectionFailedGeneric": {
+    "message": "Verbinding mislukt: Fout bij verbinding met YOURLS-server. Controleer:<br>1. URL is correct en bevat http:// of https://<br>2. Je YOURLS-server is online<br>3. Je handtekeningtoken is correct"
+  },
+  "settingsSaved": {
+    "message": "Instellingen succesvol opgeslagen"
+  },
+  "errorUrlRequired": {
+    "message": "Voer je YOURLS server URL in"
+  },
+  "errorTokenRequired": {
+    "message": "Voer je YOURLS handtekeningtoken in"
+  },
+  "unexpectedFormat": {
+    "message": "Verbinding succesvol, maar onverwacht responsformaat"
+  },
+  "languageLabel": {
+    "message": "Taal"
+  },
+  "toYourls": {
+    "message": "naar YOURLS"
+  },
+  "contextMenuShortenLink": {
+    "message": "Link Verkorten"
+  },
+  "contextMenuShortenPage": {
+    "message": "Pagina Verkorten"
+  },
+  "apiErrorMissingUrl": {
+    "message": "Ontbrekende of misvormde URL"
+  },
+  "apiErrorKeywordExists": {
+    "message": "Trefwoord bestaat al"
+  },
+  "apiErrorUrlExists": {
+    "message": "URL is al verkort"
+  },
+  "apiErrorUnknown": {
+    "message": "API-fout: {{message}}"
+  },
+  "primaryServerOption": {
+    "message": "Primaire Server"
+  },
+  "additionalServerOption": {
+    "message": "Extra Server"
+  },
+  "enableAdditionalServerLabel": {
+    "message": "Extra YOURLS-server inschakelen"
+  },
+  "additionalServerTitle": {
+    "message": "Instellingen Extra Server"
+  },
+  "additionalServerUrlLabel": {
+    "message": "Extra YOURLS Server URL"
+  },
+  "additionalServerUrlHelp": {
+    "message": "Voer de URL in naar je extra YOURLS-installatie"
+  },
+  "additionalTokenLabel": {
+    "message": "Extra YOURLS Handtekeningtoken"
+  },
+  "additionalTokenHelp": {
+    "message": "Voer je extra YOURLS handtekeningtoken in voor API-toegang"
+  },
+  "additionalServerNameLabel": {
+    "message": "Servernaam (voor weergave)"
+  },
+  "additionalServerNamePlaceholder": {
+    "message": "Naam extra server"
+  },
+  "additionalServerNameHelp": {
+    "message": "Voer een naam in om deze server in het dropdown-menu te identificeren"
+  },
+  "errorAdditionalUrlRequired": {
+    "message": "Voer de URL van je extra YOURLS-server in"
+  },
+  "errorAdditionalTokenRequired": {
+    "message": "Voer je extra YOURLS handtekeningtoken in"
+  },
+  "errorAdditionalServerNameRequired": {
+    "message": "Voer een naam in voor je extra server"
+  },
+  "errorMissingAdditionalSettings": {
+    "message": "Configureer eerst de instellingen voor je extra YOURLS-server."
+  },
+  "testAdditionalConnectionButton": {
+    "message": "Test Extra Verbinding"
+  },
+  "footerText": {
+    "message": "Trots gemaakt met ❤ in Duitsland"
+  }
+}

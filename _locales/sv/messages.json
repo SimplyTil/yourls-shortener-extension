@@ -1,0 +1,176 @@
+{
+  "extensionName": {
+    "message": "YOURLS Länkförkortare"
+  },
+  "extensionDescription": {
+    "message": "Förkorta länkar med din YOURLS-server. Ange värd och nyckel och börja förkorta."
+  },
+  "popupTitle": {
+    "message": "YOURLS Länkförkortare"
+  },
+  "currentUrl": {
+    "message": "Nuvarande URL"
+  },
+  "keywordPlaceholder": {
+    "message": "Anpassat nyckelord (valfritt)"
+  },
+  "shortenButton": {
+    "message": "Förkorta URL"
+  },
+  "shorteningButton": {
+    "message": "Förkortar..."
+  },
+  "shortenedUrl": {
+    "message": "Förkortad URL:"
+  },
+  "copyButton": {
+    "message": "Kopiera"
+  },
+  "copiedButton": {
+    "message": "Kopierad!"
+  },
+  "configureSettings": {
+    "message": "Inställningar"
+  },
+  "errorMissingSettings": {
+    "message": "Vänligen konfigurera dina YOURLS-inställningar först."
+  },
+  "errorNetwork": {
+    "message": "Nätverksfel. Kontrollera din anslutning."
+  },
+  "errorCorsNetwork": {
+    "message": "Fel vid anslutning till YOURLS-server. Kontrollera:<br>1. Din YOURLS-server URL är korrekt<br>2. Din YOURLS-server är online och tillgänglig<br>3. Din signaturnyckel är korrekt"
+  },
+  "settingsTitle": {
+    "message": "YOURLS Inställningar"
+  },
+  "serverUrlLabel": {
+    "message": "YOURLS Server URL"
+  },
+  "serverUrlPlaceholder": {
+    "message": "https://din-yourls-domän.com/"
+  },
+  "serverUrlHelp": {
+    "message": "Ange URL:en till din YOURLS-installation (t.ex., https://din-yourls-domän.com/)"
+  },
+  "tokenLabel": {
+    "message": "YOURLS Signaturtoken"
+  },
+  "tokenPlaceholder": {
+    "message": "Din signaturtoken"
+  },
+  "tokenHelp": {
+    "message": "Ange din YOURLS signaturtoken för API-åtkomst"
+  },
+  "askKeywordLabel": {
+    "message": "Fråga alltid efter ett nyckelord"
+  },
+  "autoCopyLabel": {
+    "message": "Kopiera förkortad URL till urklipp automatiskt"
+  },
+  "saveButton": {
+    "message": "Spara Inställningar"
+  },
+  "testConnectionButton": {
+    "message": "Testa Anslutning"
+  },
+  "testingConnection": {
+    "message": "Testar anslutning..."
+  },
+  "connectionSuccess": {
+    "message": "Anslutning lyckades!"
+  },
+  "connectionFailed": {
+    "message": "Anslutning misslyckades: {{error}}"
+  },
+  "connectionFailedGeneric": {
+    "message": "Anslutning misslyckades: Fel vid anslutning till YOURLS-server. Kontrollera:<br>1. URL är korrekt och inkluderar http:// eller https://<br>2. Din YOURLS-server är online<br>3. Din signaturtoken är korrekt"
+  },
+  "settingsSaved": {
+    "message": "Inställningar sparades framgångsrikt"
+  },
+  "errorUrlRequired": {
+    "message": "Ange din YOURLS server URL"
+  },
+  "errorTokenRequired": {
+    "message": "Ange din YOURLS signaturtoken"
+  },
+  "unexpectedFormat": {
+    "message": "Anslutning lyckades, men oväntat svarsformat"
+  },
+  "languageLabel": {
+    "message": "Språk"
+  },
+  "toYourls": {
+    "message": "till YOURLS"
+  },
+  "contextMenuShortenLink": {
+    "message": "Förkorta Länk"
+  },
+  "contextMenuShortenPage": {
+    "message": "Förkorta Sida"
+  },
+  "apiErrorMissingUrl": {
+    "message": "Saknad eller felaktig URL"
+  },
+  "apiErrorKeywordExists": {
+    "message": "Nyckelord finns redan"
+  },
+  "apiErrorUrlExists": {
+    "message": "URL har redan förkortats"
+  },
+  "apiErrorUnknown": {
+    "message": "API-fel: {{message}}"
+  },
+  "primaryServerOption": {
+    "message": "Primär Server"
+  },
+  "additionalServerOption": {
+    "message": "Ytterligare Server"
+  },
+  "enableAdditionalServerLabel": {
+    "message": "Aktivera ytterligare YOURLS-server"
+  },
+  "additionalServerTitle": {
+    "message": "Inställningar för Ytterligare Server"
+  },
+  "additionalServerUrlLabel": {
+    "message": "URL för Ytterligare YOURLS-server"
+  },
+  "additionalServerUrlHelp": {
+    "message": "Ange URL:en till din ytterligare YOURLS-installation"
+  },
+  "additionalTokenLabel": {
+    "message": "Ytterligare YOURLS Signaturtoken"
+  },
+  "additionalTokenHelp": {
+    "message": "Ange din ytterligare YOURLS signaturtoken för API-åtkomst"
+  },
+  "additionalServerNameLabel": {
+    "message": "Servernamn (för visning)"
+  },
+  "additionalServerNamePlaceholder": {
+    "message": "Namn på ytterligare server"
+  },
+  "additionalServerNameHelp": {
+    "message": "Ange ett namn för att identifiera denna server i rullgardinsmenyn"
+  },
+  "errorAdditionalUrlRequired": {
+    "message": "Ange URL:en för din ytterligare YOURLS-server"
+  },
+  "errorAdditionalTokenRequired": {
+    "message": "Ange din ytterligare YOURLS signaturtoken"
+  },
+  "errorAdditionalServerNameRequired": {
+    "message": "Ange ett namn för din ytterligare server"
+  },
+  "errorMissingAdditionalSettings": {
+    "message": "Konfigurera inställningarna för din ytterligare YOURLS-server först."
+  },
+  "testAdditionalConnectionButton": {
+    "message": "Testa Ytterligare Anslutning"
+  },
+  "footerText": {
+    "message": "Stolt gjord med ❤ i Tyskland"
+  }
+}

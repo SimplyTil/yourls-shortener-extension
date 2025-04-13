@@ -1,0 +1,176 @@
+{
+  "extensionName": {
+    "message": "YOURLS Link Forkorter"
+  },
+  "extensionDescription": {
+    "message": "Forkort links ved hjælp af din YOURLS-server. Angiv vært og nøgle og begynd forkortning."
+  },
+  "popupTitle": {
+    "message": "YOURLS Link Forkorter"
+  },
+  "currentUrl": {
+    "message": "Nuværende URL"
+  },
+  "keywordPlaceholder": {
+    "message": "Brugerdefineret nøgleord (valgfrit)"
+  },
+  "shortenButton": {
+    "message": "Forkort URL"
+  },
+  "shorteningButton": {
+    "message": "Forkorter..."
+  },
+  "shortenedUrl": {
+    "message": "Forkortet URL:"
+  },
+  "copyButton": {
+    "message": "Kopiér"
+  },
+  "copiedButton": {
+    "message": "Kopieret!"
+  },
+  "configureSettings": {
+    "message": "Indstillinger"
+  },
+  "errorMissingSettings": {
+    "message": "Konfigurer venligst dine YOURLS-indstillinger først."
+  },
+  "errorNetwork": {
+    "message": "Netværksfejl. Tjek venligst din forbindelse."
+  },
+  "errorCorsNetwork": {
+    "message": "Fejl ved forbindelse til YOURLS-server. Kontrollér venligst:<br>1. Din YOURLS-server URL er korrekt<br>2. Din YOURLS-server er online og tilgængelig<br>3. Din signaturnøgle er korrekt"
+  },
+  "settingsTitle": {
+    "message": "YOURLS Indstillinger"
+  },
+  "serverUrlLabel": {
+    "message": "YOURLS Server URL"
+  },
+  "serverUrlPlaceholder": {
+    "message": "https://dit-yourls-domæne.com/"
+  },
+  "serverUrlHelp": {
+    "message": "Indtast URL'en til din YOURLS-installation (f.eks. https://dit-yourls-domæne.com/)"
+  },
+  "tokenLabel": {
+    "message": "YOURLS Signaturnøgle"
+  },
+  "tokenPlaceholder": {
+    "message": "Din signaturnøgle"
+  },
+  "tokenHelp": {
+    "message": "Indtast din YOURLS signaturnøgle til API-adgang"
+  },
+  "askKeywordLabel": {
+    "message": "Spørg altid om et nøgleord"
+  },
+  "autoCopyLabel": {
+    "message": "Autokopiér forkortet URL til udklipsholder"
+  },
+  "saveButton": {
+    "message": "Gem Indstillinger"
+  },
+  "testConnectionButton": {
+    "message": "Test Forbindelse"
+  },
+  "testingConnection": {
+    "message": "Tester forbindelse..."
+  },
+  "connectionSuccess": {
+    "message": "Forbindelse vellykket!"
+  },
+  "connectionFailed": {
+    "message": "Forbindelse mislykkedes: {{error}}"
+  },
+  "connectionFailedGeneric": {
+    "message": "Forbindelse mislykkedes: Fejl ved forbindelse til YOURLS-server. Kontrollér venligst:<br>1. URL er korrekt og inkluderer http:// eller https://<br>2. Din YOURLS-server er online<br>3. Din signaturnøgle er korrekt"
+  },
+  "settingsSaved": {
+    "message": "Indstillinger gemt med succes"
+  },
+  "errorUrlRequired": {
+    "message": "Indtast venligst din YOURLS-server URL"
+  },
+  "errorTokenRequired": {
+    "message": "Indtast venligst din YOURLS signaturnøgle"
+  },
+  "unexpectedFormat": {
+    "message": "Forbindelse vellykket, men uventet responsformat"
+  },
+  "languageLabel": {
+    "message": "Sprog"
+  },
+  "toYourls": {
+    "message": "til YOURLS"
+  },
+  "contextMenuShortenLink": {
+    "message": "Forkort Link"
+  },
+  "contextMenuShortenPage": {
+    "message": "Forkort Side"
+  },
+  "apiErrorMissingUrl": {
+    "message": "Manglende eller fejlformateret URL"
+  },
+  "apiErrorKeywordExists": {
+    "message": "Nøgleord eksisterer allerede"
+  },
+  "apiErrorUrlExists": {
+    "message": "URL er allerede blevet forkortet"
+  },
+  "apiErrorUnknown": {
+    "message": "API-fejl: {{message}}"
+  },
+  "primaryServerOption": {
+    "message": "Primær Server"
+  },
+  "additionalServerOption": {
+    "message": "Ekstra Server"
+  },
+  "enableAdditionalServerLabel": {
+    "message": "Aktivér ekstra YOURLS-server"
+  },
+  "additionalServerTitle": {
+    "message": "Indstillinger for Ekstra Server"
+  },
+  "additionalServerUrlLabel": {
+    "message": "Ekstra YOURLS Server URL"
+  },
+  "additionalServerUrlHelp": {
+    "message": "Indtast URL'en til din ekstra YOURLS-installation"
+  },
+  "additionalTokenLabel": {
+    "message": "Ekstra YOURLS Signaturnøgle"
+  },
+  "additionalTokenHelp": {
+    "message": "Indtast din ekstra YOURLS signaturnøgle til API-adgang"
+  },
+  "additionalServerNameLabel": {
+    "message": "Servernavn (til visning)"
+  },
+  "additionalServerNamePlaceholder": {
+    "message": "Ekstra servernavn"
+  },
+  "additionalServerNameHelp": {
+    "message": "Indtast et navn til at identificere denne server i rullemenuen"
+  },
+  "errorAdditionalUrlRequired": {
+    "message": "Indtast venligst din ekstra YOURLS server URL"
+  },
+  "errorAdditionalTokenRequired": {
+    "message": "Indtast venligst din ekstra YOURLS signaturnøgle"
+  },
+  "errorAdditionalServerNameRequired": {
+    "message": "Indtast venligst et navn for din ekstra server"
+  },
+  "errorMissingAdditionalSettings": {
+    "message": "Konfigurer venligst indstillingerne for din ekstra YOURLS-server først."
+  },
+  "testAdditionalConnectionButton": {
+    "message": "Test Ekstra Forbindelse"
+  },
+  "footerText": {
+    "message": "Stolt lavet med ❤ i Tyskland"
+  }
+}

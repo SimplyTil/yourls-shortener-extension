@@ -101,13 +101,20 @@ class I18n {
    */
   getAvailableLanguages() {
     return [
+      { code: 'ar', name: 'العربية', rtl: true },
+      { code: 'da', name: 'Dansk' },
       { code: 'de', name: 'Deutsch' },
+      { code: 'el', name: 'Ελληνικά' },
       { code: 'en', name: 'English' },
       { code: 'es', name: 'Español' },
       { code: 'fr', name: 'Français' },
+      { code: 'it', name: 'Italiano' },
       { code: 'ja', name: '日本語' },
-      { code: 'zh_CN', name: '简体中文' },
-      { code: 'ar', name: 'العربية', rtl: true }
+      { code: 'nl', name: 'Nederlands' },
+      { code: 'pl', name: 'Polski' },
+      { code: 'pt', name: 'Português' },
+      { code: 'sv', name: 'Svenska' },
+      { code: 'zh_CN', name: '简体中文' }
     ];
   }
   

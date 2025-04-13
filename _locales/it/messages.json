@@ -1,0 +1,176 @@
+{
+  "extensionName": {
+    "message": "YOURLS Abbreviatore di Link"
+  },
+  "extensionDescription": {
+    "message": "Abbrevia link utilizzando il tuo server YOURLS. Specifica host e chiave e inizia ad abbreviare."
+  },
+  "popupTitle": {
+    "message": "YOURLS Abbreviatore di Link"
+  },
+  "currentUrl": {
+    "message": "URL Corrente"
+  },
+  "keywordPlaceholder": {
+    "message": "Parola chiave personalizzata (opzionale)"
+  },
+  "shortenButton": {
+    "message": "Abbrevia URL"
+  },
+  "shorteningButton": {
+    "message": "Abbreviando..."
+  },
+  "shortenedUrl": {
+    "message": "URL Abbreviato:"
+  },
+  "copyButton": {
+    "message": "Copia"
+  },
+  "copiedButton": {
+    "message": "Copiato!"
+  },
+  "configureSettings": {
+    "message": "Impostazioni"
+  },
+  "errorMissingSettings": {
+    "message": "Configura prima le tue impostazioni YOURLS."
+  },
+  "errorNetwork": {
+    "message": "Errore di rete. Verifica la tua connessione."
+  },
+  "errorCorsNetwork": {
+    "message": "Errore di connessione al server YOURLS. Verifica:<br>1. L'URL del tuo server YOURLS è corretto<br>2. Il tuo server YOURLS è online e accessibile<br>3. Il tuo token di firma è corretto"
+  },
+  "settingsTitle": {
+    "message": "Impostazioni YOURLS"
+  },
+  "serverUrlLabel": {
+    "message": "URL Server YOURLS"
+  },
+  "serverUrlPlaceholder": {
+    "message": "https://tuo-dominio-yourls.com/"
+  },
+  "serverUrlHelp": {
+    "message": "Inserisci l'URL della tua installazione YOURLS (es., https://tuo-dominio-yourls.com/)"
+  },
+  "tokenLabel": {
+    "message": "Token di Firma YOURLS"
+  },
+  "tokenPlaceholder": {
+    "message": "Il tuo token di firma"
+  },
+  "tokenHelp": {
+    "message": "Inserisci il tuo token di firma YOURLS per l'accesso API"
+  },
+  "askKeywordLabel": {
+    "message": "Chiedi sempre una parola chiave"
+  },
+  "autoCopyLabel": {
+    "message": "Copia automaticamente URL abbreviato negli appunti"
+  },
+  "saveButton": {
+    "message": "Salva Impostazioni"
+  },
+  "testConnectionButton": {
+    "message": "Testa Connessione"
+  },
+  "testingConnection": {
+    "message": "Test connessione in corso..."
+  },
+  "connectionSuccess": {
+    "message": "Connessione riuscita!"
+  },
+  "connectionFailed": {
+    "message": "Connessione fallita: {{error}}"
+  },
+  "connectionFailedGeneric": {
+    "message": "Connessione fallita: Errore di connessione al server YOURLS. Verifica:<br>1. L'URL è corretto e include http:// o https://<br>2. Il tuo server YOURLS è online<br>3. Il tuo token di firma è corretto"
+  },
+  "settingsSaved": {
+    "message": "Impostazioni salvate con successo"
+  },
+  "errorUrlRequired": {
+    "message": "Inserisci l'URL del tuo server YOURLS"
+  },
+  "errorTokenRequired": {
+    "message": "Inserisci il tuo token di firma YOURLS"
+  },
+  "unexpectedFormat": {
+    "message": "Connessione riuscita, ma formato di risposta inaspettato"
+  },
+  "languageLabel": {
+    "message": "Lingua"
+  },
+  "toYourls": {
+    "message": "a YOURLS"
+  },
+  "contextMenuShortenLink": {
+    "message": "Abbrevia Link"
+  },
+  "contextMenuShortenPage": {
+    "message": "Abbrevia Pagina"
+  },
+  "apiErrorMissingUrl": {
+    "message": "URL mancante o malformato"
+  },
+  "apiErrorKeywordExists": {
+    "message": "La parola chiave esiste già"
+  },
+  "apiErrorUrlExists": {
+    "message": "L'URL è già stato abbreviato"
+  },
+  "apiErrorUnknown": {
+    "message": "Errore API: {{message}}"
+  },
+  "primaryServerOption": {
+    "message": "Server Primario"
+  },
+  "additionalServerOption": {
+    "message": "Server Aggiuntivo"
+  },
+  "enableAdditionalServerLabel": {
+    "message": "Abilita server YOURLS aggiuntivo"
+  },
+  "additionalServerTitle": {
+    "message": "Impostazioni Server Aggiuntivo"
+  },
+  "additionalServerUrlLabel": {
+    "message": "URL Server YOURLS Aggiuntivo"
+  },
+  "additionalServerUrlHelp": {
+    "message": "Inserisci l'URL della tua installazione YOURLS aggiuntiva"
+  },
+  "additionalTokenLabel": {
+    "message": "Token di Firma YOURLS Aggiuntivo"
+  },
+  "additionalTokenHelp": {
+    "message": "Inserisci il tuo token di firma YOURLS aggiuntivo per l'accesso API"
+  },
+  "additionalServerNameLabel": {
+    "message": "Nome Server (per visualizzazione)"
+  },
+  "additionalServerNamePlaceholder": {
+    "message": "Nome server aggiuntivo"
+  },
+  "additionalServerNameHelp": {
+    "message": "Inserisci un nome per identificare questo server nel menu a discesa"
+  },
+  "errorAdditionalUrlRequired": {
+    "message": "Inserisci l'URL del tuo server YOURLS aggiuntivo"
+  },
+  "errorAdditionalTokenRequired": {
+    "message": "Inserisci il tuo token di firma YOURLS aggiuntivo"
+  },
+  "errorAdditionalServerNameRequired": {
+    "message": "Inserisci un nome per il tuo server aggiuntivo"
+  },
+  "errorMissingAdditionalSettings": {
+    "message": "Configura prima le impostazioni del tuo server YOURLS aggiuntivo."
+  },
+  "testAdditionalConnectionButton": {
+    "message": "Testa Connessione Aggiuntiva"
+  },
+  "footerText": {
+    "message": "Creato con ❤ in Germania"
+  }
+}
