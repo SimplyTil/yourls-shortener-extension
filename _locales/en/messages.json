@@ -172,5 +172,131 @@
   },
   "footerText": {
     "message": "Proudly made with ❤ in Germany"
+  },
+  "generalTab": {
+    "message": "General"
+  },
+  "serversTab": {
+    "message": "Servers"
+  },
+  "dashboardTab": {
+    "message": "Dashboard"
+  },
+  "dashboardTitle": {
+    "message": "Dashboard"
+  },
+  "refreshButton": {
+    "message": "Refresh"
+  },
+  "totalLinksLabel": {
+    "message": "Total Links"
+  },
+  "totalClicksLabel": {
+    "message": "Total Clicks"
+  },
+  "avgClicksLabel": {
+    "message": "Avg. Clicks"
+  },
+  "serverStatusLabel": {
+    "message": "Server Status"
+  },
+  "recentLinksTitle": {
+    "message": "Recent Links"
+  },
+  "loadingDashboard": {
+    "message": "Loading dashboard data..."
+  },
+  "dashboardError": {
+    "message": "Unable to load dashboard data. Please check your server configuration."
+  },
+  "primaryServerTitle": {
+    "message": "Primary Server"
+  },
+  "additionalServerDescription": {
+    "message": "Configure a second YOURLS server for multiple shortening options"
+  },
+  "behaviorTitle": {
+    "message": "Behavior Settings"
+  },
+  "interfaceTitle": {
+    "message": "Interface Settings"
+  },
+  "askKeywordHelp": {
+    "message": "When enabled, you'll be prompted for a custom keyword each time you shorten a URL"
+  },
+  "autoCopyHelp": {
+    "message": "When enabled, shortened URLs will automatically be copied to your clipboard"
+  },
+  "languageHelp": {
+    "message": "Choose your preferred interface language"
+  },
+  "viewStatsLabel": {
+    "message": "View stats from"
+  },
+  "copyLinkTitle": {
+    "message": "Copy short URL"
+  },
+  "copiedLinkTitle": {
+    "message": "Copied!"
+  },
+  "changelogTitle": {
+    "message": "Changelog"
+  },
+  "changelogDescription": {
+    "message": "Latest updates and improvements to the extension"
+  },
+  "loadingChangelog": {
+    "message": "Loading changelog..."
+  },
+  "autoSaveLabel": {
+    "message": "Auto-save settings"
+  },
+  "autoSaveHelp": {
+    "message": "When enabled, settings will be saved automatically as you make changes"
+  },
+  "autoSaving": {
+    "message": "Auto-saving..."
+  },
+  "autoSaved": {
+    "message": "Settings saved automatically"
+  },
+  "autoSaveError": {
+    "message": "Auto-save failed"
+  },
+  "loading": {
+    "message": "Loading..."
+  },
+  "errorLoadingSettings": {
+    "message": "Error loading settings"
+  },
+  "errorSavingSettings": {
+    "message": "Error saving settings"
+  },
+  "connectionTimeout": {
+    "message": "Connection timed out"
+  },
+  "dashboardTimeout": {
+    "message": "Dashboard request timed out"
+  },
+  "noLinksFound": {
+    "message": "No links found"
+  },
+  "clicks": {
+    "message": "clicks"
+  },
+  "errorNoUrl": {
+    "message": "No URL to shorten"
+  },
+  "errorInvalidUrl": {
+    "message": "Invalid URL format"
+  },
+  "errorCopy": {
+    "message": "Failed to copy to clipboard"
+  },
+  "behaviorDescription": {
+    "message": "Configure how the extension behaves when shortening URLs"
+  },
+  "interfaceDescription": {
+    "message": "Customize the extension's appearance and language"
   }
 }

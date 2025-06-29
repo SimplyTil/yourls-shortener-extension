@@ -172,5 +172,131 @@
   },
   "footerText": {
     "message": "Mit ❤ in Deutschland programmiert"
+  },
+  "generalTab": {
+    "message": "Allgemein"
+  },
+  "serversTab": {
+    "message": "Server"
+  },
+  "dashboardTab": {
+    "message": "Dashboard"
+  },
+  "dashboardTitle": {
+    "message": "Dashboard"
+  },
+  "refreshButton": {
+    "message": "Aktualisieren"
+  },
+  "totalLinksLabel": {
+    "message": "Gesamte Links"
+  },
+  "totalClicksLabel": {
+    "message": "Gesamte Klicks"
+  },
+  "avgClicksLabel": {
+    "message": "Durchschnittliche Klicks"
+  },
+  "serverStatusLabel": {
+    "message": "Serverstatus"
+  },
+  "recentLinksTitle": {
+    "message": "Neueste Links"
+  },
+  "loadingDashboard": {
+    "message": "Dashboard-Daten werden geladen..."
+  },
+  "dashboardError": {
+    "message": "Dashboard-Daten können nicht geladen werden. Überprüfe deine Serverkonfiguration."
+  },
+  "primaryServerTitle": {
+    "message": "Primärer Server"
+  },
+  "additionalServerDescription": {
+    "message": "Konfiguriere einen zweiten YOURLS-Server für mehrere Kürzungsoptionen"
+  },
+  "behaviorTitle": {
+    "message": "Verhaltenseinstellungen"
+  },
+  "interfaceTitle": {
+    "message": "Oberflächen-Einstellungen"
+  },
+  "askKeywordHelp": {
+    "message": "Wenn aktiviert, wirst du jedes Mal nach einem benutzerdefinierten Keyword gefragt, wenn du eine URL kürzt"
+  },
+  "autoCopyHelp": {
+    "message": "Wenn aktiviert, werden gekürzte URLs automatisch in die Zwischenablage kopiert"
+  },
+  "languageHelp": {
+    "message": "Wähle deine bevorzugte Oberflächensprache"
+  },
+  "viewStatsLabel": {
+    "message": "Statistiken anzeigen von"
+  },
+  "copyLinkTitle": {
+    "message": "Kurze URL kopieren"
+  },
+  "copiedLinkTitle": {
+    "message": "Kopiert!"
+  },
+  "changelogTitle": {
+    "message": "Changelog"
+  },
+  "changelogDescription": {
+    "message": "Neueste Updates und Verbesserungen der Erweiterung"
+  },
+  "loadingChangelog": {
+    "message": "Changelog wird geladen..."
+  },
+  "autoSaveLabel": {
+    "message": "Einstellungen automatisch speichern"
+  },
+  "autoSaveHelp": {
+    "message": "Wenn aktiviert, werden Einstellungen automatisch gespeichert, während du Änderungen vornimmst"
+  },
+  "autoSaving": {
+    "message": "Automatisches Speichern..."
+  },
+  "autoSaved": {
+    "message": "Einstellungen automatisch gespeichert"
+  },
+  "autoSaveError": {
+    "message": "Automatisches Speichern fehlgeschlagen"
+  },
+  "loading": {
+    "message": "Wird geladen..."
+  },
+  "errorLoadingSettings": {
+    "message": "Fehler beim Laden der Einstellungen"
+  },
+  "errorSavingSettings": {
+    "message": "Fehler beim Speichern der Einstellungen"
+  },
+  "connectionTimeout": {
+    "message": "Verbindung ist abgelaufen"
+  },
+  "dashboardTimeout": {
+    "message": "Dashboard-Anfrage ist abgelaufen"
+  },
+  "noLinksFound": {
+    "message": "Keine Links gefunden"
+  },
+  "clicks": {
+    "message": "Klicks"
+  },
+  "errorNoUrl": {
+    "message": "Keine URL zum Kürzen vorhanden"
+  },
+  "errorInvalidUrl": {
+    "message": "Ungültiges URL-Format"
+  },
+  "errorCopy": {
+    "message": "Fehler beim Kopieren in die Zwischenablage"
+  },
+  "behaviorDescription": {
+    "message": "Konfiguriere, wie sich die Erweiterung beim Kürzen von URLs verhält"
+  },
+  "interfaceDescription": {
+    "message": "Passe das Aussehen und die Sprache der Erweiterung an"
   }
 }

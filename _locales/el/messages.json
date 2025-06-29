@@ -172,5 +172,131 @@
   },
   "footerText": {
     "message": "Φτιαγμένο με ❤ στη Γερμανία"
+  },
+  "generalTab": {
+    "message": "Γενικά"
+  },
+  "serversTab": {
+    "message": "Διακομιστές"
+  },
+  "dashboardTab": {
+    "message": "Πίνακας Ελέγχου"
+  },
+  "dashboardTitle": {
+    "message": "Πίνακας Ελέγχου"
+  },
+  "refreshButton": {
+    "message": "Ανανέωση"
+  },
+  "totalLinksLabel": {
+    "message": "Συνολικοί Σύνδεσμοι"
+  },
+  "totalClicksLabel": {
+    "message": "Συνολικά Κλικ"
+  },
+  "avgClicksLabel": {
+    "message": "Μέσα Κλικ"
+  },
+  "serverStatusLabel": {
+    "message": "Κατάσταση Διακομιστή"
+  },
+  "recentLinksTitle": {
+    "message": "Πρόσφατοι Σύνδεσμοι"
+  },
+  "loadingDashboard": {
+    "message": "Φόρτωση δεδομένων πίνακα ελέγχου..."
+  },
+  "dashboardError": {
+    "message": "Αδυναμία φόρτωσης δεδομένων πίνακα ελέγχου. Ελέγξτε τη διαμόρφωση του διακομιστή σας."
+  },
+  "primaryServerTitle": {
+    "message": "Κύριος Διακομιστής"
+  },
+  "additionalServerDescription": {
+    "message": "Διαμορφώστε έναν δεύτερο διακομιστή YOURLS για πολλαπλές επιλογές συντόμευσης"
+  },
+  "behaviorTitle": {
+    "message": "Ρυθμίσεις Συμπεριφοράς"
+  },
+  "interfaceTitle": {
+    "message": "Ρυθμίσεις Διεπαφής"
+  },
+  "askKeywordHelp": {
+    "message": "Όταν ενεργοποιηθεί, θα σας ζητείται προσαρμοσμένη λέξη-κλειδί κάθε φορά που συντομεύετε ένα URL"
+  },
+  "autoCopyHelp": {
+    "message": "Όταν ενεργοποιηθεί, τα συντομευμένα URL θα αντιγράφονται αυτόματα στο πρόχειρο"
+  },
+  "languageHelp": {
+    "message": "Επιλέξτε την προτιμώμενη γλώσσα διεπαφής"
+  },
+  "viewStatsLabel": {
+    "message": "Προβολή στατιστικών από"
+  },
+  "copyLinkTitle": {
+    "message": "Αντιγραφή σύντομου URL"
+  },
+  "copiedLinkTitle": {
+    "message": "Αντιγράφηκε!"
+  },
+  "changelogTitle": {
+    "message": "Αρχείο Αλλαγών"
+  },
+  "changelogDescription": {
+    "message": "Τελευταίες ενημερώσεις και βελτιώσεις της επέκτασης"
+  },
+  "loadingChangelog": {
+    "message": "Φόρτωση αρχείου αλλαγών..."
+  },
+  "autoSaveLabel": {
+    "message": "Αυτόματη αποθήκευση ρυθμίσεων"
+  },
+  "autoSaveHelp": {
+    "message": "Όταν ενεργοποιηθεί, οι ρυθμίσεις θα αποθηκεύονται αυτόματα καθώς κάνετε αλλαγές"
+  },
+  "autoSaving": {
+    "message": "Αυτόματη αποθήκευση..."
+  },
+  "autoSaved": {
+    "message": "Ρυθμίσεις αποθηκεύτηκαν αυτόματα"
+  },
+  "autoSaveError": {
+    "message": "Η αυτόματη αποθήκευση απέτυχε"
+  },
+  "loading": {
+    "message": "Φόρτωση..."
+  },
+  "errorLoadingSettings": {
+    "message": "Σφάλμα φόρτωσης ρυθμίσεων"
+  },
+  "errorSavingSettings": {
+    "message": "Σφάλμα αποθήκευσης ρυθμίσεων"
+  },
+  "connectionTimeout": {
+    "message": "Λήξη χρονικού ορίου σύνδεσης"
+  },
+  "dashboardTimeout": {
+    "message": "Λήξη χρονικού ορίου αιτήματος πίνακα ελέγχου"
+  },
+  "noLinksFound": {
+    "message": "Δεν βρέθηκαν σύνδεσμοι"
+  },
+  "clicks": {
+    "message": "κλικ"
+  },
+  "errorNoUrl": {
+    "message": "Δεν υπάρχει URL για συντόμευση"
+  },
+  "errorInvalidUrl": {
+    "message": "Μη έγκυρη μορφή URL"
+  },
+  "errorCopy": {
+    "message": "Αποτυχία αντιγραφής στο πρόχειρο"
+  },
+  "behaviorDescription": {
+    "message": "Διαμορφώστε πώς συμπεριφέρεται η επέκταση κατά τη συντόμευση URL"
+  },
+  "interfaceDescription": {
+    "message": "Προσαρμόστε την εμφάνιση και τη γλώσσα της επέκτασης"
   }
 }

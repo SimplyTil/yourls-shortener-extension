@@ -172,5 +172,131 @@
   },
   "footerText": {
     "message": "Feito com ❤ na Alemanha"
+  },
+  "generalTab": {
+    "message": "Geral"
+  },
+  "serversTab": {
+    "message": "Servidores"
+  },
+  "dashboardTab": {
+    "message": "Painel"
+  },
+  "dashboardTitle": {
+    "message": "Painel"
+  },
+  "refreshButton": {
+    "message": "Atualizar"
+  },
+  "totalLinksLabel": {
+    "message": "Total de Links"
+  },
+  "totalClicksLabel": {
+    "message": "Total de Cliques"
+  },
+  "avgClicksLabel": {
+    "message": "Cliques Médios"
+  },
+  "serverStatusLabel": {
+    "message": "Status do Servidor"
+  },
+  "recentLinksTitle": {
+    "message": "Links Recentes"
+  },
+  "loadingDashboard": {
+    "message": "Carregando dados do painel..."
+  },
+  "dashboardError": {
+    "message": "Não foi possível carregar os dados do painel. Verifique a configuração do servidor."
+  },
+  "primaryServerTitle": {
+    "message": "Servidor Principal"
+  },
+  "additionalServerDescription": {
+    "message": "Configure um segundo servidor YOURLS para múltiplas opções de encurtamento"
+  },
+  "behaviorTitle": {
+    "message": "Configurações de Comportamento"
+  },
+  "interfaceTitle": {
+    "message": "Configurações de Interface"
+  },
+  "askKeywordHelp": {
+    "message": "Quando habilitado, você será solicitado a inserir uma palavra-chave personalizada toda vez que encurtar uma URL"
+  },
+  "autoCopyHelp": {
+    "message": "Quando habilitado, URLs encurtadas serão automaticamente copiadas para a área de transferência"
+  },
+  "languageHelp": {
+    "message": "Escolha seu idioma de interface preferido"
+  },
+  "viewStatsLabel": {
+    "message": "Ver estatísticas de"
+  },
+  "copyLinkTitle": {
+    "message": "Copiar URL curta"
+  },
+  "copiedLinkTitle": {
+    "message": "Copiado!"
+  },
+  "changelogTitle": {
+    "message": "Registro de Alterações"
+  },
+  "changelogDescription": {
+    "message": "Últimas atualizações e melhorias da extensão"
+  },
+  "loadingChangelog": {
+    "message": "Carregando registro de alterações..."
+  },
+  "autoSaveLabel": {
+    "message": "Salvar configurações automaticamente"
+  },
+  "autoSaveHelp": {
+    "message": "Quando habilitado, as configurações serão salvas automaticamente conforme você faz alterações"
+  },
+  "autoSaving": {
+    "message": "Salvando automaticamente..."
+  },
+  "autoSaved": {
+    "message": "Configurações salvas automaticamente"
+  },
+  "autoSaveError": {
+    "message": "Falha no salvamento automático"
+  },
+  "loading": {
+    "message": "Carregando..."
+  },
+  "errorLoadingSettings": {
+    "message": "Erro ao carregar configurações"
+  },
+  "errorSavingSettings": {
+    "message": "Erro ao salvar configurações"
+  },
+  "connectionTimeout": {
+    "message": "Tempo limite de conexão esgotado"
+  },
+  "dashboardTimeout": {
+    "message": "Tempo limite da solicitação do painel esgotado"
+  },
+  "noLinksFound": {
+    "message": "Nenhum link encontrado"
+  },
+  "clicks": {
+    "message": "cliques"
+  },
+  "errorNoUrl": {
+    "message": "Nenhuma URL para encurtar"
+  },
+  "errorInvalidUrl": {
+    "message": "Formato de URL inválido"
+  },
+  "errorCopy": {
+    "message": "Falha ao copiar para a área de transferência"
+  },
+  "behaviorDescription": {
+    "message": "Configure como a extensão se comporta ao encurtar URLs"
+  },
+  "interfaceDescription": {
+    "message": "Personalize a aparência e o idioma da extensão"
   }
 }

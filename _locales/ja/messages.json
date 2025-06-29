@@ -172,5 +172,131 @@
   },
   "footerText": {
     "message": "ドイツで❤を込めて作成"
+  },
+  "generalTab": {
+    "message": "一般"
+  },
+  "serversTab": {
+    "message": "サーバー"
+  },
+  "dashboardTab": {
+    "message": "ダッシュボード"
+  },
+  "dashboardTitle": {
+    "message": "ダッシュボード"
+  },
+  "refreshButton": {
+    "message": "更新"
+  },
+  "totalLinksLabel": {
+    "message": "総リンク数"
+  },
+  "totalClicksLabel": {
+    "message": "総クリック数"
+  },
+  "avgClicksLabel": {
+    "message": "平均クリック数"
+  },
+  "serverStatusLabel": {
+    "message": "サーバーステータス"
+  },
+  "recentLinksTitle": {
+    "message": "最近のリンク"
+  },
+  "loadingDashboard": {
+    "message": "ダッシュボードデータを読み込み中..."
+  },
+  "dashboardError": {
+    "message": "ダッシュボードデータを読み込めません。サーバー設定を確認してください。"
+  },
+  "primaryServerTitle": {
+    "message": "メインサーバー"
+  },
+  "additionalServerDescription": {
+    "message": "複数の短縮オプションのために2番目のYOURLSサーバーを設定"
+  },
+  "behaviorTitle": {
+    "message": "動作設定"
+  },
+  "interfaceTitle": {
+    "message": "インターフェース設定"
+  },
+  "askKeywordHelp": {
+    "message": "有効にすると、URLを短縮するたびにカスタムキーワードの入力を促されます"
+  },
+  "autoCopyHelp": {
+    "message": "有効にすると、短縮されたURLが自動的にクリップボードにコピーされます"
+  },
+  "languageHelp": {
+    "message": "お好みのインターフェース言語を選択してください"
+  },
+  "viewStatsLabel": {
+    "message": "統計を表示"
+  },
+  "copyLinkTitle": {
+    "message": "短いURLをコピー"
+  },
+  "copiedLinkTitle": {
+    "message": "コピー完了！"
+  },
+  "changelogTitle": {
+    "message": "変更履歴"
+  },
+  "changelogDescription": {
+    "message": "拡張機能の最新アップデートと改善"
+  },
+  "loadingChangelog": {
+    "message": "変更履歴を読み込み中..."
+  },
+  "autoSaveLabel": {
+    "message": "設定の自動保存"
+  },
+  "autoSaveHelp": {
+    "message": "有効にすると、変更を行う際に設定が自動的に保存されます"
+  },
+  "autoSaving": {
+    "message": "自動保存中..."
+  },
+  "autoSaved": {
+    "message": "設定が自動保存されました"
+  },
+  "autoSaveError": {
+    "message": "自動保存に失敗しました"
+  },
+  "loading": {
+    "message": "読み込み中..."
+  },
+  "errorLoadingSettings": {
+    "message": "設定の読み込みエラー"
+  },
+  "errorSavingSettings": {
+    "message": "設定の保存エラー"
+  },
+  "connectionTimeout": {
+    "message": "接続がタイムアウトしました"
+  },
+  "dashboardTimeout": {
+    "message": "ダッシュボードリクエストがタイムアウトしました"
+  },
+  "noLinksFound": {
+    "message": "リンクが見つかりません"
+  },
+  "clicks": {
+    "message": "クリック"
+  },
+  "errorNoUrl": {
+    "message": "短縮するURLがありません"
+  },
+  "errorInvalidUrl": {
+    "message": "無効なURL形式"
+  },
+  "errorCopy": {
+    "message": "クリップボードへのコピーに失敗しました"
+  },
+  "behaviorDescription": {
+    "message": "URLを短縮する際の拡張機能の動作を設定"
+  },
+  "interfaceDescription": {
+    "message": "拡張機能の外観と言語をカスタマイズ"
   }
 }

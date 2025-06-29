@@ -172,5 +172,131 @@
   },
   "footerText": {
     "message": "Dumnie wykonane z ❤ w Niemczech"
+  },
+  "generalTab": {
+    "message": "Ogólne"
+  },
+  "serversTab": {
+    "message": "Serwery"
+  },
+  "dashboardTab": {
+    "message": "Panel"
+  },
+  "dashboardTitle": {
+    "message": "Panel"
+  },
+  "refreshButton": {
+    "message": "Odśwież"
+  },
+  "totalLinksLabel": {
+    "message": "Łączna Liczba Linków"
+  },
+  "totalClicksLabel": {
+    "message": "Łączna Liczba Kliknięć"
+  },
+  "avgClicksLabel": {
+    "message": "Średnia Kliknięć"
+  },
+  "serverStatusLabel": {
+    "message": "Status Serwera"
+  },
+  "recentLinksTitle": {
+    "message": "Ostatnie Linki"
+  },
+  "loadingDashboard": {
+    "message": "Ładowanie danych panelu..."
+  },
+  "dashboardError": {
+    "message": "Nie można załadować danych panelu. Sprawdź konfigurację serwera."
+  },
+  "primaryServerTitle": {
+    "message": "Serwer Główny"
+  },
+  "additionalServerDescription": {
+    "message": "Skonfiguruj drugi serwer YOURLS dla wielu opcji skracania"
+  },
+  "behaviorTitle": {
+    "message": "Ustawienia Zachowania"
+  },
+  "interfaceTitle": {
+    "message": "Ustawienia Interfejsu"
+  },
+  "askKeywordHelp": {
+    "message": "Gdy włączone, będziesz proszony o własne słowo kluczowe za każdym razem gdy skracasz URL"
+  },
+  "autoCopyHelp": {
+    "message": "Gdy włączone, skrócone URLe będą automatycznie kopiowane do schowka"
+  },
+  "languageHelp": {
+    "message": "Wybierz swój preferowany język interfejsu"
+  },
+  "viewStatsLabel": {
+    "message": "Zobacz statystyki z"
+  },
+  "copyLinkTitle": {
+    "message": "Kopiuj krótki URL"
+  },
+  "copiedLinkTitle": {
+    "message": "Skopiowano!"
+  },
+  "changelogTitle": {
+    "message": "Dziennik Zmian"
+  },
+  "changelogDescription": {
+    "message": "Najnowsze aktualizacje i ulepszenia rozszerzenia"
+  },
+  "loadingChangelog": {
+    "message": "Ładowanie dziennika zmian..."
+  },
+  "autoSaveLabel": {
+    "message": "Automatyczny zapis ustawień"
+  },
+  "autoSaveHelp": {
+    "message": "Gdy włączone, ustawienia będą zapisywane automatycznie gdy wprowadzasz zmiany"
+  },
+  "autoSaving": {
+    "message": "Automatyczny zapis..."
+  },
+  "autoSaved": {
+    "message": "Ustawienia zapisane automatycznie"
+  },
+  "autoSaveError": {
+    "message": "Automatyczny zapis nieudany"
+  },
+  "loading": {
+    "message": "Ładowanie..."
+  },
+  "errorLoadingSettings": {
+    "message": "Błąd ładowania ustawień"
+  },
+  "errorSavingSettings": {
+    "message": "Błąd zapisywania ustawień"
+  },
+  "connectionTimeout": {
+    "message": "Przekroczono limit czasu połączenia"
+  },
+  "dashboardTimeout": {
+    "message": "Przekroczono limit czasu żądania panelu"
+  },
+  "noLinksFound": {
+    "message": "Nie znaleziono linków"
+  },
+  "clicks": {
+    "message": "kliknięcia"
+  },
+  "errorNoUrl": {
+    "message": "Brak URL do skrócenia"
+  },
+  "errorInvalidUrl": {
+    "message": "Nieprawidłowy format URL"
+  },
+  "errorCopy": {
+    "message": "Nie udało się skopiować do schowka"
+  },
+  "behaviorDescription": {
+    "message": "Skonfiguruj jak rozszerzenie zachowuje się podczas skracania URL"
+  },
+  "interfaceDescription": {
+    "message": "Dostosuj wygląd i język rozszerzenia"
   }
 }

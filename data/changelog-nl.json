@@ -1,0 +1,107 @@
+{
+  "versions": [
+    {
+      "version": "1.2.0",
+      "date": "Juli 2025",
+      "changes": [
+        {
+          "type": "new",
+          "emoji": "✨",
+          "text": "Volledige UI-modernisering met nieuw ontwerpsysteem"
+        },
+        {
+          "type": "new",
+          "emoji": "📊",
+          "text": "Interactief dashboard met serverstatistieken en recente links"
+        },
+        {
+          "type": "new",
+          "emoji": "🌍",
+          "text": "Ondersteuning toegevoegd voor 6 nieuwe talen: Grieks, Italiaans, Nederlands, Pools, Portugees, Zweeds"
+        },
+        {
+          "type": "improved",
+          "emoji": "🎨",
+          "text": "Verbeterde toegankelijkheid met toetsenbordnavigatie en schermlezerondersteuning"
+        },
+        {
+          "type": "improved",
+          "emoji": "🌍",
+          "text": "Verbeterde internationalisering met 14+ talen en RTL-ondersteuning"
+        },
+        {
+          "type": "fixed",
+          "emoji": "🐛",
+          "text": "CORS-problemen opgelost met achtergrondscript API-verzoeken"
+        }
+      ]
+    },
+    {
+      "version": "1.1.0",
+      "date": "Maart 2025",
+      "changes": [
+        {
+          "type": "new",
+          "emoji": "🌍",
+          "text": "Arabische taalondersteuning toegevoegd met RTL-layout"
+        },
+        {
+          "type": "new",
+          "emoji": "🌍",
+          "text": "Vereenvoudigde Chinese lokalisatie toegevoegd"
+        },
+        {
+          "type": "new",
+          "emoji": "ℹ️",
+          "text": "Versie-informatie weergeven in voettekst"
+        },
+        {
+          "type": "improved",
+          "emoji": "⚙️",
+          "text": "Verbeterde YOURLS-serverconfiguratieopties"
+        },
+        {
+          "type": "improved",
+          "emoji": "🎨",
+          "text": "Verbeteringen in taalvolgorde en stijlaanpassingen"
+        }
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "date": "Maart 2025",
+      "changes": [
+        {
+          "type": "new",
+          "emoji": "🚀",
+          "text": "Eerste release met Manifest V3-ondersteuning"
+        },
+        {
+          "type": "new",
+          "emoji": "🔗",
+          "text": "Basis URL-verkortingsfunctionaliteit"
+        },
+        {
+          "type": "new",
+          "emoji": "🔄",
+          "text": "Multi-server ondersteuning voor schakelen tussen YOURLS-instances"
+        },
+        {
+          "type": "new",
+          "emoji": "📋",
+          "text": "Eén-klik kopiëerfunctionaliteit voor verkorte URL's"
+        },
+        {
+          "type": "new",
+          "emoji": "🎯",
+          "text": "Contextmenu-integratie voor linkverkorting"
+        },
+        {
+          "type": "new",
+          "emoji": "⚙️",
+          "text": "Configuratie-instellingen voor YOURLS-server en voorkeuren"
+        }
+      ]
+    }
+  ]
+}

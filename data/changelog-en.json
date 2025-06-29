@@ -1,0 +1,107 @@
+{
+  "versions": [
+    {
+      "version": "1.2.0",
+      "date": "July 2025",
+      "changes": [
+        {
+          "type": "new",
+          "emoji": "✨",
+          "text": "Complete UI modernization with new design system"
+        },
+        {
+          "type": "new",
+          "emoji": "📊",
+          "text": "Interactive dashboard with server statistics and recent links"
+        },
+        {
+          "type": "new",
+          "emoji": "🌍",
+          "text": "Added support for 6 new languages: Greek, Italian, Dutch, Polish, Portuguese, Swedish"
+        },
+        {
+          "type": "improved",
+          "emoji": "🎨",
+          "text": "Enhanced accessibility with keyboard navigation and screen reader support"
+        },
+        {
+          "type": "improved",
+          "emoji": "🌍",
+          "text": "Improved internationalization with 14+ languages and RTL support"
+        },
+        {
+          "type": "fixed",
+          "emoji": "🐛",
+          "text": "Fixed CORS issues with background script API requests"
+        }
+      ]
+    },
+    {
+      "version": "1.1.0",
+      "date": "March 2025",
+      "changes": [
+        {
+          "type": "new",
+          "emoji": "🌍",
+          "text": "Added Arabic language support with RTL layout"
+        },
+        {
+          "type": "new",
+          "emoji": "🌍",
+          "text": "Added Simplified Chinese localization"
+        },
+        {
+          "type": "new",
+          "emoji": "ℹ️",
+          "text": "Version information display in footer"
+        },
+        {
+          "type": "improved",
+          "emoji": "⚙️",
+          "text": "Enhanced YOURLS server configuration options"
+        },
+        {
+          "type": "improved",
+          "emoji": "🎨",
+          "text": "Language ordering improvements and style adjustments"
+        }
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "date": "March 2025",
+      "changes": [
+        {
+          "type": "new",
+          "emoji": "🚀",
+          "text": "Initial release with Manifest V3 support"
+        },
+        {
+          "type": "new",
+          "emoji": "🔗",
+          "text": "Basic URL shortening functionality"
+        },
+        {
+          "type": "new",
+          "emoji": "🔄",
+          "text": "Multi-server support for switching between YOURLS instances"
+        },
+        {
+          "type": "new",
+          "emoji": "📋",
+          "text": "One-click copy functionality for shortened URLs"
+        },
+        {
+          "type": "new",
+          "emoji": "🎯",
+          "text": "Context menu integration for link shortening"
+        },
+        {
+          "type": "new",
+          "emoji": "⚙️",
+          "text": "Configuration settings for YOURLS server and preferences"
+        }
+      ]
+    }
+  ]
+}

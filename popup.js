@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', async () => {
   // Initialize i18n
-  await i18n.init();
+  try {
+    await i18n.init();
+  } catch (err) {
+    console.error('Failed to initialize i18n:', err);
+    // Continue with minimal functionality
+  }
   
   // Set RTL if needed
   if (i18n.isRtl()) {
@@ -21,23 +26,34 @@ document.addEventListener('DOMContentLoaded', async () => {
     element.setAttribute('placeholder', i18n.get(key));
   });
   
-  const urlElement = document.getElementById('currentUrl');
-  const keywordContainer = document.getElementById('keywordContainer');
-  const keywordInput = document.getElementById('keyword');
-  const shortenButton = document.getElementById('shortenButton');
-  const resultContainer = document.getElementById('result');
-  const shortUrlInput = document.getElementById('shortUrl');
-  const copyButton = document.getElementById('copyButton');
-  const errorContainer = document.getElementById('error');
-  const errorMessage = document.getElementById('errorMessage');
-  const yourlsLink = document.getElementById('yourlsLink');
-  const serverSelector = document.getElementById('serverSelector');
-  const serverSelect = document.getElementById('serverSelect');
-  const additionalServerOption = document.getElementById('additionalServerOption');
+  // Safely get DOM elements with error handling
+  const getElement = (id) => {
+    const element = document.getElementById(id);
+    if (!element) {
+      console.warn(`Element not found: ${id}`);
+    }
+    return element;
+  };
+  
+  const urlElement = getElement('currentUrl');
+  const faviconElement = getElement('siteFavicon');
+  const keywordContainer = getElement('keywordContainer');
+  const keywordInput = getElement('keyword');
+  const shortenButton = getElement('shortenButton');
+  const resultContainer = getElement('result');
+  const shortUrlInput = getElement('shortUrl');
+  const copyButton = getElement('copyButton');
+  const errorContainer = getElement('error');
+  const errorMessage = getElement('errorMessage');
+  const yourlsLink = getElement('yourlsLink');
+  const serverSelector = getElement('serverSelector');
+  const serverSelect = getElement('serverSelect');
+  const additionalServerOption = getElement('additionalServerOption');
   
   let currentUrl = '';
   let selectedText = '';
   let selectedServer = 'primary';
+  let isProcessing = false; // Flag to prevent multiple submissions
   
   // Load settings
   chrome.storage.sync.get([
@@ -50,29 +66,40 @@ document.addEventListener('DOMContentLoaded', async () => {
     'additional_yourls_key',
     'additional_server_name'
   ], (settings) => {
+    if (chrome.runtime.lastError) {
+      console.error('Error loading settings:', chrome.runtime.lastError);
+      showError(i18n.get('errorLoadingSettings') || 'Error loading settings');
+      if (shortenButton) shortenButton.disabled = true;
+      return;
+    }
+    
     // Check if additional server is enabled
     if (settings.enable_additional_server && settings.additional_yourls_url && settings.additional_yourls_key) {
       // Setup server selector
-      serverSelector.style.display = 'block';
-      additionalServerOption.textContent = settings.additional_server_name || i18n.get('additionalServerOption');
+      if (serverSelector) serverSelector.style.display = 'block';
+      if (additionalServerOption) {
+        additionalServerOption.textContent = settings.additional_server_name || i18n.get('additionalServerOption');
+      }
       
       // Handle server selection change
-      serverSelect.addEventListener('change', function() {
-        selectedServer = this.value;
-        updateYourlsLink(settings);
-      });
+      if (serverSelect) {
+        serverSelect.addEventListener('change', function() {
+          selectedServer = this.value;
+          updateYourlsLink(settings);
+        });
+      }
     } else {
-      serverSelector.style.display = 'none';
+      if (serverSelector) serverSelector.style.display = 'none';
     }
     
     // Handle missing settings
     if (!settings.yourls_url || !settings.yourls_key) {
       showError(i18n.get('errorMissingSettings'));
-      shortenButton.disabled = true;
+      if (shortenButton) shortenButton.disabled = true;
       return;
     }
     
-    if (settings.ask_for_keyword) {
+    if (settings.ask_for_keyword && keywordContainer) {
       keywordContainer.style.display = 'block';
     }
     
@@ -80,43 +107,164 @@ document.addEventListener('DOMContentLoaded', async () => {
     
     // Get the current tab URL and any selected text
     chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
+      if (chrome.runtime.lastError) {
+        console.error('Error querying tabs:', chrome.runtime.lastError);
+        return;
+      }
+      
+      if (!tabs || tabs.length === 0) {
+        console.warn('No active tab found');
+        return;
+      }
+      
       currentUrl = tabs[0].url;
-      urlElement.textContent = currentUrl;
+      if (urlElement) urlElement.textContent = currentUrl;
+      
+      // Get and display favicon
+      getFaviconUrl(currentUrl, tabs[0].favIconUrl);
       
       // Check if there's information from context menu
       chrome.storage.local.get(['contextMenuUrl', 'selectedText'], (data) => {
-        if (data.contextMenuUrl) {
-          currentUrl = data.contextMenuUrl;
-          urlElement.textContent = currentUrl;
-          chrome.storage.local.remove('contextMenuUrl');
+        if (chrome.runtime.lastError) {
+          console.error('Error loading context data:', chrome.runtime.lastError);
+          return;
         }
         
-        if (data.selectedText) {
+        if (data.contextMenuUrl) {
+          currentUrl = data.contextMenuUrl;
+          if (urlElement) urlElement.textContent = currentUrl;
+          getFaviconUrl(currentUrl);
+          
+          // Clear the stored URL
+          chrome.storage.local.remove('contextMenuUrl', () => {
+            if (chrome.runtime.lastError) {
+              console.error('Error clearing contextMenuUrl:', chrome.runtime.lastError);
+            }
+          });
+        }
+        
+        if (data.selectedText && keywordInput) {
           selectedText = data.selectedText;
           keywordInput.value = selectedText;
-          chrome.storage.local.remove('selectedText');
+          
+          // Clear the stored text
+          chrome.storage.local.remove('selectedText', () => {
+            if (chrome.runtime.lastError) {
+              console.error('Error clearing selectedText:', chrome.runtime.lastError);
+            }
+          });
         }
       });
     });
   });
   
-  // Handle shortening button click
-  shortenButton.addEventListener('click', () => {
-    shortenUrl(currentUrl, keywordInput.value);
-  });
+  // Function to get and display favicon
+  function getFaviconUrl(url, tabFavicon = null) {
+    if (!faviconElement) return;
+    
+    // Try to use the tab's favicon first
+    if (tabFavicon && tabFavicon !== '') {
+      faviconElement.src = tabFavicon;
+      faviconElement.style.display = 'block';
+      return;
+    }
+    
+    // Otherwise, construct favicon URL from domain
+    try {
+      const urlObj = new URL(url);
+      const domain = urlObj.hostname;
+      
+      // Use Google's favicon service directly - more reliable
+      const googleFavicon = `https://www.google.com/s2/favicons?domain=${domain}&sz=16`;
+      faviconElement.src = googleFavicon;
+      faviconElement.style.display = 'block';
+    } catch (e) {
+      console.warn('Invalid URL for favicon:', e);
+      // Hide favicon if URL is invalid
+      faviconElement.style.display = 'none';
+    }
+  }
   
-  // Handle copy button click
-  copyButton.addEventListener('click', () => {
-    shortUrlInput.select();
-    document.execCommand('copy');
-    copyButton.textContent = i18n.get('copiedButton');
-    setTimeout(() => {
-      copyButton.textContent = i18n.get('copyButton');
-    }, 2000);
-  });
+  // Handle shortening button click
+  if (shortenButton) {
+    shortenButton.addEventListener('click', () => {
+      // Prevent double-submission
+      if (isProcessing) return;
+      
+      // Validate URL before sending
+      if (!currentUrl) {
+        showError(i18n.get('errorNoUrl') || 'No URL to shorten');
+        return;
+      }
+      
+      try {
+        // Basic URL validation
+        new URL(currentUrl);
+        const keyword = keywordInput ? keywordInput.value.trim() : '';
+        shortenUrl(currentUrl, keyword);
+      } catch (e) {
+        showError(i18n.get('errorInvalidUrl') || 'Invalid URL format');
+      }
+    });
+  }
+  
+  // Handle copy button click with modern Clipboard API
+  if (copyButton && shortUrlInput) {
+    copyButton.addEventListener('click', () => {
+      const textToCopy = shortUrlInput.value;
+      
+      if (!textToCopy) {
+        console.warn('Nothing to copy');
+        return;
+      }
+      
+      // Use Clipboard API with fallbacks
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(textToCopy)
+          .then(() => {
+            copyButton.textContent = i18n.get('copiedButton');
+            copyButton.classList.add('copied');
+            setTimeout(() => {
+              copyButton.textContent = i18n.get('copyButton');
+              copyButton.classList.remove('copied');
+            }, 2000);
+          })
+          .catch(err => {
+            console.error('Clipboard API error:', err);
+            fallbackCopy();
+          });
+      } else {
+        fallbackCopy();
+      }
+      
+      // Fallback copy method
+      function fallbackCopy() {
+        shortUrlInput.select();
+        try {
+          const success = document.execCommand('copy');
+          if (success) {
+            copyButton.textContent = i18n.get('copiedButton');
+            copyButton.classList.add('copied');
+            setTimeout(() => {
+              copyButton.textContent = i18n.get('copyButton');
+              copyButton.classList.remove('copied');
+            }, 2000);
+          } else {
+            console.error('execCommand failed to copy');
+            showError(i18n.get('errorCopy') || 'Failed to copy. Please select and copy manually.');
+          }
+        } catch (err) {
+          console.error('execCommand error:', err);
+          showError(i18n.get('errorCopy') || 'Failed to copy. Please select and copy manually.');
+        }
+      }
+    });
+  }
   
   // Update the YOURLS admin link based on selected server
   function updateYourlsLink(settings) {
+    if (!yourlsLink) return;
+    
     const baseUrl = selectedServer === 'primary' ? 
       settings.yourls_url : 
       settings.additional_yourls_url;
@@ -142,12 +290,26 @@ document.addEventListener('DOMContentLoaded', async () => {
           toYourlsSpan.textContent = i18n.get('toYourls');
         }
       }
+      
+      yourlsLink.style.display = 'inline-flex';
     } else {
       yourlsLink.style.display = 'none';
     }
   }
   
   function shortenUrl(url, keyword = '') {
+    // Set processing state
+    isProcessing = true;
+    if (shortenButton) {
+      shortenButton.disabled = true;
+      shortenButton.textContent = i18n.get('shorteningButton') || 'Shortening...';
+      shortenButton.classList.add('processing');
+    }
+    
+    // Hide previous results/errors
+    if (resultContainer) resultContainer.style.display = 'none';
+    if (errorContainer) errorContainer.style.display = 'none';
+    
     chrome.storage.sync.get([
       'yourls_url', 
       'yourls_key', 
@@ -155,6 +317,13 @@ document.addEventListener('DOMContentLoaded', async () => {
       'additional_yourls_key', 
       'auto_copy'
     ], (settings) => {
+      if (chrome.runtime.lastError) {
+        console.error('Error loading settings for shortening:', chrome.runtime.lastError);
+        resetShortenButton();
+        showError(i18n.get('errorLoadingSettings') || 'Failed to load settings');
+        return;
+      }
+      
       // Determine which server to use based on the selection
       const baseUrl = selectedServer === 'primary' ? 
         settings.yourls_url : 
@@ -165,13 +334,16 @@ document.addEventListener('DOMContentLoaded', async () => {
         settings.additional_yourls_key;
       
       if (!baseUrl || !apiKey) {
+        resetShortenButton();
         showError(i18n.get(selectedServer === 'primary' ? 
           'errorMissingSettings' : 
           'errorMissingAdditionalSettings'));
         return;
       }
       
-      const apiUrl = baseUrl + (baseUrl.endsWith('/') ? 'yourls-api.php' : '/yourls-api.php');
+      // Sanitize base URL
+      const sanitizedBaseUrl = baseUrl.trim().replace(/\/$/, '');
+      const apiUrl = `${sanitizedBaseUrl}/yourls-api.php`;
       
       // Create API request parameters
       const params = new URLSearchParams();
@@ -183,10 +355,6 @@ document.addEventListener('DOMContentLoaded', async () => {
       if (keyword) {
         params.append('keyword', keyword);
       }
-      
-      // Show loading state
-      shortenButton.disabled = true;
-      shortenButton.textContent = i18n.get('shorteningButton');
       
       // Try to use background script to bypass CORS
       chrome.runtime.sendMessage({
@@ -200,16 +368,49 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
       }, response => {
         // Reset button state
-        shortenButton.disabled = false;
-        shortenButton.textContent = i18n.get('shortenButton');
+        resetShortenButton();
         
         if (response && response.success) {
           const data = response.data;
-          if (data.status === 'success') {
+          if (data && data.status === 'success' && data.shorturl) {
             showResult(data.shorturl);
+            
+            // Auto-copy if enabled
+            if (settings.auto_copy && shortUrlInput) {
+              const textToCopy = data.shorturl;
+              
+              // Modern clipboard API
+              if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(textToCopy)
+                  .then(() => {
+                    if (copyButton) {
+                      copyButton.textContent = i18n.get('copiedButton');
+                      copyButton.classList.add('copied');
+                      setTimeout(() => {
+                        copyButton.textContent = i18n.get('copyButton');
+                        copyButton.classList.remove('copied');
+                      }, 2000);
+                    }
+                  })
+                  .catch(err => {
+                    console.error('Auto-copy failed:', err);
+                    // Fallback to old method
+                    if (shortUrlInput) {
+                      shortUrlInput.select();
+                      document.execCommand('copy');
+                    }
+                  });
+              } else {
+                // Fallback for browsers without Clipboard API
+                if (shortUrlInput) {
+                  shortUrlInput.select();
+                  document.execCommand('copy');
+                }
+              }
+            }
           } else {
             // Localize common YOURLS error messages
-            let errorMessage = data.message || i18n.get('errorNetwork');
+            let errorMessage = data && data.message ? data.message : i18n.get('errorNetwork');
             
             // Check for known error messages and replace with localized versions
             if (errorMessage.includes('Missing or malformed URL')) {
@@ -218,7 +419,7 @@ document.addEventListener('DOMContentLoaded', async () => {
               errorMessage = i18n.get('apiErrorKeywordExists');
             } else if (errorMessage.includes('already exists')) {
               errorMessage = i18n.get('apiErrorUrlExists');
-            } else {
+            } else if (data && data.status === 'fail') {
               errorMessage = i18n.get('apiErrorUnknown', { message: errorMessage });
             }
             
@@ -226,34 +427,38 @@ document.addEventListener('DOMContentLoaded', async () => {
           }
         } else {
           console.error('API error:', response ? response.error : 'No response');
-          showError(i18n.get('errorCorsNetwork'));
+          showError(i18n.get('errorCorsNetwork') || 'Network error connecting to YOURLS server');
         }
       });
     });
   }
   
+  // Helper to reset the shorten button state
+  function resetShortenButton() {
+    isProcessing = false;
+    if (shortenButton) {
+      shortenButton.disabled = false;
+      shortenButton.textContent = i18n.get('shortenButton') || 'Shorten URL';
+      shortenButton.classList.remove('processing');
+    }
+  }
+  
   function showResult(shortUrl) {
-    errorContainer.style.display = 'none';
+    if (!resultContainer || !shortUrlInput) return;
+    
+    if (errorContainer) errorContainer.style.display = 'none';
     resultContainer.style.display = 'block';
     shortUrlInput.value = shortUrl;
     
-    // Check if auto-copy is enabled
-    chrome.storage.sync.get(['auto_copy'], function(items) {
-      if (items.auto_copy) {
-        shortUrlInput.select();
-        document.execCommand('copy');
-        copyButton.textContent = i18n.get('copiedButton');
-        setTimeout(() => {
-          copyButton.textContent = i18n.get('copyButton');
-        }, 2000);
-      } else {
-        shortUrlInput.select();
-      }
-    });
+    // Focus and select for easier manual copying
+    shortUrlInput.focus();
+    shortUrlInput.select();
   }
   
   function showError(message) {
-    resultContainer.style.display = 'none';
+    if (!errorContainer || !errorMessage) return;
+    
+    if (resultContainer) resultContainer.style.display = 'none';
     errorContainer.style.display = 'block';
     errorMessage.innerHTML = message;
   }

@@ -1,0 +1,107 @@
+{
+  "versions": [
+    {
+      "version": "1.2.0",
+      "date": "Julho 2025",
+      "changes": [
+        {
+          "type": "new",
+          "emoji": "✨",
+          "text": "Modernização completa da interface com novo sistema de design"
+        },
+        {
+          "type": "new",
+          "emoji": "📊",
+          "text": "Painel interativo com estatísticas do servidor e links recentes"
+        },
+        {
+          "type": "new",
+          "emoji": "🌍",
+          "text": "Adicionado suporte para 6 novos idiomas: grego, italiano, holandês, polonês, português, sueco"
+        },
+        {
+          "type": "improved",
+          "emoji": "🎨",
+          "text": "Acessibilidade aprimorada com navegação por teclado e suporte a leitor de tela"
+        },
+        {
+          "type": "improved",
+          "emoji": "🌍",
+          "text": "Internacionalização melhorada com 14+ idiomas e suporte RTL"
+        },
+        {
+          "type": "fixed",
+          "emoji": "🐛",
+          "text": "Corrigidos problemas de CORS com solicitações de API do script de fundo"
+        }
+      ]
+    },
+    {
+      "version": "1.1.0",
+      "date": "Março 2025",
+      "changes": [
+        {
+          "type": "new",
+          "emoji": "🌍",
+          "text": "Adicionado suporte ao idioma árabe com layout RTL"
+        },
+        {
+          "type": "new",
+          "emoji": "🌍",
+          "text": "Adicionada localização em chinês simplificado"
+        },
+        {
+          "type": "new",
+          "emoji": "ℹ️",
+          "text": "Exibição de informações de versão no rodapé"
+        },
+        {
+          "type": "improved",
+          "emoji": "⚙️",
+          "text": "Opções de configuração do servidor YOURLS aprimoradas"
+        },
+        {
+          "type": "improved",
+          "emoji": "🎨",
+          "text": "Melhorias na ordenação de idiomas e ajustes de estilo"
+        }
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "date": "Março 2025",
+      "changes": [
+        {
+          "type": "new",
+          "emoji": "🚀",
+          "text": "Lançamento inicial com suporte ao Manifest V3"
+        },
+        {
+          "type": "new",
+          "emoji": "🔗",
+          "text": "Funcionalidade básica de encurtamento de URL"
+        },
+        {
+          "type": "new",
+          "emoji": "🔄",
+          "text": "Suporte multi-servidor para alternar entre instâncias YOURLS"
+        },
+        {
+          "type": "new",
+          "emoji": "📋",
+          "text": "Funcionalidade de cópia com um clique para URLs encurtadas"
+        },
+        {
+          "type": "new",
+          "emoji": "🎯",
+          "text": "Integração do menu de contexto para encurtamento de links"
+        },
+        {
+          "type": "new",
+          "emoji": "⚙️",
+          "text": "Configurações para servidor YOURLS e preferências"
+        }
+      ]
+    }
+  ]
+}

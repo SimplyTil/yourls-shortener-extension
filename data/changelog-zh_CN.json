@@ -1,0 +1,107 @@
+{
+  "versions": [
+    {
+      "version": "1.2.0",
+      "date": "2025年7月",
+      "changes": [
+        {
+          "type": "new",
+          "emoji": "✨",
+          "text": "采用新设计系统的完整UI现代化"
+        },
+        {
+          "type": "new",
+          "emoji": "📊",
+          "text": "带有服务器统计和最近链接的交互式仪表板"
+        },
+        {
+          "type": "new",
+          "emoji": "🌍",
+          "text": "添加了6种新语言支持：希腊语、意大利语、荷兰语、波兰语、葡萄牙语、瑞典语"
+        },
+        {
+          "type": "improved",
+          "emoji": "🎨",
+          "text": "通过键盘导航和屏幕阅读器支持增强了无障碍性"
+        },
+        {
+          "type": "improved",
+          "emoji": "🌍",
+          "text": "改进了国际化支持，包含14+种语言和RTL支持"
+        },
+        {
+          "type": "fixed",
+          "emoji": "🐛",
+          "text": "修复了后台脚本API请求的CORS问题"
+        }
+      ]
+    },
+    {
+      "version": "1.1.0",
+      "date": "2025年3月",
+      "changes": [
+        {
+          "type": "new",
+          "emoji": "🌍",
+          "text": "添加了阿拉伯语支持和RTL布局"
+        },
+        {
+          "type": "new",
+          "emoji": "🌍",
+          "text": "添加了简体中文本地化"
+        },
+        {
+          "type": "new",
+          "emoji": "ℹ️",
+          "text": "在页脚显示版本信息"
+        },
+        {
+          "type": "improved",
+          "emoji": "⚙️",
+          "text": "增强了YOURLS服务器配置选项"
+        },
+        {
+          "type": "improved",
+          "emoji": "🎨",
+          "text": "改进了语言排序和样式调整"
+        }
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "date": "2025年3月",
+      "changes": [
+        {
+          "type": "new",
+          "emoji": "🚀",
+          "text": "支持Manifest V3的初始发布"
+        },
+        {
+          "type": "new",
+          "emoji": "🔗",
+          "text": "基本的URL缩短功能"
+        },
+        {
+          "type": "new",
+          "emoji": "🔄",
+          "text": "多服务器支持，可在YOURLS实例间切换"
+        },
+        {
+          "type": "new",
+          "emoji": "📋",
+          "text": "缩短URL的一键复制功能"
+        },
+        {
+          "type": "new",
+          "emoji": "🎯",
+          "text": "右键菜单集成，用于链接缩短"
+        },
+        {
+          "type": "new",
+          "emoji": "⚙️",
+          "text": "YOURLS服务器和首选项的配置设置"
+        }
+      ]
+    }
+  ]
+}

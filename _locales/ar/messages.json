@@ -172,5 +172,131 @@
   },
   "footerText": {
     "message": "صُنع بفخر مع ❤ في ألمانيا"
+  },
+  "generalTab": {
+    "message": "عام"
+  },
+  "serversTab": {
+    "message": "الخوادم"
+  },
+  "dashboardTab": {
+    "message": "لوحة التحكم"
+  },
+  "dashboardTitle": {
+    "message": "لوحة التحكم"
+  },
+  "refreshButton": {
+    "message": "تحديث"
+  },
+  "totalLinksLabel": {
+    "message": "إجمالي الروابط"
+  },
+  "totalClicksLabel": {
+    "message": "إجمالي النقرات"
+  },
+  "avgClicksLabel": {
+    "message": "متوسط النقرات"
+  },
+  "serverStatusLabel": {
+    "message": "حالة الخادم"
+  },
+  "recentLinksTitle": {
+    "message": "الروابط الحديثة"
+  },
+  "loadingDashboard": {
+    "message": "جارِ تحميل بيانات لوحة التحكم..."
+  },
+  "dashboardError": {
+    "message": "تعذر تحميل بيانات لوحة التحكم. يرجى التحقق من إعدادات الخادم."
+  },
+  "primaryServerTitle": {
+    "message": "الخادم الرئيسي"
+  },
+  "additionalServerDescription": {
+    "message": "قم بتكوين خادم YOURLS ثانٍ لخيارات تقصير متعددة"
+  },
+  "behaviorTitle": {
+    "message": "إعدادات السلوك"
+  },
+  "interfaceTitle": {
+    "message": "إعدادات الواجهة"
+  },
+  "askKeywordHelp": {
+    "message": "عند التمكين، ستتم مطالبتك بكلمة مفتاحية مخصصة في كل مرة تقوم فيها بتقصير رابط"
+  },
+  "autoCopyHelp": {
+    "message": "عند التمكين، سيتم نسخ الروابط المقصّرة تلقائياً إلى الحافظة"
+  },
+  "languageHelp": {
+    "message": "اختر لغة الواجهة المفضلة لديك"
+  },
+  "viewStatsLabel": {
+    "message": "عرض الإحصائيات من"
+  },
+  "copyLinkTitle": {
+    "message": "نسخ الرابط القصير"
+  },
+  "copiedLinkTitle": {
+    "message": "تم النسخ!"
+  },
+  "changelogTitle": {
+    "message": "سجل التغييرات"
+  },
+  "changelogDescription": {
+    "message": "أحدث التحديثات والتحسينات للإضافة"
+  },
+  "loadingChangelog": {
+    "message": "جارِ تحميل سجل التغييرات..."
+  },
+  "autoSaveLabel": {
+    "message": "حفظ الإعدادات تلقائياً"
+  },
+  "autoSaveHelp": {
+    "message": "عند التمكين، سيتم حفظ الإعدادات تلقائياً أثناء إجراء التغييرات"
+  },
+  "autoSaving": {
+    "message": "جارِ الحفظ التلقائي..."
+  },
+  "autoSaved": {
+    "message": "تم حفظ الإعدادات تلقائياً"
+  },
+  "autoSaveError": {
+    "message": "فشل الحفظ التلقائي"
+  },
+  "loading": {
+    "message": "جارِ التحميل..."
+  },
+  "errorLoadingSettings": {
+    "message": "خطأ في تحميل الإعدادات"
+  },
+  "errorSavingSettings": {
+    "message": "خطأ في حفظ الإعدادات"
+  },
+  "connectionTimeout": {
+    "message": "انتهت مهلة الاتصال"
+  },
+  "dashboardTimeout": {
+    "message": "انتهت مهلة طلب لوحة التحكم"
+  },
+  "noLinksFound": {
+    "message": "لم يتم العثور على روابط"
+  },
+  "clicks": {
+    "message": "نقرات"
+  },
+  "errorNoUrl": {
+    "message": "لا يوجد رابط للتقصير"
+  },
+  "errorInvalidUrl": {
+    "message": "تنسيق رابط غير صالح"
+  },
+  "errorCopy": {
+    "message": "فشل النسخ إلى الحافظة"
+  },
+  "behaviorDescription": {
+    "message": "تكوين كيفية تصرف الإضافة عند تقصير الروابط"
+  },
+  "interfaceDescription": {
+    "message": "تخصيص مظهر ولغة الإضافة"
   }
 }

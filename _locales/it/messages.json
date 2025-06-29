@@ -172,5 +172,131 @@
   },
   "footerText": {
     "message": "Creato con ❤ in Germania"
+  },
+  "generalTab": {
+    "message": "Generale"
+  },
+  "serversTab": {
+    "message": "Server"
+  },
+  "dashboardTab": {
+    "message": "Cruscotto"
+  },
+  "dashboardTitle": {
+    "message": "Cruscotto"
+  },
+  "refreshButton": {
+    "message": "Aggiorna"
+  },
+  "totalLinksLabel": {
+    "message": "Totale Link"
+  },
+  "totalClicksLabel": {
+    "message": "Totale Clic"
+  },
+  "avgClicksLabel": {
+    "message": "Clic Medi"
+  },
+  "serverStatusLabel": {
+    "message": "Stato Server"
+  },
+  "recentLinksTitle": {
+    "message": "Link Recenti"
+  },
+  "loadingDashboard": {
+    "message": "Caricamento dati cruscotto..."
+  },
+  "dashboardError": {
+    "message": "Impossibile caricare i dati del cruscotto. Controlla la configurazione del server."
+  },
+  "primaryServerTitle": {
+    "message": "Server Primario"
+  },
+  "additionalServerDescription": {
+    "message": "Configura un secondo server YOURLS per opzioni di abbreviazione multiple"
+  },
+  "behaviorTitle": {
+    "message": "Impostazioni Comportamento"
+  },
+  "interfaceTitle": {
+    "message": "Impostazioni Interfaccia"
+  },
+  "askKeywordHelp": {
+    "message": "Quando abilitato, ti verrà chiesta una parola chiave personalizzata ogni volta che abbrevia un URL"
+  },
+  "autoCopyHelp": {
+    "message": "Quando abilitato, gli URL abbreviati verranno automaticamente copiati negli appunti"
+  },
+  "languageHelp": {
+    "message": "Scegli la tua lingua di interfaccia preferita"
+  },
+  "viewStatsLabel": {
+    "message": "Visualizza statistiche da"
+  },
+  "copyLinkTitle": {
+    "message": "Copia URL corto"
+  },
+  "copiedLinkTitle": {
+    "message": "Copiato!"
+  },
+  "changelogTitle": {
+    "message": "Registro Modifiche"
+  },
+  "changelogDescription": {
+    "message": "Ultimi aggiornamenti e miglioramenti dell'estensione"
+  },
+  "loadingChangelog": {
+    "message": "Caricamento registro modifiche..."
+  },
+  "autoSaveLabel": {
+    "message": "Salvataggio automatico impostazioni"
+  },
+  "autoSaveHelp": {
+    "message": "Quando abilitato, le impostazioni verranno salvate automaticamente mentre apporti modifiche"
+  },
+  "autoSaving": {
+    "message": "Salvataggio automatico..."
+  },
+  "autoSaved": {
+    "message": "Impostazioni salvate automaticamente"
+  },
+  "autoSaveError": {
+    "message": "Salvataggio automatico fallito"
+  },
+  "loading": {
+    "message": "Caricamento..."
+  },
+  "errorLoadingSettings": {
+    "message": "Errore nel caricamento delle impostazioni"
+  },
+  "errorSavingSettings": {
+    "message": "Errore nel salvataggio delle impostazioni"
+  },
+  "connectionTimeout": {
+    "message": "Timeout della connessione"
+  },
+  "dashboardTimeout": {
+    "message": "Timeout della richiesta del cruscotto"
+  },
+  "noLinksFound": {
+    "message": "Nessun link trovato"
+  },
+  "clicks": {
+    "message": "clic"
+  },
+  "errorNoUrl": {
+    "message": "Nessuna URL da abbreviare"
+  },
+  "errorInvalidUrl": {
+    "message": "Formato URL non valido"
+  },
+  "errorCopy": {
+    "message": "Copia negli appunti fallita"
+  },
+  "behaviorDescription": {
+    "message": "Configura come si comporta l'estensione durante l'abbreviazione degli URL"
+  },
+  "interfaceDescription": {
+    "message": "Personalizza l'aspetto e la lingua dell'estensione"
   }
 }

@@ -1,102 +1,276 @@
 <!DOCTYPE html>
-<meta charset="UTF-8">
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>YOURLS Shortener Settings</title>
   <link rel="stylesheet" href="css/settings.css">
 </head>
 <body>
   <div class="container">
-    <div class="header">
-      <img src="images/icon48.png" alt="YOURLS Icon" class="header-icon">
-      <h1 data-i18n="settingsTitle">YOURLS Settings</h1>
-    </div>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <img src="images/icon48.png" alt="YOURLS Icon" class="header-icon">
+        <h1 data-i18n="settingsTitle">YOURLS Settings</h1>
+      </div>
+    </header>
     
-    <div class="form-group">
-      <label for="yourls_url" data-i18n="serverUrlLabel">YOURLS Server URL</label>
-      <input type="text" id="yourls_url" data-i18n-placeholder="serverUrlPlaceholder">
-      <p class="help-text" data-i18n="serverUrlHelp">Enter the URL to your YOURLS installation</p>
-    </div>
+    <!-- Tab Navigation -->
+    <nav class="tab-navigation" role="tablist" aria-label="Settings sections">
+      <div class="tab-nav-content">
+        <button class="tab-button active" data-tab="servers" data-i18n="serversTab" role="tab" aria-selected="true" aria-controls="servers">Servers</button>
+        <button class="tab-button" data-tab="dashboard" data-i18n="dashboardTab" role="tab" aria-selected="false" aria-controls="dashboard">Dashboard</button>
+        <button class="tab-button" data-tab="general" data-i18n="generalTab" role="tab" aria-selected="false" aria-controls="general">General</button>
+      </div>
+    </nav>
     
-    <div class="form-group">
-      <label for="yourls_key" data-i18n="tokenLabel">YOURLS Signature Token</label>
-      <input type="password" id="yourls_key" data-i18n-placeholder="tokenPlaceholder">
-      <p class="help-text" data-i18n="tokenHelp">Enter your YOURLS signature token for API access</p>
-    </div>
-    
-    <div class="form-group toggle-container">
-      <label for="ask_for_keyword" data-i18n="askKeywordLabel">Always ask for a keyword</label>
-      <label class="switch">
-        <input type="checkbox" id="ask_for_keyword">
-        <span class="slider round"></span>
-      </label>
-    </div>
-    
-    <div class="form-group toggle-container">
-      <label for="auto_copy" data-i18n="autoCopyLabel">Auto-copy shortened URL to clipboard</label>
-      <label class="switch">
-        <input type="checkbox" id="auto_copy">
-        <span class="slider round"></span>
-      </label>
-    </div>
-    
-    <div class="form-group toggle-container">
-      <label for="enable_additional_server" data-i18n="enableAdditionalServerLabel">Enable additional YOURLS server</label>
-      <label class="switch">
-        <input type="checkbox" id="enable_additional_server">
-        <span class="slider round"></span>
-      </label>
-    </div>
-    
-    <div id="additional_server_settings" style="display: none;">
-      <h2 data-i18n="additionalServerTitle">Additional Server Settings</h2>
-      
-      <div class="form-group">
-        <label for="additional_yourls_url" data-i18n="additionalServerUrlLabel">Additional YOURLS Server URL</label>
-        <input type="text" id="additional_yourls_url" data-i18n-placeholder="serverUrlPlaceholder">
-        <p class="help-text" data-i18n="additionalServerUrlHelp">Enter the URL to your additional YOURLS installation</p>
+    <!-- Servers Tab -->
+    <main id="servers" class="tab-content active" role="tabpanel">
+      <div class="section">
+        <div class="section-header">
+          <h2 class="section-title" data-i18n="primaryServerTitle">Primary Server</h2>
+          <p class="section-description" data-i18n="serverUrlHelp">Configure your main YOURLS installation</p>
+        </div>
+        <div class="card">
+          <div class="form-group">
+            <label for="yourls_url" class="form-label" data-i18n="serverUrlLabel">YOURLS Server URL</label>
+            <input type="text" id="yourls_url" class="form-input" data-i18n-placeholder="serverUrlPlaceholder">
+            <p class="form-help" data-i18n="serverUrlHelp">Enter the URL to your YOURLS installation</p>
+          </div>
+          
+          <div class="form-group">
+            <label for="yourls_key" class="form-label" data-i18n="tokenLabel">YOURLS Signature Token</label>
+            <input type="password" id="yourls_key" class="form-input" data-i18n-placeholder="tokenPlaceholder">
+            <p class="form-help" data-i18n="tokenHelp">Enter your YOURLS signature token for API access</p>
+          </div>
+          
+          <div class="button-group">
+            <button id="test_connection" class="button button-secondary" data-i18n="testConnectionButton">Test Connection</button>
+          </div>
+          <div id="test_result"></div>
+        </div>
       </div>
       
-      <div class="form-group">
-        <label for="additional_yourls_key" data-i18n="additionalTokenLabel">Additional YOURLS Signature Token</label>
-        <input type="password" id="additional_yourls_key" data-i18n-placeholder="tokenPlaceholder">
-        <p class="help-text" data-i18n="additionalTokenHelp">Enter your additional YOURLS signature token for API access</p>
+      <div class="section">
+        <div class="section-header">
+          <h2 class="section-title" data-i18n="additionalServerTitle">Additional Server</h2>
+          <p class="section-description" data-i18n="additionalServerDescription">Configure a second YOURLS server for multiple shortening options</p>
+        </div>
+        
+        <div class="toggle-group">
+          <div class="toggle-content">
+            <div class="toggle-title" data-i18n="enableAdditionalServerLabel">Enable additional YOURLS server</div>
+            <div class="toggle-description">Add a second server to switch between different YOURLS instances</div>
+          </div>
+          <div class="toggle-switch">
+            <input type="checkbox" id="enable_additional_server" class="toggle-input">
+            <label for="enable_additional_server" class="toggle-slider"></label>
+          </div>
+        </div>
+        
+        <div id="additional_server_settings" class="card" style="display: none; margin-top: 1.5rem;">
+          <div class="form-group">
+            <label for="additional_yourls_url" class="form-label" data-i18n="additionalServerUrlLabel">Additional YOURLS Server URL</label>
+            <input type="text" id="additional_yourls_url" class="form-input" data-i18n-placeholder="serverUrlPlaceholder">
+            <p class="form-help" data-i18n="additionalServerUrlHelp">Enter the URL to your additional YOURLS installation</p>
+          </div>
+          
+          <div class="form-group">
+            <label for="additional_yourls_key" class="form-label" data-i18n="additionalTokenLabel">Additional YOURLS Signature Token</label>
+            <input type="password" id="additional_yourls_key" class="form-input" data-i18n-placeholder="tokenPlaceholder">
+            <p class="form-help" data-i18n="additionalTokenHelp">Enter your additional YOURLS signature token for API access</p>
+          </div>
+          
+          <div class="form-group">
+            <label for="additional_server_name" class="form-label" data-i18n="additionalServerNameLabel">Server Name (for display)</label>
+            <input type="text" id="additional_server_name" class="form-input" data-i18n-placeholder="additionalServerNamePlaceholder">
+            <p class="form-help" data-i18n="additionalServerNameHelp">Enter a name to identify this server in the dropdown</p>
+          </div>
+          
+          <div class="button-group">
+            <button id="test_additional_connection" class="button button-secondary" data-i18n="testAdditionalConnectionButton">Test Additional Connection</button>
+          </div>
+          <div id="test_additional_result"></div>
+        </div>
       </div>
       
-      <div class="form-group">
-        <label for="additional_server_name" data-i18n="additionalServerNameLabel">Server Name (for display)</label>
-        <input type="text" id="additional_server_name" data-i18n-placeholder="additionalServerNamePlaceholder">
-        <p class="help-text" data-i18n="additionalServerNameHelp">Enter a name to identify this server in the dropdown</p>
+      <div class="section">
+        <div class="card">
+          <button id="save_button" class="button button-success button-lg" data-i18n="saveButton">Save Settings</button>
+          <div id="status"></div>
+        </div>
       </div>
-    </div>
+    </main>
     
-    <div class="form-group">
-      <label for="language" data-i18n="languageLabel">Language</label>
-      <select id="language">
-        <!-- Will be populated by JavaScript -->
-      </select>
-    </div>
+    <!-- Dashboard Tab -->
+    <main id="dashboard" class="tab-content" role="tabpanel">
+      <div class="dashboard-header">
+        <h2 class="dashboard-title" data-i18n="dashboardTitle">Dashboard</h2>
+        <div class="dashboard-controls">
+          <div id="server-toggle" class="server-selector" style="display: none;">
+            <label for="dashboard-server-select" class="server-selector-label" data-i18n="viewStatsLabel">View stats from:</label>
+            <select id="dashboard-server-select" class="server-selector-select" aria-label="Select server for dashboard">
+              <option value="primary" data-i18n="primaryServerOption">Primary Server</option>
+              <option value="additional" id="dashboard-additional-option"></option>
+            </select>
+          </div>
+          <button id="refresh_dashboard" class="button button-secondary" data-i18n="refreshButton" aria-label="Refresh dashboard data">
+            <span aria-hidden="true">🔄</span>
+            <span>Refresh</span>
+          </button>
+        </div>
+      </div>
+      
+      <div id="dashboard_content">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-content">
+              <div class="stat-icon">🔗</div>
+              <div class="stat-details">
+                <div class="stat-value" id="total_links" data-target="0">-</div>
+                <div class="stat-label" data-i18n="totalLinksLabel">Total Links</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-content">
+              <div class="stat-icon">👆</div>
+              <div class="stat-details">
+                <div class="stat-value" id="total_clicks" data-target="0">-</div>
+                <div class="stat-label" data-i18n="totalClicksLabel">Total Clicks</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-content">
+              <div class="stat-icon">📊</div>
+              <div class="stat-details">
+                <div class="stat-value" id="avg_clicks" data-target="0">-</div>
+                <div class="stat-label" data-i18n="avgClicksLabel">Avg. Clicks</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-content">
+              <div class="stat-icon">🌐</div>
+              <div class="stat-details">
+                <div class="stat-value" id="server_status">-</div>
+                <div class="stat-label" data-i18n="serverStatusLabel">Server Status</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="recent-links">
+          <div class="recent-links-header">
+            <h3 class="recent-links-title" data-i18n="recentLinksTitle">Recent Links</h3>
+          </div>
+          <div id="recent_links_list" class="links-list">
+            <div class="loading-state" data-i18n="loadingDashboard">Loading dashboard data...</div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="dashboard_error" class="error-state" style="display: none;">
+        <p data-i18n="dashboardError">Unable to load dashboard data. Please check your server configuration.</p>
+      </div>
+    </main>
     
-    <div class="form-group">
-      <button id="save_button" data-i18n="saveButton">Save Settings</button>
-      <div id="status"></div>
-    </div>
+    <!-- General Tab -->
+    <main id="general" class="tab-content" role="tabpanel">
+      <div class="section">
+        <div class="section-header">
+          <h2 class="section-title" data-i18n="behaviorTitle">Behavior Settings</h2>
+          <p class="section-description" data-i18n="behaviorDescription">Configure how the extension behaves when shortening URLs</p>
+        </div>
+        <div class="card">
+          <div class="toggle-group">
+            <div class="toggle-content">
+              <div class="toggle-title" data-i18n="askKeywordLabel">Always ask for a keyword</div>
+              <div class="toggle-description" data-i18n="askKeywordHelp">When enabled, you'll be prompted for a custom keyword each time you shorten a URL</div>
+            </div>
+            <div class="toggle-switch">
+              <input type="checkbox" id="ask_for_keyword" class="toggle-input">
+              <label for="ask_for_keyword" class="toggle-slider"></label>
+            </div>
+          </div>
+          
+          <div class="toggle-group">
+            <div class="toggle-content">
+              <div class="toggle-title" data-i18n="autoCopyLabel">Auto-copy shortened URL to clipboard</div>
+              <div class="toggle-description" data-i18n="autoCopyHelp">When enabled, shortened URLs will automatically be copied to your clipboard</div>
+            </div>
+            <div class="toggle-switch">
+              <input type="checkbox" id="auto_copy" class="toggle-input">
+              <label for="auto_copy" class="toggle-slider"></label>
+            </div>
+          </div>
+          
+          <div class="toggle-group">
+            <div class="toggle-content">
+              <div class="toggle-title" data-i18n="autoSaveLabel">Auto-save settings</div>
+              <div class="toggle-description" data-i18n="autoSaveHelp">When enabled, settings will be saved automatically as you make changes</div>
+            </div>
+            <div class="toggle-switch">
+              <input type="checkbox" id="auto_save_settings" class="toggle-input" checked>
+              <label for="auto_save_settings" class="toggle-slider"></label>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="section">
+        <div class="section-header">
+          <h2 class="section-title" data-i18n="interfaceTitle">Interface Settings</h2>
+          <p class="section-description" data-i18n="interfaceDescription">Customize the extension's appearance and language</p>
+        </div>
+        <div class="card">
+          <div class="form-group">
+            <label for="language" class="form-label" data-i18n="languageLabel">Language</label>
+            <select id="language" class="form-input form-select">
+              <!-- Will be populated by JavaScript -->
+            </select>
+            <p class="form-help" data-i18n="languageHelp">Choose your preferred interface language</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-header">
+          <h2 class="section-title" data-i18n="changelogTitle">What's New</h2>
+          <p class="section-description" data-i18n="changelogDescription">Latest updates and improvements to the extension</p>
+        </div>
+        <div class="changelog">
+          <div class="changelog-header">
+            <h3 class="changelog-title">
+              <span>📋</span>
+              <span data-i18n="changelogTitle">Changelog</span>
+            </h3>
+          </div>
+          <div id="changelog-content" class="changelog-content">
+            <div class="loading-state" data-i18n="loadingChangelog">Loading changelog...</div>
+          </div>
+        </div>
+      </div>
+    </main>
     
-    <div class="form-group">
-      <button id="test_connection" data-i18n="testConnectionButton">Test Connection</button>
-      <div id="test_result"></div>
-    </div>
-    
-    <div class="form-group" id="test_additional_connection_container" style="display: none;">
-      <button id="test_additional_connection" data-i18n="testAdditionalConnectionButton">Test Additional Connection</button>
-      <div id="test_additional_result"></div>
-    </div>
-    <p class="footer-text">
-      <span data-i18n-html="footerText">Proudly made with <span style="color: red;">&#10084;</span> in Germany</span>
-      <span id="version-info" class="version-info"></span>
-    </p>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p class="footer-text">
+          <span data-i18n-html="footerText">Proudly made with ❤ in Germany</span>
+          <span id="version-info" class="version-info"></span>
+        </p>
+      </div>
+    </footer>
   </div>
+  
   <script src="js/i18n.js"></script>
+  <script src="js/utils.js"></script>
   <script src="settings.js"></script>
 </body>
 </html>

@@ -172,5 +172,131 @@
   },
   "footerText": {
     "message": "Stolt gjord med ❤ i Tyskland"
+  },
+  "generalTab": {
+    "message": "Allmänt"
+  },
+  "serversTab": {
+    "message": "Servrar"
+  },
+  "dashboardTab": {
+    "message": "Instrumentpanel"
+  },
+  "dashboardTitle": {
+    "message": "Instrumentpanel"
+  },
+  "refreshButton": {
+    "message": "Uppdatera"
+  },
+  "totalLinksLabel": {
+    "message": "Totalt Antal Länkar"
+  },
+  "totalClicksLabel": {
+    "message": "Totalt Antal Klick"
+  },
+  "avgClicksLabel": {
+    "message": "Genomsnittliga Klick"
+  },
+  "serverStatusLabel": {
+    "message": "Serverstatus"
+  },
+  "recentLinksTitle": {
+    "message": "Senaste Länkar"
+  },
+  "loadingDashboard": {
+    "message": "Laddar instrumentpaneldata..."
+  },
+  "dashboardError": {
+    "message": "Kan inte ladda instrumentpaneldata. Kontrollera din serverkonfiguration."
+  },
+  "primaryServerTitle": {
+    "message": "Primär Server"
+  },
+  "additionalServerDescription": {
+    "message": "Konfigurera en andra YOURLS-server för flera förkortningsalternativ"
+  },
+  "behaviorTitle": {
+    "message": "Beteendeinställningar"
+  },
+  "interfaceTitle": {
+    "message": "Gränssnittsinställningar"
+  },
+  "askKeywordHelp": {
+    "message": "När aktiverat kommer du att tillfrågas om ett anpassat nyckelord varje gång du förkortar en URL"
+  },
+  "autoCopyHelp": {
+    "message": "När aktiverat kommer förkortade URL:er automatiskt att kopieras till urklipp"
+  },
+  "languageHelp": {
+    "message": "Välj ditt föredragna gränssnittsspråk"
+  },
+  "viewStatsLabel": {
+    "message": "Visa statistik från"
+  },
+  "copyLinkTitle": {
+    "message": "Kopiera kort URL"
+  },
+  "copiedLinkTitle": {
+    "message": "Kopierad!"
+  },
+  "changelogTitle": {
+    "message": "Ändringslogg"
+  },
+  "changelogDescription": {
+    "message": "Senaste uppdateringar och förbättringar av tillägget"
+  },
+  "loadingChangelog": {
+    "message": "Laddar ändringslogg..."
+  },
+  "autoSaveLabel": {
+    "message": "Spara inställningar automatiskt"
+  },
+  "autoSaveHelp": {
+    "message": "När aktiverat sparas inställningar automatiskt när du gör ändringar"
+  },
+  "autoSaving": {
+    "message": "Sparar automatiskt..."
+  },
+  "autoSaved": {
+    "message": "Inställningar sparade automatiskt"
+  },
+  "autoSaveError": {
+    "message": "Automatisk sparning misslyckades"
+  },
+  "loading": {
+    "message": "Laddar..."
+  },
+  "errorLoadingSettings": {
+    "message": "Fel vid laddning av inställningar"
+  },
+  "errorSavingSettings": {
+    "message": "Fel vid sparande av inställningar"
+  },
+  "connectionTimeout": {
+    "message": "Anslutningen tog slut"
+  },
+  "dashboardTimeout": {
+    "message": "Instrumentpanelförfrågan tog slut"
+  },
+  "noLinksFound": {
+    "message": "Inga länkar hittades"
+  },
+  "clicks": {
+    "message": "klick"
+  },
+  "errorNoUrl": {
+    "message": "Ingen URL att förkorta"
+  },
+  "errorInvalidUrl": {
+    "message": "Ogiltigt URL-format"
+  },
+  "errorCopy": {
+    "message": "Misslyckades att kopiera till urklipp"
+  },
+  "behaviorDescription": {
+    "message": "Konfigurera hur tillägget beter sig när URL:er förkortas"
+  },
+  "interfaceDescription": {
+    "message": "Anpassa tillägets utseende och språk"
   }
 }

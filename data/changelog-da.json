@@ -1,0 +1,107 @@
+{
+  "versions": [
+    {
+      "version": "1.2.0",
+      "date": "Juli 2025",
+      "changes": [
+        {
+          "type": "new",
+          "emoji": "✨",
+          "text": "Komplet UI-modernisering med nyt designsystem"
+        },
+        {
+          "type": "new",
+          "emoji": "📊",
+          "text": "Interaktivt dashboard med serverstatistikker og seneste links"
+        },
+        {
+          "type": "new",
+          "emoji": "🌍",
+          "text": "Tilføjet understøttelse for 6 nye sprog: græsk, italiensk, hollandsk, polsk, portugisisk, svensk"
+        },
+        {
+          "type": "improved",
+          "emoji": "🎨",
+          "text": "Forbedret tilgængelighed med tastaturnavigation og skærmlæserunderstøttelse"
+        },
+        {
+          "type": "improved",
+          "emoji": "🌍",
+          "text": "Forbedret internationalisering med 14+ sprog og RTL-understøttelse"
+        },
+        {
+          "type": "fixed",
+          "emoji": "🐛",
+          "text": "Løst CORS-problemer med baggrundsskript API-anmodninger"
+        }
+      ]
+    },
+    {
+      "version": "1.1.0",
+      "date": "Marts 2025",
+      "changes": [
+        {
+          "type": "new",
+          "emoji": "🌍",
+          "text": "Tilføjet arabisk sprogunderstøttelse med RTL-layout"
+        },
+        {
+          "type": "new",
+          "emoji": "🌍",
+          "text": "Tilføjet forenklet kinesisk lokalisering"
+        },
+        {
+          "type": "new",
+          "emoji": "ℹ️",
+          "text": "Versionsinformation vist i sidefod"
+        },
+        {
+          "type": "improved",
+          "emoji": "⚙️",
+          "text": "Forbedrede YOURLS-serverkonfigurationsindstillinger"
+        },
+        {
+          "type": "improved",
+          "emoji": "🎨",
+          "text": "Forbedringer af sprogrækkefølge og stiljusteringer"
+        }
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "date": "Marts 2025",
+      "changes": [
+        {
+          "type": "new",
+          "emoji": "🚀",
+          "text": "Første udgivelse med Manifest V3-understøttelse"
+        },
+        {
+          "type": "new",
+          "emoji": "🔗",
+          "text": "Grundlæggende URL-forkortningsfunktionalitet"
+        },
+        {
+          "type": "new",
+          "emoji": "🔄",
+          "text": "Multi-server-understøttelse til skift mellem YOURLS-instanser"
+        },
+        {
+          "type": "new",
+          "emoji": "📋",
+          "text": "Et-klik-kopiering for forkortede URL'er"
+        },
+        {
+          "type": "new",
+          "emoji": "🎯",
+          "text": "Kontekstmenu-integration til link-forkortning"
+        },
+        {
+          "type": "new",
+          "emoji": "⚙️",
+          "text": "Konfigurationsindstillinger for YOURLS-server og præferencer"
+        }
+      ]
+    }
+  ]
+}

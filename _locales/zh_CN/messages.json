@@ -172,5 +172,131 @@
   },
   "footerText": {
     "message": "自豪地在德国用❤制作"
+  },
+  "generalTab": {
+    "message": "常规"
+  },
+  "serversTab": {
+    "message": "服务器"
+  },
+  "dashboardTab": {
+    "message": "仪表板"
+  },
+  "dashboardTitle": {
+    "message": "仪表板"
+  },
+  "refreshButton": {
+    "message": "刷新"
+  },
+  "totalLinksLabel": {
+    "message": "总链接数"
+  },
+  "totalClicksLabel": {
+    "message": "总点击数"
+  },
+  "avgClicksLabel": {
+    "message": "平均点击数"
+  },
+  "serverStatusLabel": {
+    "message": "服务器状态"
+  },
+  "recentLinksTitle": {
+    "message": "最近的链接"
+  },
+  "loadingDashboard": {
+    "message": "正在加载仪表板数据..."
+  },
+  "dashboardError": {
+    "message": "无法加载仪表板数据。请检查您的服务器配置。"
+  },
+  "primaryServerTitle": {
+    "message": "主服务器"
+  },
+  "additionalServerDescription": {
+    "message": "配置第二个 YOURLS 服务器以获得多个缩短选项"
+  },
+  "behaviorTitle": {
+    "message": "行为设置"
+  },
+  "interfaceTitle": {
+    "message": "界面设置"
+  },
+  "askKeywordHelp": {
+    "message": "启用时，每次缩短 URL 时都会提示您输入自定义关键词"
+  },
+  "autoCopyHelp": {
+    "message": "启用时，缩短的 URL 将自动复制到剪贴板"
+  },
+  "languageHelp": {
+    "message": "选择您的首选界面语言"
+  },
+  "viewStatsLabel": {
+    "message": "查看统计来源"
+  },
+  "copyLinkTitle": {
+    "message": "复制短链接"
+  },
+  "copiedLinkTitle": {
+    "message": "已复制！"
+  },
+  "changelogTitle": {
+    "message": "更新日志"
+  },
+  "changelogDescription": {
+    "message": "扩展的最新更新和改进"
+  },
+  "loadingChangelog": {
+    "message": "正在加载更新日志..."
+  },
+  "autoSaveLabel": {
+    "message": "自动保存设置"
+  },
+  "autoSaveHelp": {
+    "message": "启用时，设置将在您进行更改时自动保存"
+  },
+  "autoSaving": {
+    "message": "自动保存中..."
+  },
+  "autoSaved": {
+    "message": "设置已自动保存"
+  },
+  "autoSaveError": {
+    "message": "自动保存失败"
+  },
+  "loading": {
+    "message": "加载中..."
+  },
+  "errorLoadingSettings": {
+    "message": "加载设置时出错"
+  },
+  "errorSavingSettings": {
+    "message": "保存设置时出错"
+  },
+  "connectionTimeout": {
+    "message": "连接超时"
+  },
+  "dashboardTimeout": {
+    "message": "仪表板请求超时"
+  },
+  "noLinksFound": {
+    "message": "未找到链接"
+  },
+  "clicks": {
+    "message": "点击"
+  },
+  "errorNoUrl": {
+    "message": "没有要缩短的URL"
+  },
+  "errorInvalidUrl": {
+    "message": "无效的URL格式"
+  },
+  "errorCopy": {
+    "message": "复制到剪贴板失败"
+  },
+  "behaviorDescription": {
+    "message": "配置扩展在缩短URL时的行为方式"
+  },
+  "interfaceDescription": {
+    "message": "自定义扩展的外观和语言"
   }
 }

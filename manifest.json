@@ -1,6 +1,6 @@
 {
   "name": "__MSG_extensionName__",
-  "version": "1.0.1",
+  "version": "1.2.0",
   "manifest_version": 3,
   "description": "__MSG_extensionDescription__",
   "author": "extensions@lyxo.link",
@@ -17,8 +17,7 @@
       "48": "images/icon48.png",
       "128": "images/icon128.png"
     },
-    "default_title": "__MSG_extensionName__",
-    "theme_color": "#026090"
+    "default_title": "__MSG_extensionName__"
   },
   "permissions": [
     "activeTab",
@@ -29,13 +28,22 @@
     "<all_urls>"
   ],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background.js",
+    "type": "module"
   },
   "options_page": "settings.html",
+  "options_ui": {
+    "page": "settings.html",
+    "open_in_tab": true
+  },
   "web_accessible_resources": [
     {
-      "resources": ["_locales/*/*.json"],
+      "resources": ["_locales/*/*.json", "data/*.json", "changelog/*.json"],
       "matches": ["<all_urls>"]
     }
-  ]
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "minimum_chrome_version": "88"
 }

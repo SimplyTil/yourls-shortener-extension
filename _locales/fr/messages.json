@@ -172,5 +172,131 @@
   },
   "footerText": {
     "message": "Fièrement créé avec ❤ en Allemagne"
+  },
+  "generalTab": {
+    "message": "Général"
+  },
+  "serversTab": {
+    "message": "Serveurs"
+  },
+  "dashboardTab": {
+    "message": "Tableau de bord"
+  },
+  "dashboardTitle": {
+    "message": "Tableau de bord"
+  },
+  "refreshButton": {
+    "message": "Actualiser"
+  },
+  "totalLinksLabel": {
+    "message": "Total des Liens"
+  },
+  "totalClicksLabel": {
+    "message": "Total des Clics"
+  },
+  "avgClicksLabel": {
+    "message": "Clics Moyens"
+  },
+  "serverStatusLabel": {
+    "message": "État du Serveur"
+  },
+  "recentLinksTitle": {
+    "message": "Liens Récents"
+  },
+  "loadingDashboard": {
+    "message": "Chargement des données du tableau de bord..."
+  },
+  "dashboardError": {
+    "message": "Impossible de charger les données du tableau de bord. Vérifiez la configuration de votre serveur."
+  },
+  "primaryServerTitle": {
+    "message": "Serveur Principal"
+  },
+  "additionalServerDescription": {
+    "message": "Configurez un second serveur YOURLS pour plusieurs options de raccourcissement"
+  },
+  "behaviorTitle": {
+    "message": "Paramètres de Comportement"
+  },
+  "interfaceTitle": {
+    "message": "Paramètres d'Interface"
+  },
+  "askKeywordHelp": {
+    "message": "Lorsqu'activé, vous serez invité à saisir un mot-clé personnalisé chaque fois que vous raccourcissez une URL"
+  },
+  "autoCopyHelp": {
+    "message": "Lorsqu'activé, les URL raccourcies seront automatiquement copiées dans le presse-papiers"
+  },
+  "languageHelp": {
+    "message": "Choisissez votre langue d'interface préférée"
+  },
+  "viewStatsLabel": {
+    "message": "Voir les statistiques de"
+  },
+  "copyLinkTitle": {
+    "message": "Copier l'URL courte"
+  },
+  "copiedLinkTitle": {
+    "message": "Copié !"
+  },
+  "changelogTitle": {
+    "message": "Journal des Modifications"
+  },
+  "changelogDescription": {
+    "message": "Dernières mises à jour et améliorations de l'extension"
+  },
+  "loadingChangelog": {
+    "message": "Chargement du journal des modifications..."
+  },
+  "autoSaveLabel": {
+    "message": "Sauvegarde automatique des paramètres"
+  },
+  "autoSaveHelp": {
+    "message": "Lorsqu'activé, les paramètres seront sauvegardés automatiquement lorsque vous apportez des modifications"
+  },
+  "autoSaving": {
+    "message": "Sauvegarde automatique..."
+  },
+  "autoSaved": {
+    "message": "Paramètres sauvegardés automatiquement"
+  },
+  "autoSaveError": {
+    "message": "Échec de la sauvegarde automatique"
+  },
+  "loading": {
+    "message": "Chargement..."
+  },
+  "errorLoadingSettings": {
+    "message": "Erreur lors du chargement des paramètres"
+  },
+  "errorSavingSettings": {
+    "message": "Erreur lors de la sauvegarde des paramètres"
+  },
+  "connectionTimeout": {
+    "message": "Délai de connexion dépassé"
+  },
+  "dashboardTimeout": {
+    "message": "Délai de la demande du tableau de bord dépassé"
+  },
+  "noLinksFound": {
+    "message": "Aucun lien trouvé"
+  },
+  "clicks": {
+    "message": "clics"
+  },
+  "errorNoUrl": {
+    "message": "Aucune URL à raccourcir"
+  },
+  "errorInvalidUrl": {
+    "message": "Format d'URL invalide"
+  },
+  "errorCopy": {
+    "message": "Échec de la copie dans le presse-papiers"
+  },
+  "behaviorDescription": {
+    "message": "Configurez le comportement de l'extension lors du raccourcissement d'URLs"
+  },
+  "interfaceDescription": {
+    "message": "Personnalisez l'apparence et la langue de l'extension"
   }
 }

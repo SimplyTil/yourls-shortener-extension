@@ -1,0 +1,107 @@
+{
+  "versions": [
+    {
+      "version": "1.2.0",
+      "date": "Luglio 2025",
+      "changes": [
+        {
+          "type": "new",
+          "emoji": "✨",
+          "text": "Modernizzazione completa dell'interfaccia utente con nuovo sistema di design"
+        },
+        {
+          "type": "new",
+          "emoji": "📊",
+          "text": "Dashboard interattiva con statistiche del server e link recenti"
+        },
+        {
+          "type": "new",
+          "emoji": "🌍",
+          "text": "Aggiunto supporto per 6 nuove lingue: greco, italiano, olandese, polacco, portoghese, svedese"
+        },
+        {
+          "type": "improved",
+          "emoji": "🎨",
+          "text": "Accessibilità migliorata con navigazione da tastiera e supporto per lettori di schermo"
+        },
+        {
+          "type": "improved",
+          "emoji": "🌍",
+          "text": "Internazionalizzazione migliorata con 14+ lingue e supporto RTL"
+        },
+        {
+          "type": "fixed",
+          "emoji": "🐛",
+          "text": "Risolti problemi CORS con richieste API dello script in background"
+        }
+      ]
+    },
+    {
+      "version": "1.1.0",
+      "date": "Marzo 2025",
+      "changes": [
+        {
+          "type": "new",
+          "emoji": "🌍",
+          "text": "Aggiunto supporto per la lingua araba con layout RTL"
+        },
+        {
+          "type": "new",
+          "emoji": "🌍",
+          "text": "Aggiunta localizzazione cinese semplificato"
+        },
+        {
+          "type": "new",
+          "emoji": "ℹ️",
+          "text": "Visualizzazione informazioni versione nel footer"
+        },
+        {
+          "type": "improved",
+          "emoji": "⚙️",
+          "text": "Opzioni di configurazione server YOURLS migliorate"
+        },
+        {
+          "type": "improved",
+          "emoji": "🎨",
+          "text": "Miglioramenti nell'ordinamento delle lingue e aggiustamenti di stile"
+        }
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "date": "Marzo 2025",
+      "changes": [
+        {
+          "type": "new",
+          "emoji": "🚀",
+          "text": "Rilascio iniziale con supporto Manifest V3"
+        },
+        {
+          "type": "new",
+          "emoji": "🔗",
+          "text": "Funzionalità base di accorciamento URL"
+        },
+        {
+          "type": "new",
+          "emoji": "🔄",
+          "text": "Supporto multi-server per cambiare tra istanze YOURLS"
+        },
+        {
+          "type": "new",
+          "emoji": "📋",
+          "text": "Funzionalità copia con un clic per URL accorciati"
+        },
+        {
+          "type": "new",
+          "emoji": "🎯",
+          "text": "Integrazione menu contestuale per accorciamento link"
+        },
+        {
+          "type": "new",
+          "emoji": "⚙️",
+          "text": "Impostazioni di configurazione per server YOURLS e preferenze"
+        }
+      ]
+    }
+  ]
+}

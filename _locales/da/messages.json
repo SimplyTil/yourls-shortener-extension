@@ -172,5 +172,131 @@
   },
   "footerText": {
     "message": "Stolt lavet med ❤ i Tyskland"
+  },
+  "generalTab": {
+    "message": "Generelt"
+  },
+  "serversTab": {
+    "message": "Servere"
+  },
+  "dashboardTab": {
+    "message": "Dashboard"
+  },
+  "dashboardTitle": {
+    "message": "Dashboard"
+  },
+  "refreshButton": {
+    "message": "Opdater"
+  },
+  "totalLinksLabel": {
+    "message": "Samlede Links"
+  },
+  "totalClicksLabel": {
+    "message": "Samlede Klik"
+  },
+  "avgClicksLabel": {
+    "message": "Gennemsnitlige Klik"
+  },
+  "serverStatusLabel": {
+    "message": "Serverstatus"
+  },
+  "recentLinksTitle": {
+    "message": "Seneste Links"
+  },
+  "loadingDashboard": {
+    "message": "Indlæser dashboard-data..."
+  },
+  "dashboardError": {
+    "message": "Kan ikke indlæse dashboard-data. Kontrollér din serverkonfiguration."
+  },
+  "primaryServerTitle": {
+    "message": "Primær Server"
+  },
+  "additionalServerDescription": {
+    "message": "Konfigurer en anden YOURLS-server for flere forkortelsesmuligheder"
+  },
+  "behaviorTitle": {
+    "message": "Adfærdsindstillinger"
+  },
+  "interfaceTitle": {
+    "message": "Interface-indstillinger"
+  },
+  "askKeywordHelp": {
+    "message": "Når aktiveret, vil du blive bedt om et brugerdefineret nøgleord hver gang du forkorter en URL"
+  },
+  "autoCopyHelp": {
+    "message": "Når aktiveret, vil forkortede URL'er automatisk blive kopieret til udklipsholderen"
+  },
+  "languageHelp": {
+    "message": "Vælg dit foretrukne interface-sprog"
+  },
+  "viewStatsLabel": {
+    "message": "Se statistikker fra"
+  },
+  "copyLinkTitle": {
+    "message": "Kopiér kort URL"
+  },
+  "copiedLinkTitle": {
+    "message": "Kopieret!"
+  },
+  "changelogTitle": {
+    "message": "Ændringslog"
+  },
+  "changelogDescription": {
+    "message": "Seneste opdateringer og forbedringer til udvidelsen"
+  },
+  "loadingChangelog": {
+    "message": "Indlæser ændringslog..."
+  },
+  "autoSaveLabel": {
+    "message": "Automatisk gem indstillinger"
+  },
+  "autoSaveHelp": {
+    "message": "Når aktiveret, vil indstillinger blive gemt automatisk, når du foretager ændringer"
+  },
+  "autoSaving": {
+    "message": "Gemmer automatisk..."
+  },
+  "autoSaved": {
+    "message": "Indstillinger gemt automatisk"
+  },
+  "autoSaveError": {
+    "message": "Automatisk gemning mislykkedes"
+  },
+  "loading": {
+    "message": "Indlæser..."
+  },
+  "errorLoadingSettings": {
+    "message": "Fejl ved indlæsning af indstillinger"
+  },
+  "errorSavingSettings": {
+    "message": "Fejl ved gemning af indstillinger"
+  },
+  "connectionTimeout": {
+    "message": "Forbindelse tidsudløb"
+  },
+  "dashboardTimeout": {
+    "message": "Dashboard anmodning tidsudløb"
+  },
+  "noLinksFound": {
+    "message": "Ingen links fundet"
+  },
+  "clicks": {
+    "message": "klik"
+  },
+  "errorNoUrl": {
+    "message": "Ingen URL at forkorte"
+  },
+  "errorInvalidUrl": {
+    "message": "Ugyldigt URL-format"
+  },
+  "errorCopy": {
+    "message": "Kopiering til udklipsholder mislykkedes"
+  },
+  "behaviorDescription": {
+    "message": "Konfigurer hvordan udvidelsen opfører sig ved forkortning af URLs"
+  },
+  "interfaceDescription": {
+    "message": "Tilpas udvidelsens udseende og sprog"
   }
 }

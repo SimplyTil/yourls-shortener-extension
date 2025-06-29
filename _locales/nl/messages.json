@@ -172,5 +172,131 @@
   },
   "footerText": {
     "message": "Trots gemaakt met ❤ in Duitsland"
+  },
+  "generalTab": {
+    "message": "Algemeen"
+  },
+  "serversTab": {
+    "message": "Servers"
+  },
+  "dashboardTab": {
+    "message": "Dashboard"
+  },
+  "dashboardTitle": {
+    "message": "Dashboard"
+  },
+  "refreshButton": {
+    "message": "Vernieuwen"
+  },
+  "totalLinksLabel": {
+    "message": "Totaal Aantal Links"
+  },
+  "totalClicksLabel": {
+    "message": "Totaal Aantal Klikken"
+  },
+  "avgClicksLabel": {
+    "message": "Gemiddelde Klikken"
+  },
+  "serverStatusLabel": {
+    "message": "Serverstatus"
+  },
+  "recentLinksTitle": {
+    "message": "Recente Links"
+  },
+  "loadingDashboard": {
+    "message": "Dashboard gegevens laden..."
+  },
+  "dashboardError": {
+    "message": "Kan dashboard gegevens niet laden. Controleer je serverconfiguratie."
+  },
+  "primaryServerTitle": {
+    "message": "Primaire Server"
+  },
+  "additionalServerDescription": {
+    "message": "Configureer een tweede YOURLS-server voor meerdere verkortingsopties"
+  },
+  "behaviorTitle": {
+    "message": "Gedragsinstellingen"
+  },
+  "interfaceTitle": {
+    "message": "Interface-instellingen"
+  },
+  "askKeywordHelp": {
+    "message": "Wanneer ingeschakeld, wordt je gevraagd om een aangepast trefwoord elke keer dat je een URL verkort"
+  },
+  "autoCopyHelp": {
+    "message": "Wanneer ingeschakeld, worden verkorte URLs automatisch naar het klembord gekopieerd"
+  },
+  "languageHelp": {
+    "message": "Kies je gewenste interfacetaal"
+  },
+  "viewStatsLabel": {
+    "message": "Bekijk statistieken van"
+  },
+  "copyLinkTitle": {
+    "message": "Kopieer korte URL"
+  },
+  "copiedLinkTitle": {
+    "message": "Gekopieerd!"
+  },
+  "changelogTitle": {
+    "message": "Wijzigingslogboek"
+  },
+  "changelogDescription": {
+    "message": "Laatste updates en verbeteringen aan de extensie"
+  },
+  "loadingChangelog": {
+    "message": "Wijzigingslogboek laden..."
+  },
+  "autoSaveLabel": {
+    "message": "Instellingen automatisch opslaan"
+  },
+  "autoSaveHelp": {
+    "message": "Wanneer ingeschakeld, worden instellingen automatisch opgeslagen terwijl je wijzigingen aanbrengt"
+  },
+  "autoSaving": {
+    "message": "Automatisch opslaan..."
+  },
+  "autoSaved": {
+    "message": "Instellingen automatisch opgeslagen"
+  },
+  "autoSaveError": {
+    "message": "Automatisch opslaan mislukt"
+  },
+  "loading": {
+    "message": "Laden..."
+  },
+  "errorLoadingSettings": {
+    "message": "Fout bij laden instellingen"
+  },
+  "errorSavingSettings": {
+    "message": "Fout bij opslaan instellingen"
+  },
+  "connectionTimeout": {
+    "message": "Verbinding is verlopen"
+  },
+  "dashboardTimeout": {
+    "message": "Dashboard-verzoek is verlopen"
+  },
+  "noLinksFound": {
+    "message": "Geen links gevonden"
+  },
+  "clicks": {
+    "message": "klikken"
+  },
+  "errorNoUrl": {
+    "message": "Geen URL om te verkorten"
+  },
+  "errorInvalidUrl": {
+    "message": "Ongeldig URL-formaat"
+  },
+  "errorCopy": {
+    "message": "Kopiëren naar klembord mislukt"
+  },
+  "behaviorDescription": {
+    "message": "Configureer hoe de extensie zich gedraagt bij het verkorten van URLs"
+  },
+  "interfaceDescription": {
+    "message": "Pas het uiterlijk en de taal van de extensie aan"
   }
 }

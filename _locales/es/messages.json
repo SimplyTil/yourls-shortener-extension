@@ -172,5 +172,131 @@
   },
   "footerText": {
     "message": "Hecho con orgullo con ❤ en Alemania"
+  },
+  "generalTab": {
+    "message": "General"
+  },
+  "serversTab": {
+    "message": "Servidores"
+  },
+  "dashboardTab": {
+    "message": "Panel"
+  },
+  "dashboardTitle": {
+    "message": "Panel"
+  },
+  "refreshButton": {
+    "message": "Actualizar"
+  },
+  "totalLinksLabel": {
+    "message": "Total de Enlaces"
+  },
+  "totalClicksLabel": {
+    "message": "Total de Clics"
+  },
+  "avgClicksLabel": {
+    "message": "Clics Promedio"
+  },
+  "serverStatusLabel": {
+    "message": "Estado del Servidor"
+  },
+  "recentLinksTitle": {
+    "message": "Enlaces Recientes"
+  },
+  "loadingDashboard": {
+    "message": "Cargando datos del panel..."
+  },
+  "dashboardError": {
+    "message": "No se pueden cargar los datos del panel. Comprueba la configuración del servidor."
+  },
+  "primaryServerTitle": {
+    "message": "Servidor Principal"
+  },
+  "additionalServerDescription": {
+    "message": "Configura un segundo servidor YOURLS para múltiples opciones de acortamiento"
+  },
+  "behaviorTitle": {
+    "message": "Configuración de Comportamiento"
+  },
+  "interfaceTitle": {
+    "message": "Configuración de Interfaz"
+  },
+  "askKeywordHelp": {
+    "message": "Cuando esté habilitado, se te pedirá una palabra clave personalizada cada vez que acortes una URL"
+  },
+  "autoCopyHelp": {
+    "message": "Cuando esté habilitado, las URLs acortadas se copiarán automáticamente al portapapeles"
+  },
+  "languageHelp": {
+    "message": "Elige tu idioma de interfaz preferido"
+  },
+  "viewStatsLabel": {
+    "message": "Ver estadísticas de"
+  },
+  "copyLinkTitle": {
+    "message": "Copiar URL corta"
+  },
+  "copiedLinkTitle": {
+    "message": "¡Copiado!"
+  },
+  "changelogTitle": {
+    "message": "Registro de Cambios"
+  },
+  "changelogDescription": {
+    "message": "Últimas actualizaciones y mejoras de la extensión"
+  },
+  "loadingChangelog": {
+    "message": "Cargando registro de cambios..."
+  },
+  "autoSaveLabel": {
+    "message": "Guardado automático de configuraciones"
+  },
+  "autoSaveHelp": {
+    "message": "Cuando esté habilitado, las configuraciones se guardarán automáticamente mientras realizas cambios"
+  },
+  "autoSaving": {
+    "message": "Guardando automáticamente..."
+  },
+  "autoSaved": {
+    "message": "Configuraciones guardadas automáticamente"
+  },
+  "autoSaveError": {
+    "message": "Falló el guardado automático"
+  },
+  "loading": {
+    "message": "Cargando..."
+  },
+  "errorLoadingSettings": {
+    "message": "Error al cargar configuraciones"
+  },
+  "errorSavingSettings": {
+    "message": "Error al guardar configuraciones"
+  },
+  "connectionTimeout": {
+    "message": "Tiempo de conexión agotado"
+  },
+  "dashboardTimeout": {
+    "message": "Tiempo de espera del panel agotado"
+  },
+  "noLinksFound": {
+    "message": "No se encontraron enlaces"
+  },
+  "clicks": {
+    "message": "clics"
+  },
+  "errorNoUrl": {
+    "message": "No hay URL para acortar"
+  },
+  "errorInvalidUrl": {
+    "message": "Formato de URL inválido"
+  },
+  "errorCopy": {
+    "message": "Error al copiar al portapapeles"
+  },
+  "behaviorDescription": {
+    "message": "Configura cómo se comporta la extensión al acortar URLs"
+  },
+  "interfaceDescription": {
+    "message": "Personaliza la apariencia e idioma de la extensión"
   }
 }
