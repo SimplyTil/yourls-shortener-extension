@@ -1,180 +1,143 @@
-# Chrome Extension for YOURLS
+# Chrome Extension for YOURLS Link Shortener
 
-A modern, Manifest V3 compatible Chrome extension for interacting with your [YOURLS](http://yourls.org/) (Your Own URL Shortener) instance.
+A modern browser extension for quickly shortening URLs with your own [YOURLS](https://yourls.org/) (Your Own URL Shortener) instance. Built with Manifest V3 compatibility for Chrome and Chromium-based browsers.
 
 ## ✨ Features
 
 ### Core Functionality
-- **Quick URL Shortening**: Shorten the current page URL with one click
+- **One-Click Shortening**: Shorten the current page URL with a single click
 - **Context Menu Integration**: Right-click on any link to shorten it directly
 - **Custom Keywords**: Optionally specify custom keywords for your shortened URLs
 - **Auto-Copy**: Automatically copy shortened URLs to clipboard
 - **Multi-Server Support**: Configure and switch between multiple YOURLS servers
 
 ### Modern Interface
-- **Redesigned Settings**: Clean, modern interface with improved accessibility and visual hierarchy
-- **Tabbed Organization**: Settings organized into Servers, Dashboard, and General tabs
-- **Live Dashboard**: View real-time statistics from your YOURLS server including:
-  - Total links created
-  - Total clicks across all links
+- **Clean Dashboard**: View your YOURLS statistics at a glance:
+  - Total links and clicks
   - Average clicks per link
-  - Server status monitoring
-  - Recent links with click counts and **copy functionality**
-  - **Server selector** to view stats from different servers
-- **Enhanced Accessibility**: Full keyboard navigation, screen reader support, and proper ARIA labels
-- **Responsive Design**: Mobile-first approach with fluid layouts
-- **Multi-language Support**: Available in 14+ languages with RTL support
+  - Recently shortened links with click counts
+  - One-click copy for any shortened URL
+- **Tabbed Settings**: Well-organized settings with separate tabs for Servers, Dashboard, and General options
+- **Visual Feedback**: Clear success/error messages and loading states
+- **Auto-Save**: Settings are saved automatically as you make changes
+- **What's New**: Built-in changelog to track updates and new features
 
-### New in Latest Version
-- **🎨 Complete UI Modernization**: Rebuilt with modern design system and CSS best practices
-- **📊 Interactive Dashboard**: Copy shortened URLs directly from the dashboard with visual feedback
-- **🔄 Server Toggle**: Switch between primary and additional servers in the dashboard
-- **♿ Accessibility Improvements**: Enhanced keyboard navigation and screen reader support
-- **🎯 Better UX**: Improved visual feedback, loading states, and error handling
-- **💾 Auto-Save Settings**: Settings are automatically saved as you make changes (can be disabled)
+### Advanced Features
+- **Internationalization**: Available in multiple languages with RTL support
+- **Accessibility**: Keyboard navigation, proper ARIA attributes, and reduced motion support
+- **Responsive Design**: Works well on any screen size
+- **Error Handling**: Clear error messages with helpful troubleshooting info
 
-## Setup Instructions
+## 🚀 Installation
 
-### Installation
-1. Download the extension from the [Chrome Web Store](https://lyxo.link/l4kzv) or install it manually by loading the unpacked extension in developer mode
-2. Click on the extension icon and select "Settings" (or right-click the icon and choose "Options")
+### Chrome Web Store (Recommended)
+1. Visit the [Chrome Web Store page](https://lyxo.link/l4kzv)
+2. Click "Add to Chrome"
+3. Confirm the installation
 
-### Configuration
+### Manual Installation
+1. Download the latest release from [GitHub Releases](https://github.com/simplytil/yourls-shortener-extension/releases)
+2. Extract the zip file to a folder
+3. In Chrome, go to `chrome://extensions/`
+4. Enable "Developer mode" in the top-right corner
+5. Click "Load unpacked" and select the extracted folder
 
-#### Server Configuration
-Navigate to the **Servers** tab in settings to configure your YOURLS instances:
+## ⚙️ Configuration
 
-**Primary Server:**
+### Setting Up Your YOURLS Server
+
+1. Click the extension icon and select "Settings" (gear icon)
+2. Navigate to the "Servers" tab
+
+#### Primary Server Configuration
 - **YOURLS Server URL**: Enter the base URL of your YOURLS installation
-  - Format: `https://your-domain.com/yourls` or `http://your-domain.com/path-to-yourls`
-  - Do NOT include `yourls-api.php` at the end - the extension handles this automatically
-  - Make sure to include the correct protocol (http:// or https://)
+  - Example: `https://your-domain.com/yourls` or `http://localhost/yourls`
+  - Make sure to include the correct protocol (`http://` or `https://`)
+  - You don't need to include `yourls-api.php` at the end
+- **Signature Token**: Enter your YOURLS signature token
+  - Find this in your YOURLS admin panel under Tools → API
+- Click "Test Connection" to verify your settings
 
-- **Signature Token**: Enter your personal signature token
-  - This can be found in your YOURLS admin dashboard under "Tools" → "API"
-  - Using a signature token is more secure than using your admin credentials
+#### Additional Server (Optional)
+- Enable the "Additional YOURLS server" toggle
+- Configure URL, signature token, and display name
+- Use the server selector dropdown in the popup to switch between servers
 
-**Additional Server (Optional):**
-- **Enable additional YOURLS server**: Toggle to add a second server
-- Configure the URL, signature token, and display name for the additional server
-- Use the server selector dropdown in the extension popup to choose which server to use
+### General Settings
 
-#### General Settings
-Navigate to the **General** tab to configure behavior and interface:
+Navigate to the "General" tab to configure behavior and interface options:
 
-**Behavior Settings:**
-- **Always ask for a keyword**: Toggle whether to prompt for custom keywords
-  - When enabled: You'll be asked to provide a custom keyword each time you shorten a URL
-  - When disabled: URLs will be shortened immediately using YOURLS' automatic keyword generation
+- **Always ask for keyword**: When enabled, you'll be prompted for a custom keyword each time
+- **Auto-copy shortened URL**: Automatically copy the short URL to your clipboard
+- **Auto-save settings**: Save changes automatically without clicking the save button
+- **Language**: Choose your preferred language from the dropdown
 
-- **Auto-copy shortened URL to clipboard**: Toggle automatic clipboard copying
-  - When enabled: Short URL will always be saved in clipboard without clicking copy manually
-  - When disabled: You'll have to click copy manually
+## 📝 Usage
 
-- **Auto-save settings**: Toggle automatic saving of settings as you make changes
-  - When enabled: Settings are saved automatically 2 seconds after you stop making changes
-  - When disabled: You must manually click "Save Settings" to save changes
+### Basic Usage
+1. Navigate to any webpage you want to shorten
+2. Click the YOURLS extension icon in your toolbar
+3. (Optional) Enter a custom keyword if the setting is enabled
+4. Click "Shorten URL"
+5. Copy the shortened URL or use it directly (it's automatically copied if auto-copy is enabled)
 
-**Interface Settings:**
-- **Language**: Choose your preferred interface language from 14+ available options
+### Context Menu
+- Right-click on any link
+- Select "Shorten Link" from the context menu
+- The extension popup will open with that link ready to be shortened
 
-**What's New:**
-- **Changelog**: View recent updates and improvements to the extension
-- **Version History**: Track feature additions, improvements, and bug fixes
+### Dashboard
+Click the extension icon, then open settings and go to the "Dashboard" tab to:
+- View statistics from your YOURLS server
+- See your most recently created short links
+- Copy any of your recent links with a single click
+- Switch between servers (if you've configured multiple)
 
-#### Dashboard
-The **Dashboard** tab provides real-time insights with enhanced functionality:
+## 🛠 Technical Details
 
-- **Server Selection**: Use the dropdown to view statistics from different servers
-- **Server Statistics**: View total links, clicks, and averages with modern card layout
-- **Server Status**: Monitor if your YOURLS server is online with visual indicators
-- **Recent Links**: See your most recently created short links with:
-  - Click counts displayed
-  - **One-click copy buttons** for each shortened URL
-  - Visual feedback when copying
-- **Refresh**: Update dashboard data manually with improved loading states
+- Built with Manifest V3 for modern browser compatibility
+- Uses background scripts to handle API requests and bypass CORS restrictions
+- Implements modern JavaScript with async/await patterns
+- Utilizes CSS custom properties for consistent theming
+- Provides comprehensive error handling and user feedback
 
-### Saving Your Settings
-After configuring all options, click the "Save Settings" button. A confirmation message will appear when your settings are successfully saved.
+## 🔍 Troubleshooting
 
-To verify your configuration, use the "Test Connection" button or try shortening a URL using the extension.
+### Common Issues
 
-## Usage
+**Connection Failed**
+- Verify your YOURLS URL is correct and includes the protocol (`http://` or `https://`)
+- Check that your signature token is valid
+- Ensure your YOURLS server is online and accessible
 
-### Toolbar Icon
-Click on the YOURLS extension icon in your browser toolbar to shorten the URL of the current tab. The popup shows:
-- The current page's favicon and URL
-- Server selector (if multiple servers are configured)
-- Optional keyword input field
-- Shorten button and results
+**Extension Not Working**
+- Check browser console for any error messages
+- Verify that you have the necessary permissions enabled
+- Try reinstalling the extension
 
-### Context Menu Options
-Right-click on any link on a webpage to access the context menu, then select "Shorten with YOURLS" to create a shortened version of that specific link without navigating to it first.
+**Server Not Showing in Dashboard**
+- Make sure you've properly configured server settings
+- Check that your YOURLS API is properly responding
+- Some older YOURLS versions may not support all dashboard features
 
-### Multi-Server Support
-If you have multiple YOURLS servers configured:
-1. Use the dropdown in the popup to select which server to use
-2. Each server maintains its own statistics in the dashboard
-3. The "to YOURLS" link adapts to show the correct admin panel
+## 📚 Resources
 
-### Dashboard Features
-- **Copy Links**: Click the copy icon next to any shortened URL in the recent links list
-- **Server Switching**: Use the server selector to view statistics from different YOURLS instances
-- **Real-time Updates**: Click refresh to get the latest statistics and recent links
+- [YOURLS Official Website](https://yourls.org/)
+- [YOURLS Documentation](https://docs.yourls.org/)
+- [Report Issues](https://github.com/simplytil/yourls-shortener-extension/issues)
 
-## Technical Features
+## 📜 License
 
-- **Manifest V3**: Built with the latest Chrome extension standards
-- **Modern CSS Architecture**: Complete rewrite using CSS custom properties, design tokens, and modern layout techniques
-- **Accessibility First**: WCAG 2.1 AA compliant with keyboard navigation and screen reader support
-- **Performance Optimized**: Efficient CSS with reduced repaints and optimized selectors
-- **CORS Handling**: Background script manages API requests to avoid cross-origin issues
-- **Responsive Design**: Mobile-first approach with fluid breakpoints
-- **RTL Support**: Full support for right-to-left languages
-- **Error Handling**: Comprehensive error messages with troubleshooting guidance
-- **Reduced Motion**: Respects user's motion preferences for accessibility
+```
+Copyright 2025 YOURLS Link Shortener Contributors
 
-## Planned Features
-- **QR Code Generation**: Generate QR codes for shortened URLs with SVG download capability
-- **Link Analytics**: Enhanced statistics and click tracking
-- **Bulk Operations**: Shorten multiple URLs at once
-- **Custom Domains**: Support for custom short domains
-- **Export/Import**: Backup and restore settings
+Licensed under the GNU General Public License v3.0 (GPL-3.0)
+You may obtain a copy of the License at
 
-## Development
+    https://www.gnu.org/licenses/gpl-3.0.html
+```
 
-This extension is built with:
-- Vanilla JavaScript (ES6+)
-- Modern CSS with CSS Grid, Flexbox, and Custom Properties
-- Chrome Extension Manifest V3
-- Internationalization (i18n) support
-- Accessibility-first design principles
+## 👏 Acknowledgments
 
-### Design System
-The extension uses a comprehensive design system featuring:
-- **Color System**: Semantic color tokens for consistent theming
-- **Typography Scale**: Consistent font sizing and spacing
-- **Component Library**: Reusable UI components
-- **Animation System**: Smooth transitions with reduced motion support
-
-## Acknowledgments
-
-Many thanks to [binfalse](https://github.com/binfalse) for the initial idea and helpful code foundation that inspired this modern implementation.
-
-## License
-    Copyright 2025 SimplyTil
-    
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+- Thanks to [binfalse](https://github.com/binfalse) for the initial idea and code foundation
+- YOURLS team for creating the excellent URL shortener platform
