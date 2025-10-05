@@ -2,31 +2,43 @@
 
 A modern browser extension for quickly shortening URLs with your own [YOURLS](https://yourls.org/) (Your Own URL Shortener) instance. Built with Manifest V3 compatibility for Chrome and Chromium-based browsers.
 
-## ✨ Features
+
+
+## ![YOURLS Extension Screenshot](images/icon16.png) Features
 
 ### Core Functionality
-- **One-Click Shortening**: Shorten the current page URL with a single click
-- **Context Menu Integration**: Right-click on any link to shorten it directly
-- **Custom Keywords**: Optionally specify custom keywords for your shortened URLs
-- **Auto-Copy**: Automatically copy shortened URLs to clipboard
-- **Multi-Server Support**: Configure and switch between multiple YOURLS servers
+- **One-click URL shortening** from any webpage
+- **Custom keywords** for personalized short links
+- **Auto-copy** shortened URLs to clipboard
+- **Context menu integration** for quick access
+- **Bulk operations** support
 
-### Modern Interface
-- **Clean Dashboard**: View your YOURLS statistics at a glance:
-  - Total links and clicks
-  - Average clicks per link
-  - Recently shortened links with click counts
-  - One-click copy for any shortened URL
-- **Tabbed Settings**: Well-organized settings with separate tabs for Servers, Dashboard, and General options
-- **Visual Feedback**: Clear success/error messages and loading states
-- **Auto-Save**: Settings are saved automatically as you make changes
-- **What's New**: Built-in changelog to track updates and new features
+### Advanced Analytics
+- **Comprehensive dashboard** with real-time statistics
+- **Performance metrics** including clicks today, this week, and this month
+- **Top performing links** with detailed click analytics
+- **Server information** including YOURLS version and database statistics
+- **Data export** functionality for further analysis
+- **Visual charts** and animated counters for better data presentation
 
-### Advanced Features
-- **Internationalization**: Available in multiple languages with RTL support
-- **Accessibility**: Keyboard navigation, proper ARIA attributes, and reduced motion support
-- **Responsive Design**: Works well on any screen size
-- **Error Handling**: Clear error messages with helpful troubleshooting info
+### Multi-Server Support
+- **Primary and additional server** configurations
+- **Server switching** in popup and analytics views
+- **Independent analytics** for each server
+- **Custom server naming** for easy identification
+
+### Internationalization
+- **14 languages** supported including RTL languages
+- **Dynamic language switching** without restart
+- **Localized error messages** and help text
+- **RTL layout support** for Arabic and other RTL languages
+
+### Advanced Settings
+- **Auto-save settings** for seamless experience
+- **Connection testing** for both servers
+- **Customizable behavior** options
+- **Modern tabbed interface** for organized settings
+
 
 ## 🚀 Installation
 
