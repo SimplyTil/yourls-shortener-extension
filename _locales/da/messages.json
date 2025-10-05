@@ -298,5 +298,74 @@
   },
   "interfaceDescription": {
     "message": "Tilpas udvidelsens udseende og sprog"
+  },
+  "analyticsTab": {
+    "message": "Analyser"
+  },
+  "analyticsTitle": {
+    "message": "Serveranalyser"
+  },
+  "analyticsDescription": {
+    "message": "Detaljerede indsigter og statistikker fra din YOURLS-server"
+  },
+  "topLinksTitle": {
+    "message": "Bedst Ydende Links"
+  },
+  "recentActivityTitle": {
+    "message": "Seneste Aktivitet"
+  },
+  "serverInfoTitle": {
+    "message": "Serverinformation"
+  },
+  "loadingAnalytics": {
+    "message": "Indlæser analysedata..."
+  },
+  "analyticsError": {
+    "message": "Kan ikke indlæse analysedata. Kontroller din serverkonfiguration."
+  },
+  "noAnalyticsData": {
+    "message": "Ingen analysedata tilgængelig"
+  },
+  "clicksToday": {
+    "message": "Klik I Dag"
+  },
+  "clicksThisWeek": {
+    "message": "Klik Denne Uge"
+  },
+  "clicksThisMonth": {
+    "message": "Klik Denne Måned"
+  },
+  "topKeywords": {
+    "message": "Top Nøgleord"
+  },
+  "linkCreationTrends": {
+    "message": "Link-oprettelsestendens"
+  },
+  "serverVersion": {
+    "message": "YOURLS Version"
+  },
+  "totalUrls": {
+    "message": "Totalt URLs"
+  },
+  "dbSize": {
+    "message": "Databasestørrelse"
+  },
+  "refreshAnalytics": {
+    "message": "Opdater Analyser"
+  },
+  "exportData": {
+    "message": "Eksporter Data"
+  },
+  "viewDetails": {
+    "message": "Se Detaljer"
+  },
+  "linksCreated": {
+    "message": "links oprettet"
+  },
+  "uniqueClicks": {
+    "message": "unikke klik"
+  },
+  "averageDaily": {
+    "message": "dagligt gennemsnit"
   }
 }

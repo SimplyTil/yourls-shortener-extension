@@ -298,5 +298,74 @@
   },
   "interfaceDescription": {
     "message": "Customize the extension's appearance and language"
+  },
+  "analyticsTab": {
+    "message": "Analytics"
+  },
+  "analyticsTitle": {
+    "message": "Server Analytics"
+  },
+  "analyticsDescription": {
+    "message": "Detailed insights and statistics from your YOURLS server"
+  },
+  "topLinksTitle": {
+    "message": "Top Performing Links"
+  },
+  "recentActivityTitle": {
+    "message": "Recent Activity"
+  },
+  "serverInfoTitle": {
+    "message": "Server Information"
+  },
+  "loadingAnalytics": {
+    "message": "Loading analytics data..."
+  },
+  "analyticsError": {
+    "message": "Unable to load analytics data. Please check your server configuration."
+  },
+  "noAnalyticsData": {
+    "message": "No analytics data available"
+  },
+  "clicksToday": {
+    "message": "Clicks Today"
+  },
+  "clicksThisWeek": {
+    "message": "Clicks This Week"
+  },
+  "clicksThisMonth": {
+    "message": "Clicks This Month"
+  },
+  "topKeywords": {
+    "message": "Top Keywords"
+  },
+  "linkCreationTrends": {
+    "message": "Link Creation Trends"
+  },
+  "serverVersion": {
+    "message": "YOURLS Version"
+  },
+  "totalUrls": {
+    "message": "Total URLs"
+  },
+  "dbSize": {
+    "message": "Database Size"
+  },
+  "refreshAnalytics": {
+    "message": "Refresh Analytics"
+  },
+  "exportData": {
+    "message": "Export Data"
+  },
+  "viewDetails": {
+    "message": "View Details"
+  },
+  "linksCreated": {
+    "message": "links created"
+  },
+  "uniqueClicks": {
+    "message": "unique clicks"
+  },
+  "averageDaily": {
+    "message": "avg. daily"
   }
 }

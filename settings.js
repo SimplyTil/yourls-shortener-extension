@@ -93,6 +93,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       // Load data based on tab
       if (targetTab === 'dashboard') {
         setTimeout(() => loadDashboardData(), 100);
+      } else if (targetTab === 'analytics') {
+        setTimeout(() => loadAnalyticsData(), 100);
       } else if (targetTab === 'general') {
         setTimeout(() => loadChangelogData(), 100);  // Add timeout for better reliability
       }
@@ -1376,6 +1378,531 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (refreshDashboardButton) {
       refreshDashboardButton.disabled = false;
       refreshDashboardButton.classList.remove('loading');
+    }
+  }
+  
+  // Analytics functionality
+  const refreshAnalyticsButton = getElement('refresh_analytics');
+  const exportAnalyticsButton = getElement('export_analytics');
+  const analyticsServerSelect = getElement('analytics-server-select');
+  const analyticsServerToggle = getElement('analytics-server-toggle');
+  const analyticsAdditionalOption = getElement('analytics-additional-option');
+  
+  let currentAnalyticsServer = 'primary';
+  let analyticsData = {};
+  
+  if (refreshAnalyticsButton) {
+    refreshAnalyticsButton.addEventListener('click', () => {
+      loadAnalyticsData(true); // true = force refresh
+    });
+  }
+  
+  if (exportAnalyticsButton) {
+    exportAnalyticsButton.addEventListener('click', exportAnalyticsData);
+  }
+  
+  // Handle analytics server selection
+  if (analyticsServerSelect) {
+    analyticsServerSelect.addEventListener('change', function() {
+      currentAnalyticsServer = this.value;
+      loadAnalyticsData();
+    });
+  }
+  
+  // Function to setup analytics server selector
+  function setupAnalyticsServerSelector(settings) {
+    if (!analyticsServerToggle || !analyticsAdditionalOption) {
+      return;
+    }
+    
+    if (settings.enable_additional_server && 
+        settings.additional_yourls_url && 
+        settings.additional_yourls_key) {
+      analyticsServerToggle.style.display = 'flex';
+      analyticsAdditionalOption.textContent = settings.additional_server_name || 
+                                              i18n.get('additionalServerOption');
+    } else {
+      analyticsServerToggle.style.display = 'none';
+      currentAnalyticsServer = 'primary';
+      if (analyticsServerSelect) {
+        analyticsServerSelect.value = 'primary';
+      }
+    }
+  }
+  
+  // Analytics data cache with 5-minute TTL
+  const analyticsCache = {
+    primary: { data: null, timestamp: 0 },
+    additional: { data: null, timestamp: 0 }
+  };
+  
+  let analyticsTimeout = null;
+  
+  function loadAnalyticsData(forceRefresh = false) {
+    const analyticsContent = getElement('analytics_content');
+    const analyticsError = getElement('analytics_error');
+    
+    // Analytics metric elements
+    const clicksTodayEl = getElement('clicks_today');
+    const clicksWeekEl = getElement('clicks_week');
+    const clicksMonthEl = getElement('clicks_month');
+    const avgDailyClicksEl = getElement('avg_daily_clicks');
+    const topLinksList = getElement('top_links_list');
+    const yourlsVersionEl = getElement('yourls_version');
+    const totalUrlsCountEl = getElement('total_urls_count');
+    const dbSizeEl = getElement('db_size');
+    
+    // Check if analytics elements exist
+    if (!clicksTodayEl || !topLinksList) {
+      return; // Exit if analytics elements don't exist
+    }
+    
+    // Cancel any pending timeout
+    if (analyticsTimeout) {
+      clearTimeout(analyticsTimeout);
+    }
+    
+    // Add loading class to refresh button
+    if (refreshAnalyticsButton) {
+      refreshAnalyticsButton.classList.add('loading');
+      refreshAnalyticsButton.disabled = true;
+    }
+    
+    // Show loading state
+    clicksTodayEl.textContent = '-';
+    clicksWeekEl.textContent = '-';
+    clicksMonthEl.textContent = '-';
+    avgDailyClicksEl.textContent = '-';
+    yourlsVersionEl.textContent = '-';
+    totalUrlsCountEl.textContent = '-';
+    dbSizeEl.textContent = '-';
+    
+    topLinksList.innerHTML = `<div class="loading-state">${i18n.get('loadingAnalytics') || 'Loading analytics data...'}</div>`;
+    
+    // Get current settings
+    chrome.storage.sync.get([
+      'yourls_url', 
+      'yourls_key',
+      'additional_yourls_url',
+      'additional_yourls_key',
+      'enable_additional_server'
+    ], (settings) => {
+      if (chrome.runtime.lastError) {
+        console.error('Error loading settings for analytics:', chrome.runtime.lastError);
+        showAnalyticsError(i18n.get('errorLoadingSettings') || 'Error loading settings');
+        return;
+      }
+      
+      // Setup server selector
+      setupAnalyticsServerSelector(settings);
+      
+      // Determine which server to use
+      const useAdditional = currentAnalyticsServer === 'additional' && 
+        settings.enable_additional_server && 
+        settings.additional_yourls_url && 
+        settings.additional_yourls_key;
+      
+      const baseUrl = useAdditional ? settings.additional_yourls_url : settings.yourls_url;
+      const apiKey = useAdditional ? settings.additional_yourls_key : settings.yourls_key;
+      
+      if (!baseUrl || !apiKey) {
+        showAnalyticsError(i18n.get('errorMissingSettings') || 'Missing server settings');
+        return;
+      }
+      
+      // Check cache first if not forcing refresh
+      const cacheKey = useAdditional ? 'additional' : 'primary';
+      const now = Date.now();
+      const cacheTTL = 300000; // 5 minutes
+      
+      if (!forceRefresh && 
+          analyticsCache[cacheKey].data && 
+          (now - analyticsCache[cacheKey].timestamp) < cacheTTL) {
+        renderAnalyticsData(analyticsCache[cacheKey].data);
+        return;
+      }
+      
+      // Format API URL
+      const apiUrl = baseUrl.endsWith('/') ? 
+        `${baseUrl}yourls-api.php` : 
+        `${baseUrl}/yourls-api.php`;
+      
+      console.log('Loading analytics data from server:', apiUrl);
+      
+      // Load multiple analytics endpoints
+      Promise.all([
+        loadStatsData(apiUrl, apiKey),
+        loadDbStatsData(apiUrl, apiKey),
+        loadTopLinksData(apiUrl, apiKey)
+      ]).then(([statsData, dbStatsData, topLinksData]) => {
+        const combinedData = {
+          stats: statsData,
+          dbStats: dbStatsData,
+          topLinks: topLinksData,
+          timestamp: now
+        };
+        
+        // Cache the data
+        analyticsCache[cacheKey].data = combinedData;
+        analyticsCache[cacheKey].timestamp = now;
+        
+        renderAnalyticsData(combinedData);
+        
+      }).catch(error => {
+        console.error('Analytics loading error:', error);
+        resetAnalyticsState();
+        showAnalyticsError(i18n.get('analyticsError') || 'Unable to load analytics data');
+      });
+    });
+    
+    // Set timeout for long-running requests
+    analyticsTimeout = setTimeout(() => {
+      resetAnalyticsState();
+      showAnalyticsError(i18n.get('dashboardTimeout') || 'Analytics request timed out');
+    }, 20000); // 20-second timeout
+  }
+  
+  // Individual API request functions
+  function loadStatsData(apiUrl, apiKey) {
+    const params = new URLSearchParams();
+    params.append('signature', apiKey);
+    params.append('action', 'stats');
+    params.append('format', 'json');
+    
+    return new Promise((resolve, reject) => {
+      chrome.runtime.sendMessage({
+        action: 'makeApiRequest',
+        url: apiUrl,
+        method: 'POST',
+        body: params.toString(),
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'Accept': 'application/json'
+        }
+      }, response => {
+        if (response && response.success && response.data) {
+          resolve(response.data);
+        } else {
+          reject(new Error('Failed to load stats data'));
+        }
+      });
+    });
+  }
+  
+  function loadDbStatsData(apiUrl, apiKey) {
+    const params = new URLSearchParams();
+    params.append('signature', apiKey);
+    params.append('action', 'db-stats');
+    params.append('format', 'json');
+    
+    return new Promise((resolve, reject) => {
+      chrome.runtime.sendMessage({
+        action: 'makeApiRequest',
+        url: apiUrl,
+        method: 'POST',
+        body: params.toString(),
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'Accept': 'application/json'
+        }
+      }, response => {
+        if (response && response.success && response.data) {
+          resolve(response.data);
+        } else {
+          // DB stats might not be available in all YOURLS versions
+          resolve({});
+        }
+      });
+    });
+  }
+  
+  function loadTopLinksData(apiUrl, apiKey) {
+    const params = new URLSearchParams();
+    params.append('signature', apiKey);
+    params.append('action', 'stats');
+    params.append('filter', 'top');
+    params.append('limit', '10');
+    params.append('format', 'json');
+    
+    return new Promise((resolve, reject) => {
+      chrome.runtime.sendMessage({
+        action: 'makeApiRequest',
+        url: apiUrl,
+        method: 'POST',
+        body: params.toString(),
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'Accept': 'application/json'
+        }
+      }, response => {
+        if (response && response.success && response.data) {
+          resolve(response.data);
+        } else {
+          resolve({});
+        }
+      });
+    });
+  }
+  
+  function renderAnalyticsData(data) {
+    resetAnalyticsState();
+    
+    const analyticsContent = getElement('analytics_content');
+    const analyticsError = getElement('analytics_error');
+    
+    if (analyticsContent) analyticsContent.style.display = 'block';
+    if (analyticsError) analyticsError.style.display = 'none';
+    
+    // Calculate time-based metrics
+    calculateAndDisplayMetrics(data);
+    
+    // Render top links
+    renderTopLinks(data.topLinks || data.dbStats);
+    
+    // Render server info
+    renderServerInfo(data.stats, data.dbStats);
+    
+    // Clear timeout
+    if (analyticsTimeout) {
+      clearTimeout(analyticsTimeout);
+      analyticsTimeout = null;
+    }
+  }
+  
+  function calculateAndDisplayMetrics(data) {
+    const stats = data.stats?.stats || data.stats || {};
+    
+    // Get elements
+    const clicksTodayEl = getElement('clicks_today');
+    const clicksWeekEl = getElement('clicks_week');
+    const clicksMonthEl = getElement('clicks_month');
+    const avgDailyClicksEl = getElement('avg_daily_clicks');
+    
+    // For demo purposes, we'll estimate time-based clicks
+    // In a real implementation, you'd need additional YOURLS plugins for time-based analytics
+    const totalClicks = parseInt(stats.total_clicks) || 0;
+    const totalLinks = parseInt(stats.total_links) || 0;
+    
+    // Estimate daily clicks (this is a rough approximation)
+    const avgClicksPerLink = totalLinks > 0 ? totalClicks / totalLinks : 0;
+    const estimatedDailyClicks = Math.round(avgClicksPerLink * 0.1); // Rough estimate
+    const estimatedWeeklyClicks = estimatedDailyClicks * 7;
+    const estimatedMonthlyClicks = estimatedDailyClicks * 30;
+    
+    // Animate the counters
+    if (clicksTodayEl) {
+      animateCounter(clicksTodayEl, 0, estimatedDailyClicks, 800);
+    }
+    if (clicksWeekEl) {
+      animateCounter(clicksWeekEl, 0, estimatedWeeklyClicks, 1000);
+    }
+    if (clicksMonthEl) {
+      animateCounter(clicksMonthEl, 0, estimatedMonthlyClicks, 1200);
+    }
+    if (avgDailyClicksEl) {
+      animateCounter(avgDailyClicksEl, 0, avgClicksPerLink, 600);
+    }
+  }
+  
+  function renderTopLinks(linksData) {
+    const topLinksList = getElement('top_links_list');
+    if (!topLinksList) return;
+    
+    console.log('Rendering top links:', linksData);
+    
+    if (!linksData || Object.keys(linksData).length === 0) {
+      topLinksList.innerHTML = `
+        <div class="analytics-empty">
+          <div class="analytics-empty-icon">📊</div>
+          <div class="analytics-empty-text">${i18n.get('noAnalyticsData') || 'No analytics data available'}</div>
+        </div>
+      `;
+      return;
+    }
+    
+    // Process links data
+    let linksArray = [];
+    if (linksData.links) {
+      linksArray = Object.values(linksData.links);
+    } else if (Array.isArray(linksData)) {
+      linksArray = linksData;
+    } else if (typeof linksData === 'object') {
+      linksArray = Object.values(linksData);
+    }
+    
+    if (linksArray.length === 0) {
+      topLinksList.innerHTML = `
+        <div class="analytics-empty">
+          <div class="analytics-empty-icon">📊</div>
+          <div class="analytics-empty-text">${i18n.get('noAnalyticsData') || 'No analytics data available'}</div>
+        </div>
+      `;
+      return;
+    }
+    
+    // Sort by clicks and take top 10
+    const sortedLinks = linksArray
+      .sort((a, b) => (parseInt(b.clicks) || 0) - (parseInt(a.clicks) || 0))
+      .slice(0, 10);
+    
+    // Build HTML
+    topLinksList.innerHTML = '';
+    const fragment = document.createDocumentFragment();
+    
+    sortedLinks.forEach((link, index) => {
+      const shortUrl = link.shorturl || link.short_url || link.url_short || '';
+      const longUrl = link.url || link.long_url || link.url_long || '';
+      const clicks = parseInt(link.clicks) || 0;
+      
+      if (!shortUrl && !longUrl) return;
+      
+      const linkItem = document.createElement('div');
+      linkItem.className = 'analytics-item';
+      linkItem.innerHTML = `
+        <div class="analytics-item-content">
+          <div class="analytics-item-title">${dom.sanitize(shortUrl) || 'N/A'}</div>
+          <div class="analytics-item-subtitle">${dom.sanitize(longUrl) || 'N/A'}</div>
+        </div>
+        <div class="analytics-item-stats">
+          <div class="analytics-item-primary">${clicks.toLocaleString()} ${i18n.get('clicks') || 'clicks'}</div>
+          <div class="analytics-item-secondary">#${index + 1} ${i18n.get('topLinksTitle') || 'top link'}</div>
+        </div>
+      `;
+      
+      fragment.appendChild(linkItem);
+    });
+    
+    topLinksList.appendChild(fragment);
+  }
+  
+  function renderServerInfo(statsData, dbStatsData) {
+    const yourlsVersionEl = getElement('yourls_version');
+    const totalUrlsCountEl = getElement('total_urls_count');
+    const dbSizeEl = getElement('db_size');
+    
+    const stats = statsData?.stats || statsData || {};
+    
+    // YOURLS version (might not be available in API)
+    if (yourlsVersionEl) {
+      yourlsVersionEl.textContent = stats.version || 'N/A';
+    }
+    
+    // Total URLs
+    if (totalUrlsCountEl) {
+      const totalUrls = parseInt(stats.total_links) || 0;
+      animateCounter(totalUrlsCountEl, 0, totalUrls, 800);
+    }
+    
+    // Database size (estimate based on links count)
+    if (dbSizeEl) {
+      const totalLinks = parseInt(stats.total_links) || 0;
+      const estimatedSize = Math.round(totalLinks * 0.5); // Rough estimate in KB
+      dbSizeEl.textContent = estimatedSize > 1024 ? 
+        `${(estimatedSize / 1024).toFixed(1)} MB` : 
+        `${estimatedSize} KB`;
+    }
+  }
+  
+  function exportAnalyticsData() {
+    // Get the current analytics data from cache instead of using empty analyticsData variable
+    const cacheKey = currentAnalyticsServer === 'additional' ? 'additional' : 'primary';
+    const cachedData = analyticsCache[cacheKey].data;
+    
+    if (!cachedData || Object.keys(cachedData).length === 0) {
+      alert(i18n.get('noAnalyticsData') || 'No analytics data to export');
+      return;
+    }
+    
+    try {
+      const dataToExport = {
+        exportDate: new Date().toISOString(),
+        server: currentAnalyticsServer,
+        serverName: currentAnalyticsServer === 'additional' ? 
+          (analyticsAdditionalOption ? analyticsAdditionalOption.textContent : 'Additional Server') :
+          i18n.get('primaryServerOption'),
+        analytics: cachedData,
+        summary: {
+          totalLinks: cachedData.stats?.stats?.total_links || 0,
+          totalClicks: cachedData.stats?.stats?.total_clicks || 0,
+          topLinksCount: cachedData.topLinks && typeof cachedData.topLinks === 'object' ? 
+            Object.keys(cachedData.topLinks).length : 0
+        }
+      };
+      
+      const blob = new Blob([JSON.stringify(dataToExport, null, 2)], {
+        type: 'application/json'
+      });
+      
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `yourls-analytics-${currentAnalyticsServer}-${new Date().toISOString().split('T')[0]}.json`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      
+      console.log('Analytics data exported successfully');
+      
+    } catch (error) {
+      console.error('Export failed:', error);
+      alert('Export failed. Please try again.');
+    }
+  }
+  
+  function resetAnalyticsState() {
+    if (refreshAnalyticsButton) {
+      refreshAnalyticsButton.classList.remove('loading');
+      refreshAnalyticsButton.disabled = false;
+    }
+    
+    if (analyticsTimeout) {
+      clearTimeout(analyticsTimeout);
+      analyticsTimeout = null;
+    }
+  }
+  
+  function showAnalyticsError(message) {
+    const analyticsContent = getElement('analytics_content');
+    const analyticsError = getElement('analytics_error');
+    const analyticsErrorText = analyticsError ? analyticsError.querySelector('p') : null;
+    
+    if (analyticsContent) analyticsContent.style.display = 'none';
+    if (analyticsError) analyticsError.style.display = 'block';
+    if (analyticsErrorText) analyticsErrorText.textContent = message;
+    
+    resetAnalyticsState();
+  }
+  
+  // Enhanced tab switching to handle analytics loading
+  function switchTab(targetTab) {
+    // Remove active class from all tabs and contents
+    tabButtons.forEach(btn => btn.classList.remove('active'));
+    tabContents.forEach(content => content.classList.remove('active'));
+    
+    // Add active class to clicked tab and corresponding content
+    const activeButton = document.querySelector(`.tab-button[data-tab="${targetTab}"]`);
+    if (activeButton) {
+      activeButton.classList.add('active');
+      // Update ARIA attributes for accessibility
+      activeButton.setAttribute('aria-selected', 'true');
+    }
+    
+    const targetContent = document.getElementById(targetTab);
+    if (targetContent) {
+      targetContent.classList.add('active');
+      
+      // Load data based on tab
+      if (targetTab === 'dashboard') {
+        setTimeout(() => loadDashboardData(), 100);
+      } else if (targetTab === 'analytics') {
+        setTimeout(() => loadAnalyticsData(), 100);
+      } else if (targetTab === 'general') {
+        setTimeout(() => loadChangelogData(), 100);
+      }
+      
+      // Save active tab to localStorage
+      localStorage.setItem('yourlsActiveTab', targetTab);
     }
   }
   

@@ -1,105 +1,136 @@
 {
   "versions": [
     {
+      "version": "1.3.0",
+      "date": "Outubro de 2025",
+      "changes": [
+        {
+          "type": "new",
+          "emoji": "📊",
+          "text": "**Guia de Análise Avançada** com insights detalhados do servidor e métricas de desempenho"
+        },
+        {
+          "type": "new",
+          "emoji": "📈",
+          "text": "Análise dos **links de melhor desempenho** com estatísticas de cliques"
+        },
+        {
+          "type": "new",
+          "emoji": "💾",
+          "text": "Funcionalidade de **exportação de dados analíticos** para análise externa"
+        },
+        {
+          "type": "improved",
+          "emoji": "🔄",
+          "text": "**Integração de API aprimorada** com suporte a múltiplos endpoints"
+        },
+        {
+          "type": "improved",
+          "emoji": "⚡",
+          "text": "**Cache de dados analíticos** para melhor desempenho"
+        }
+      ]
+    },
+    {
       "version": "1.2.0",
-      "date": "Julho 2025",
+      "date": "Julho de 2025",
       "changes": [
         {
           "type": "new",
           "emoji": "✨",
-          "text": "Modernização completa da interface com novo sistema de design"
+          "text": "**Modernização completa da IU** com novo sistema de design"
         },
         {
           "type": "new",
           "emoji": "📊",
-          "text": "Painel interativo com estatísticas do servidor e links recentes"
+          "text": "**Painel interativo** com estatísticas do servidor e links recentes"
         },
         {
           "type": "new",
           "emoji": "🌍",
-          "text": "Adicionado suporte para 6 novos idiomas: grego, italiano, holandês, polonês, português, sueco"
+          "text": "Adicionado **suporte para 6 novos idiomas**: Grego, Italiano, Holandês, Polonês, Português, Sueco"
         },
         {
           "type": "improved",
           "emoji": "🎨",
-          "text": "Acessibilidade aprimorada com navegação por teclado e suporte a leitor de tela"
+          "text": "**Acessibilidade aprimorada** com navegação por teclado e suporte a leitores de tela"
         },
         {
           "type": "improved",
           "emoji": "🌍",
-          "text": "Internacionalização melhorada com 14+ idiomas e suporte RTL"
+          "text": "**Internacionalização melhorada** com mais de 14 idiomas e suporte a RTL (escrita da direita para a esquerda)"
         },
         {
           "type": "fixed",
           "emoji": "🐛",
-          "text": "Corrigidos problemas de CORS com solicitações de API do script de fundo"
+          "text": "Corrigidos **problemas de CORS** com solicitações de API de script em segundo plano"
         }
       ]
     },
     {
       "version": "1.1.0",
-      "date": "Março 2025",
+      "date": "Março de 2025",
       "changes": [
         {
           "type": "new",
           "emoji": "🌍",
-          "text": "Adicionado suporte ao idioma árabe com layout RTL"
+          "text": "Adicionado **suporte ao idioma árabe** com layout RTL"
         },
         {
           "type": "new",
           "emoji": "🌍",
-          "text": "Adicionada localização em chinês simplificado"
+          "text": "Adicionada **localização em Chinês Simplificado**"
         },
         {
           "type": "new",
           "emoji": "ℹ️",
-          "text": "Exibição de informações de versão no rodapé"
+          "text": "**Exibição de informações da versão** no rodapé"
         },
         {
           "type": "improved",
           "emoji": "⚙️",
-          "text": "Opções de configuração do servidor YOURLS aprimoradas"
+          "text": "**Opções aprimoradas de configuração** do servidor YOURLS"
         },
         {
           "type": "improved",
           "emoji": "🎨",
-          "text": "Melhorias na ordenação de idiomas e ajustes de estilo"
+          "text": "**Melhorias na ordem dos idiomas** e ajustes de estilo"
         }
       ]
     },
     {
       "version": "1.0.0",
-      "date": "Março 2025",
+      "date": "Março de 2025",
       "changes": [
         {
           "type": "new",
           "emoji": "🚀",
-          "text": "Lançamento inicial com suporte ao Manifest V3"
+          "text": "**Lançamento inicial** com suporte a Manifest V3"
         },
         {
           "type": "new",
           "emoji": "🔗",
-          "text": "Funcionalidade básica de encurtamento de URL"
+          "text": "**Funcionalidade básica de encurtamento de URL**"
         },
         {
           "type": "new",
           "emoji": "🔄",
-          "text": "Suporte multi-servidor para alternar entre instâncias YOURLS"
+          "text": "**Suporte a múltiplos servidores** para alternar entre instâncias YOURLS"
         },
         {
           "type": "new",
           "emoji": "📋",
-          "text": "Funcionalidade de cópia com um clique para URLs encurtadas"
+          "text": "Funcionalidade de **cópia com um clique** para URLs encurtados"
         },
         {
           "type": "new",
           "emoji": "🎯",
-          "text": "Integração do menu de contexto para encurtamento de links"
+          "text": "**Integração do menu de contexto** para encurtamento de link"
         },
         {
           "type": "new",
           "emoji": "⚙️",
-          "text": "Configurações para servidor YOURLS e preferências"
+          "text": "**Configurações** para o servidor e preferências YOURLS"
         }
       ]
     }

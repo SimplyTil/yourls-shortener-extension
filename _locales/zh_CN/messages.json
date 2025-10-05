@@ -298,5 +298,74 @@
   },
   "interfaceDescription": {
     "message": "自定义扩展的外观和语言"
+  },
+  "analyticsTab": {
+    "message": "分析"
+  },
+  "analyticsTitle": {
+    "message": "服务器分析"
+  },
+  "analyticsDescription": {
+    "message": "来自您的YOURLS服务器的详细洞察和统计数据"
+  },
+  "topLinksTitle": {
+    "message": "热门链接"
+  },
+  "recentActivityTitle": {
+    "message": "最近活动"
+  },
+  "serverInfoTitle": {
+    "message": "服务器信息"
+  },
+  "loadingAnalytics": {
+    "message": "正在加载分析数据..."
+  },
+  "analyticsError": {
+    "message": "无法加载分析数据。请检查您的服务器配置。"
+  },
+  "noAnalyticsData": {
+    "message": "没有可用的分析数据"
+  },
+  "clicksToday": {
+    "message": "今日点击"
+  },
+  "clicksThisWeek": {
+    "message": "本周点击"
+  },
+  "clicksThisMonth": {
+    "message": "本月点击"
+  },
+  "topKeywords": {
+    "message": "热门关键词"
+  },
+  "linkCreationTrends": {
+    "message": "链接创建趋势"
+  },
+  "serverVersion": {
+    "message": "YOURLS版本"
+  },
+  "totalUrls": {
+    "message": "总URL数"
+  },
+  "dbSize": {
+    "message": "数据库大小"
+  },
+  "refreshAnalytics": {
+    "message": "刷新分析"
+  },
+  "exportData": {
+    "message": "导出数据"
+  },
+  "viewDetails": {
+    "message": "查看详情"
+  },
+  "linksCreated": {
+    "message": "已创建链接"
+  },
+  "uniqueClicks": {
+    "message": "独立点击"
+  },
+  "averageDaily": {
+    "message": "日均"
   }
 }

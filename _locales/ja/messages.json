@@ -298,5 +298,74 @@
   },
   "interfaceDescription": {
     "message": "拡張機能の外観と言語をカスタマイズ"
+  },
+  "analyticsTab": {
+    "message": "分析"
+  },
+  "analyticsTitle": {
+    "message": "サーバー分析"
+  },
+  "analyticsDescription": {
+    "message": "YOURLSサーバーからの詳細な洞察と統計"
+  },
+  "topLinksTitle": {
+    "message": "パフォーマンス上位のリンク"
+  },
+  "recentActivityTitle": {
+    "message": "最近のアクティビティ"
+  },
+  "serverInfoTitle": {
+    "message": "サーバー情報"
+  },
+  "loadingAnalytics": {
+    "message": "分析データを読み込み中..."
+  },
+  "analyticsError": {
+    "message": "分析データを読み込めません。サーバー設定を確認してください。"
+  },
+  "noAnalyticsData": {
+    "message": "分析データがありません"
+  },
+  "clicksToday": {
+    "message": "今日のクリック"
+  },
+  "clicksThisWeek": {
+    "message": "今週のクリック"
+  },
+  "clicksThisMonth": {
+    "message": "今月のクリック"
+  },
+  "topKeywords": {
+    "message": "トップキーワード"
+  },
+  "linkCreationTrends": {
+    "message": "リンク作成トレンド"
+  },
+  "serverVersion": {
+    "message": "YOURLSバージョン"
+  },
+  "totalUrls": {
+    "message": "総URL数"
+  },
+  "dbSize": {
+    "message": "データベースサイズ"
+  },
+  "refreshAnalytics": {
+    "message": "分析を更新"
+  },
+  "exportData": {
+    "message": "データをエクスポート"
+  },
+  "viewDetails": {
+    "message": "詳細を表示"
+  },
+  "linksCreated": {
+    "message": "作成されたリンク"
+  },
+  "uniqueClicks": {
+    "message": "ユニッククリック"
+  },
+  "averageDaily": {
+    "message": "日平均"
   }
 }

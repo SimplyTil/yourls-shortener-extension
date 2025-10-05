@@ -1,28 +1,59 @@
 {
   "versions": [
     {
+      "version": "1.3.0",
+      "date": "Oktober 2025",
+      "changes": [
+        {
+          "type": "new",
+          "emoji": "📊",
+          "text": "Fanen Avanceret analyse med detaljerede serverindsigter og ydeevnemålinger"
+        },
+        {
+          "type": "new",
+          "emoji": "📈",
+          "text": "Analyse af de bedste links med klikstatistik"
+        },
+        {
+          "type": "new",
+          "emoji": "💾",
+          "text": "Funktionalitet til eksport af analysedata til ekstern analyse"
+        },
+        {
+          "type": "improved",
+          "emoji": "🔄",
+          "text": "Forbedret API-integration med understøttelse af flere endpoints"
+        },
+        {
+          "type": "improved",
+          "emoji": "⚡",
+          "text": "Analysedata-cachelagring for forbedret ydeevne"
+        }
+      ]
+    },
+    {
       "version": "1.2.0",
       "date": "Juli 2025",
       "changes": [
         {
           "type": "new",
           "emoji": "✨",
-          "text": "Komplet UI-modernisering med nyt designsystem"
+          "text": "Komplet modernisering af brugergrænsefladen med nyt designsystem"
         },
         {
           "type": "new",
           "emoji": "📊",
-          "text": "Interaktivt dashboard med serverstatistikker og seneste links"
+          "text": "Interaktivt dashboard med serverstatistik og seneste links"
         },
         {
           "type": "new",
           "emoji": "🌍",
-          "text": "Tilføjet understøttelse for 6 nye sprog: græsk, italiensk, hollandsk, polsk, portugisisk, svensk"
+          "text": "Tilføjet understøttelse af 6 nye sprog: græsk, italiensk, hollandsk, polsk, portugisisk, svensk"
         },
         {
           "type": "improved",
           "emoji": "🎨",
-          "text": "Forbedret tilgængelighed med tastaturnavigation og skærmlæserunderstøttelse"
+          "text": "Forbedret tilgængelighed med tastaturnavigation og understøttelse af skærmlæser"
         },
         {
           "type": "improved",
@@ -32,7 +63,7 @@
         {
           "type": "fixed",
           "emoji": "🐛",
-          "text": "Løst CORS-problemer med baggrundsskript API-anmodninger"
+          "text": "Rettede CORS-problemer med baggrundsscript-API-anmodninger"
         }
       ]
     },
@@ -43,7 +74,7 @@
         {
           "type": "new",
           "emoji": "🌍",
-          "text": "Tilføjet arabisk sprogunderstøttelse med RTL-layout"
+          "text": "Tilføjet understøttelse af arabisk sprog med RTL-layout"
         },
         {
           "type": "new",
@@ -53,17 +84,17 @@
         {
           "type": "new",
           "emoji": "ℹ️",
-          "text": "Versionsinformation vist i sidefod"
+          "text": "Versionsinformation vises i sidefoden"
         },
         {
           "type": "improved",
           "emoji": "⚙️",
-          "text": "Forbedrede YOURLS-serverkonfigurationsindstillinger"
+          "text": "Forbedrede YOURLS-serverkonfigurationsmuligheder"
         },
         {
           "type": "improved",
           "emoji": "🎨",
-          "text": "Forbedringer af sprogrækkefølge og stiljusteringer"
+          "text": "Forbedringer af sproglig rækkefølge og stiljusteringer"
         }
       ]
     },
@@ -79,22 +110,22 @@
         {
           "type": "new",
           "emoji": "🔗",
-          "text": "Grundlæggende URL-forkortningsfunktionalitet"
+          "text": "Grundlæggende URL-forkortelsesfunktionalitet"
         },
         {
           "type": "new",
           "emoji": "🔄",
-          "text": "Multi-server-understøttelse til skift mellem YOURLS-instanser"
+          "text": "Multi-server support til skift mellem YOURLS-instanser"
         },
         {
           "type": "new",
           "emoji": "📋",
-          "text": "Et-klik-kopiering for forkortede URL'er"
+          "text": "Kopieringsfunktion med ét klik til forkortede URL'er"
         },
         {
           "type": "new",
           "emoji": "🎯",
-          "text": "Kontekstmenu-integration til link-forkortning"
+          "text": "Integration af kontekstmenu til linkforkortelse"
         },
         {
           "type": "new",

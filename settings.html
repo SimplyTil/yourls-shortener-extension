@@ -21,6 +21,7 @@
       <div class="tab-nav-content">
         <button class="tab-button active" data-tab="servers" data-i18n="serversTab" role="tab" aria-selected="true" aria-controls="servers">Servers</button>
         <button class="tab-button" data-tab="dashboard" data-i18n="dashboardTab" role="tab" aria-selected="false" aria-controls="dashboard">Dashboard</button>
+        <button class="tab-button" data-tab="analytics" data-i18n="analyticsTab" role="tab" aria-selected="false" aria-controls="analytics">Analytics</button>
         <button class="tab-button" data-tab="general" data-i18n="generalTab" role="tab" aria-selected="false" aria-controls="general">General</button>
       </div>
     </nav>
@@ -177,6 +178,130 @@
       
       <div id="dashboard_error" class="error-state" style="display: none;">
         <p data-i18n="dashboardError">Unable to load dashboard data. Please check your server configuration.</p>
+      </div>
+    </main>
+    
+    <!-- Analytics Tab -->
+    <main id="analytics" class="tab-content" role="tabpanel">
+      <div class="analytics-header">
+        <h2 class="analytics-title" data-i18n="analyticsTitle">Server Analytics</h2>
+        <div class="analytics-controls">
+          <div id="analytics-server-toggle" class="server-selector" style="display: none;">
+            <label for="analytics-server-select" class="server-selector-label" data-i18n="viewStatsLabel">View stats from:</label>
+            <select id="analytics-server-select" class="server-selector-select" aria-label="Select server for analytics">
+              <option value="primary" data-i18n="primaryServerOption">Primary Server</option>
+              <option value="additional" id="analytics-additional-option"></option>
+            </select>
+          </div>
+          <div class="button-group">
+            <button id="refresh_analytics" class="button button-secondary" data-i18n="refreshAnalytics" aria-label="Refresh analytics data">
+              <span aria-hidden="true">📊</span>
+              <span>Refresh Analytics</span>
+            </button>
+            <button id="export_analytics" class="button button-secondary" data-i18n="exportData" aria-label="Export analytics data">
+              <span aria-hidden="true">📄</span>
+              <span>Export Data</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div id="analytics_content">
+        <!-- Performance Metrics -->
+        <div class="section">
+          <div class="section-header">
+            <h3 class="section-title">Performance Overview</h3>
+            <p class="section-description">Key metrics from your YOURLS server</p>
+          </div>
+          <div class="analytics-grid">
+            <div class="analytics-card metric-card">
+              <div class="metric-content">
+                <div class="metric-icon">📈</div>
+                <div class="metric-details">
+                  <div class="metric-value" id="clicks_today">-</div>
+                  <div class="metric-label" data-i18n="clicksToday">Clicks Today</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="analytics-card metric-card">
+              <div class="metric-content">
+                <div class="metric-icon">📅</div>
+                <div class="metric-details">
+                  <div class="metric-value" id="clicks_week">-</div>
+                  <div class="metric-label" data-i18n="clicksThisWeek">Clicks This Week</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="analytics-card metric-card">
+              <div class="metric-content">
+                <div class="metric-icon">📊</div>
+                <div class="metric-details">
+                  <div class="metric-value" id="clicks_month">-</div>
+                  <div class="metric-label" data-i18n="clicksThisMonth">Clicks This Month</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="analytics-card metric-card">
+              <div class="metric-content">
+                <div class="metric-icon">🎯</div>
+                <div class="metric-details">
+                  <div class="metric-value" id="avg_daily_clicks">-</div>
+                  <div class="metric-label" data-i18n="averageDaily">Avg. Daily</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Top Links Section -->
+        <div class="section">
+          <div class="section-header">
+            <h3 class="section-title" data-i18n="topLinksTitle">Top Performing Links</h3>
+            <p class="section-description">Your most clicked shortened URLs</p>
+          </div>
+          <div class="analytics-card">
+            <div id="top_links_list" class="analytics-list">
+              <div class="loading-state" data-i18n="loadingAnalytics">Loading analytics data...</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Server Info Section -->
+        <div class="section">
+          <div class="section-header">
+            <h3 class="section-title" data-i18n="serverInfoTitle">Server Information</h3>
+            <p class="section-description">Technical details about your YOURLS installation</p>
+          </div>
+          <div class="analytics-grid server-info-grid">
+            <div class="analytics-card info-card">
+              <div class="info-content">
+                <div class="info-label" data-i18n="serverVersion">YOURLS Version</div>
+                <div class="info-value" id="yourls_version">-</div>
+              </div>
+            </div>
+            
+            <div class="analytics-card info-card">
+              <div class="info-content">
+                <div class="info-label" data-i18n="totalUrls">Total URLs</div>
+                <div class="info-value" id="total_urls_count">-</div>
+              </div>
+            </div>
+            
+            <div class="analytics-card info-card">
+              <div class="info-content">
+                <div class="info-label" data-i18n="dbSize">Database Size</div>
+                <div class="info-value" id="db_size">-</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="analytics_error" class="error-state" style="display: none;">
+        <p data-i18n="analyticsError">Unable to load analytics data. Please check your server configuration.</p>
       </div>
     </main>
     

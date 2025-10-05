@@ -298,5 +298,74 @@
   },
   "interfaceDescription": {
     "message": "Pas het uiterlijk en de taal van de extensie aan"
+  },
+  "analyticsTab": {
+    "message": "Analyses"
+  },
+  "analyticsTitle": {
+    "message": "Server Analyses"
+  },
+  "analyticsDescription": {
+    "message": "Gedetailleerde inzichten en statistieken van je YOURLS-server"
+  },
+  "topLinksTitle": {
+    "message": "Best Presterende Links"
+  },
+  "recentActivityTitle": {
+    "message": "Recente Activiteit"
+  },
+  "serverInfoTitle": {
+    "message": "Serverinformatie"
+  },
+  "loadingAnalytics": {
+    "message": "Analysegegevens laden..."
+  },
+  "analyticsError": {
+    "message": "Kan analysegegevens niet laden. Controleer je serverconfiguratie."
+  },
+  "noAnalyticsData": {
+    "message": "Geen analysegegevens beschikbaar"
+  },
+  "clicksToday": {
+    "message": "Klikken Vandaag"
+  },
+  "clicksThisWeek": {
+    "message": "Klikken Deze Week"
+  },
+  "clicksThisMonth": {
+    "message": "Klikken Deze Maand"
+  },
+  "topKeywords": {
+    "message": "Top Trefwoorden"
+  },
+  "linkCreationTrends": {
+    "message": "Link Aanmaaktrends"
+  },
+  "serverVersion": {
+    "message": "YOURLS Versie"
+  },
+  "totalUrls": {
+    "message": "Totaal URLs"
+  },
+  "dbSize": {
+    "message": "Databasegrootte"
+  },
+  "refreshAnalytics": {
+    "message": "Analyses Vernieuwen"
+  },
+  "exportData": {
+    "message": "Gegevens Exporteren"
+  },
+  "viewDetails": {
+    "message": "Details Bekijken"
+  },
+  "linksCreated": {
+    "message": "links aangemaakt"
+  },
+  "uniqueClicks": {
+    "message": "unieke klikken"
+  },
+  "averageDaily": {
+    "message": "gemiddeld dagelijks"
   }
 }

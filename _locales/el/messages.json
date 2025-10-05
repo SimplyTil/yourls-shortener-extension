@@ -298,5 +298,74 @@
   },
   "interfaceDescription": {
     "message": "Προσαρμόστε την εμφάνιση και τη γλώσσα της επέκτασης"
+  },
+  "analyticsTab": {
+    "message": "Αναλύσεις"
+  },
+  "analyticsTitle": {
+    "message": "Αναλύσεις Διακομιστή"
+  },
+  "analyticsDescription": {
+    "message": "Λεπτομερείς πληροφορίες και στατιστικά από τον διακομιστή YOURLS σας"
+  },
+  "topLinksTitle": {
+    "message": "Κορυφαίοι Σύνδεσμοι"
+  },
+  "recentActivityTitle": {
+    "message": "Πρόσφατη Δραστηριότητα"
+  },
+  "serverInfoTitle": {
+    "message": "Πληροφορίες Διακομιστή"
+  },
+  "loadingAnalytics": {
+    "message": "Φόρτωση δεδομένων αναλύσεων..."
+  },
+  "analyticsError": {
+    "message": "Αδυναμία φόρτωσης δεδομένων αναλύσεων. Ελέγξτε τη διαμόρφωση του διακομιστή σας."
+  },
+  "noAnalyticsData": {
+    "message": "Δεν υπάρχουν διαθέσιμα δεδομένα αναλύσεων"
+  },
+  "clicksToday": {
+    "message": "Κλικ Σήμερα"
+  },
+  "clicksThisWeek": {
+    "message": "Κλικ Αυτήν την Εβδομάδα"
+  },
+  "clicksThisMonth": {
+    "message": "Κλικ Αυτόν τον Μήνα"
+  },
+  "topKeywords": {
+    "message": "Κορυφαίες Λέξεις-Κλειδιά"
+  },
+  "linkCreationTrends": {
+    "message": "Τάσεις Δημιουργίας Συνδέσμων"
+  },
+  "serverVersion": {
+    "message": "Έκδοση YOURLS"
+  },
+  "totalUrls": {
+    "message": "Συνολικά URLs"
+  },
+  "dbSize": {
+    "message": "Μέγεθος Βάσης Δεδομένων"
+  },
+  "refreshAnalytics": {
+    "message": "Ανανέωση Αναλύσεων"
+  },
+  "exportData": {
+    "message": "Εξαγωγή Δεδομένων"
+  },
+  "viewDetails": {
+    "message": "Προβολή Λεπτομερειών"
+  },
+  "linksCreated": {
+    "message": "σύνδεσμοι που δημιουργήθηκαν"
+  },
+  "uniqueClicks": {
+    "message": "μοναδικά κλικ"
+  },
+  "averageDaily": {
+    "message": "ημερήσιος μέσος όρος"
   }
 }

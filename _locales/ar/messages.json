@@ -298,5 +298,74 @@
   },
   "interfaceDescription": {
     "message": "تخصيص مظهر ولغة الإضافة"
+  },
+  "analyticsTab": {
+    "message": "التحليلات"
+  },
+  "analyticsTitle": {
+    "message": "تحليلات الخادم"
+  },
+  "analyticsDescription": {
+    "message": "رؤى مفصلة وإحصائيات من خادم YOURLS الخاص بك"
+  },
+  "topLinksTitle": {
+    "message": "الروابط الأكثر أداءً"
+  },
+  "recentActivityTitle": {
+    "message": "النشاط الحديث"
+  },
+  "serverInfoTitle": {
+    "message": "معلومات الخادم"
+  },
+  "loadingAnalytics": {
+    "message": "جارِ تحميل بيانات التحليلات..."
+  },
+  "analyticsError": {
+    "message": "تعذر تحميل بيانات التحليلات. يرجى التحقق من إعدادات الخادم."
+  },
+  "noAnalyticsData": {
+    "message": "لا توجد بيانات تحليلات متاحة"
+  },
+  "clicksToday": {
+    "message": "النقرات اليوم"
+  },
+  "clicksThisWeek": {
+    "message": "النقرات هذا الأسبوع"
+  },
+  "clicksThisMonth": {
+    "message": "النقرات هذا الشهر"
+  },
+  "topKeywords": {
+    "message": "الكلمات المفتاحية الأهم"
+  },
+  "linkCreationTrends": {
+    "message": "اتجاهات إنشاء الروابط"
+  },
+  "serverVersion": {
+    "message": "إصدار YOURLS"
+  },
+  "totalUrls": {
+    "message": "إجمالي العناوين"
+  },
+  "dbSize": {
+    "message": "حجم قاعدة البيانات"
+  },
+  "refreshAnalytics": {
+    "message": "تحديث التحليلات"
+  },
+  "exportData": {
+    "message": "تصدير البيانات"
+  },
+  "viewDetails": {
+    "message": "عرض التفاصيل"
+  },
+  "linksCreated": {
+    "message": "الروابط المنشأة"
+  },
+  "uniqueClicks": {
+    "message": "النقرات الفريدة"
+  },
+  "averageDaily": {
+    "message": "المتوسط اليومي"
   }
 }

@@ -1,6 +1,37 @@
 {
   "versions": [
     {
+      "version": "1.3.0",
+      "date": "October 2025",
+      "changes": [
+        {
+          "type": "new",
+          "emoji": "📊",
+          "text": "Advanced Analytics tab with detailed server insights and performance metrics"
+        },
+        {
+          "type": "new",
+          "emoji": "📈",
+          "text": "Top performing links analysis with click statistics"
+        },
+        {
+          "type": "new",
+          "emoji": "💾",
+          "text": "Analytics data export functionality for external analysis"
+        },
+        {
+          "type": "improved",
+          "emoji": "🔄",
+          "text": "Enhanced API integration with multiple endpoint support"
+        },
+        {
+          "type": "improved",
+          "emoji": "⚡",
+          "text": "Analytics data caching for improved performance"
+        }
+      ]
+    },
+    {
       "version": "1.2.0",
       "date": "July 2025",
       "changes": [

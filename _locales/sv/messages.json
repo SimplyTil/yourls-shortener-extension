@@ -298,5 +298,74 @@
   },
   "interfaceDescription": {
     "message": "Anpassa tillägets utseende och språk"
+  },
+  "analyticsTab": {
+    "message": "Analys"
+  },
+  "analyticsTitle": {
+    "message": "Serveranalys"
+  },
+  "analyticsDescription": {
+    "message": "Detaljerade insikter och statistik från din YOURLS-server"
+  },
+  "topLinksTitle": {
+    "message": "Bäst Presterande Länkar"
+  },
+  "recentActivityTitle": {
+    "message": "Senaste Aktivitet"
+  },
+  "serverInfoTitle": {
+    "message": "Serverinformation"
+  },
+  "loadingAnalytics": {
+    "message": "Laddar analysdata..."
+  },
+  "analyticsError": {
+    "message": "Kan inte ladda analysdata. Kontrollera din serverkonfiguration."
+  },
+  "noAnalyticsData": {
+    "message": "Ingen analysdata tillgänglig"
+  },
+  "clicksToday": {
+    "message": "Klick Idag"
+  },
+  "clicksThisWeek": {
+    "message": "Klick Denna Vecka"
+  },
+  "clicksThisMonth": {
+    "message": "Klick Denna Månad"
+  },
+  "topKeywords": {
+    "message": "Topp Nyckelord"
+  },
+  "linkCreationTrends": {
+    "message": "Länkskapandetrender"
+  },
+  "serverVersion": {
+    "message": "YOURLS-version"
+  },
+  "totalUrls": {
+    "message": "Totalt URLs"
+  },
+  "dbSize": {
+    "message": "Databasstorlek"
+  },
+  "refreshAnalytics": {
+    "message": "Uppdatera Analys"
+  },
+  "exportData": {
+    "message": "Exportera Data"
+  },
+  "viewDetails": {
+    "message": "Visa Detaljer"
+  },
+  "linksCreated": {
+    "message": "länkar skapade"
+  },
+  "uniqueClicks": {
+    "message": "unika klick"
+  },
+  "averageDaily": {
+    "message": "dagligt genomsnitt"
   }
 }

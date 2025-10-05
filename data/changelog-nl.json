@@ -1,13 +1,44 @@
 {
   "versions": [
     {
+      "version": "1.3.0",
+      "date": "Oktober 2025",
+      "changes": [
+        {
+          "type": "new",
+          "emoji": "📊",
+          "text": "Tabblad Geavanceerde analyses met gedetailleerde serverinzichten en prestatiegegevens"
+        },
+        {
+          "type": "new",
+          "emoji": "📈",
+          "text": "Analyse van de best presterende links met klikstatistieken"
+        },
+        {
+          "type": "new",
+          "emoji": "💾",
+          "text": "Analytics-gegevensexportfunctionaliteit voor externe analyse"
+        },
+        {
+          "type": "improved",
+          "emoji": "🔄",
+          "text": "Verbeterde API-integratie met ondersteuning voor meerdere eindpunten"
+        },
+        {
+          "type": "improved",
+          "emoji": "⚡",
+          "text": "Analytics-datacaching voor verbeterde prestaties"
+        }
+      ]
+    },
+    {
       "version": "1.2.0",
       "date": "Juli 2025",
       "changes": [
         {
           "type": "new",
           "emoji": "✨",
-          "text": "Volledige UI-modernisering met nieuw ontwerpsysteem"
+          "text": "Volledige modernisering van de gebruikersinterface met nieuw ontwerpsysteem"
         },
         {
           "type": "new",
@@ -22,17 +53,17 @@
         {
           "type": "improved",
           "emoji": "🎨",
-          "text": "Verbeterde toegankelijkheid met toetsenbordnavigatie en schermlezerondersteuning"
+          "text": "Verbeterde toegankelijkheid met toetsenbordnavigatie en ondersteuning voor schermlezers"
         },
         {
           "type": "improved",
           "emoji": "🌍",
-          "text": "Verbeterde internationalisering met 14+ talen en RTL-ondersteuning"
+          "text": "Verbeterde internationalisatie met meer dan 14 talen en RTL-ondersteuning"
         },
         {
           "type": "fixed",
           "emoji": "🐛",
-          "text": "CORS-problemen opgelost met achtergrondscript API-verzoeken"
+          "text": "CORS-problemen met API-aanvragen voor achtergrondscripts opgelost"
         }
       ]
     },
@@ -43,7 +74,7 @@
         {
           "type": "new",
           "emoji": "🌍",
-          "text": "Arabische taalondersteuning toegevoegd met RTL-layout"
+          "text": "Ondersteuning voor Arabische taal toegevoegd met RTL-indeling"
         },
         {
           "type": "new",
@@ -63,7 +94,7 @@
         {
           "type": "improved",
           "emoji": "🎨",
-          "text": "Verbeteringen in taalvolgorde en stijlaanpassingen"
+          "text": "Verbeteringen in de taalvolgorde en stijlaanpassingen"
         }
       ]
     },
@@ -74,27 +105,27 @@
         {
           "type": "new",
           "emoji": "🚀",
-          "text": "Eerste release met Manifest V3-ondersteuning"
+          "text": "Eerste release met ondersteuning voor Manifest V3"
         },
         {
           "type": "new",
           "emoji": "🔗",
-          "text": "Basis URL-verkortingsfunctionaliteit"
+          "text": "Basisfunctionaliteit voor het verkorten van URL's"
         },
         {
           "type": "new",
           "emoji": "🔄",
-          "text": "Multi-server ondersteuning voor schakelen tussen YOURLS-instances"
+          "text": "Ondersteuning voor meerdere servers voor het schakelen tussen YOURLS-instanties"
         },
         {
           "type": "new",
           "emoji": "📋",
-          "text": "Eén-klik kopiëerfunctionaliteit voor verkorte URL's"
+          "text": "Kopieerfunctionaliteit met één klik voor verkorte URL's"
         },
         {
           "type": "new",
           "emoji": "🎯",
-          "text": "Contextmenu-integratie voor linkverkorting"
+          "text": "Integratie van contextmenu voor het verkorten van links"
         },
         {
           "type": "new",

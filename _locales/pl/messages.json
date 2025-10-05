@@ -298,5 +298,74 @@
   },
   "interfaceDescription": {
     "message": "Dostosuj wygląd i język rozszerzenia"
+  },
+  "analyticsTab": {
+    "message": "Analityka"
+  },
+  "analyticsTitle": {
+    "message": "Analityka Serwera"
+  },
+  "analyticsDescription": {
+    "message": "Szczegółowe informacje i statystyki z twojego serwera YOURLS"
+  },
+  "topLinksTitle": {
+    "message": "Najlepiej Działające Linki"
+  },
+  "recentActivityTitle": {
+    "message": "Ostatnia Aktywność"
+  },
+  "serverInfoTitle": {
+    "message": "Informacje o Serwerze"
+  },
+  "loadingAnalytics": {
+    "message": "Ładowanie danych analitycznych..."
+  },
+  "analyticsError": {
+    "message": "Nie można załadować danych analitycznych. Sprawdź konfigurację serwera."
+  },
+  "noAnalyticsData": {
+    "message": "Brak dostępnych danych analitycznych"
+  },
+  "clicksToday": {
+    "message": "Kliknięcia Dzisiaj"
+  },
+  "clicksThisWeek": {
+    "message": "Kliknięcia Ten Tydzień"
+  },
+  "clicksThisMonth": {
+    "message": "Kliknięcia Ten Miesiąc"
+  },
+  "topKeywords": {
+    "message": "Najlepsze Słowa Kluczowe"
+  },
+  "linkCreationTrends": {
+    "message": "Trendy Tworzenia Linków"
+  },
+  "serverVersion": {
+    "message": "Wersja YOURLS"
+  },
+  "totalUrls": {
+    "message": "Łączna Liczba URL"
+  },
+  "dbSize": {
+    "message": "Rozmiar Bazy Danych"
+  },
+  "refreshAnalytics": {
+    "message": "Odśwież Analitykę"
+  },
+  "exportData": {
+    "message": "Eksportuj Dane"
+  },
+  "viewDetails": {
+    "message": "Pokaż Szczegóły"
+  },
+  "linksCreated": {
+    "message": "utworzonych linków"
+  },
+  "uniqueClicks": {
+    "message": "unikalne kliknięcia"
+  },
+  "averageDaily": {
+    "message": "średnio dziennie"
   }
 }
