@@ -1,6 +1,32 @@
 {
   "versions": [
     {
+      "version": "1.3.2",
+      "date": "Febbraio 2026",
+      "changes": [
+        {
+          "type": "fixed",
+          "emoji": "🧹",
+          "text": "Rimosso codice duplicato e codice morto nei moduli dell'estensione"
+        },
+        {
+          "type": "fixed",
+          "emoji": "🔒",
+          "text": "Rimossa l'esposizione non necessaria delle risorse web"
+        },
+        {
+          "type": "fixed",
+          "emoji": "🛡️",
+          "text": "Le favicon vengono ora recuperate localmente per una maggiore privacy"
+        },
+        {
+          "type": "improved",
+          "emoji": "🎨",
+          "text": "Intestazione impostazioni ridisegnata con barra di navigazione unificata"
+        }
+      ]
+    },
+    {
       "version": "1.3.1",
       "date": "Dicembre 2025",
       "changes": [

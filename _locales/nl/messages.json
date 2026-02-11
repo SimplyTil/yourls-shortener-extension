@@ -311,11 +311,17 @@
   "topLinksTitle": {
     "message": "Best Presterende Links"
   },
+  "topLinksDescription": {
+    "message": "Je meest geklikte verkorte URL's"
+  },
   "recentActivityTitle": {
     "message": "Recente Activiteit"
   },
   "serverInfoTitle": {
     "message": "Serverinformatie"
+  },
+  "serverInfoDescription": {
+    "message": "Technische details over je YOURLS-installatie"
   },
   "loadingAnalytics": {
     "message": "Analysegegevens laden..."

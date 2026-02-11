@@ -1,6 +1,32 @@
 {
   "versions": [
     {
+      "version": "1.3.2",
+      "date": "Luty 2026",
+      "changes": [
+        {
+          "type": "fixed",
+          "emoji": "🧹",
+          "text": "Usunięto duplikację kodu i martwy kod w modułach rozszerzenia"
+        },
+        {
+          "type": "fixed",
+          "emoji": "🔒",
+          "text": "Usunięto niepotrzebne udostępnianie zasobów webowych"
+        },
+        {
+          "type": "fixed",
+          "emoji": "🛡️",
+          "text": "Favikony są teraz pobierane lokalnie dla lepszej prywatności"
+        },
+        {
+          "type": "improved",
+          "emoji": "🎨",
+          "text": "Przeprojektowano nagłówek ustawień z ujednoliconym paskiem nawigacji"
+        }
+      ]
+    },
+    {
       "version": "1.3.1",
       "date": "Grudzień 2025",
       "changes": [

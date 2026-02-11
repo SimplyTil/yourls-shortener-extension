@@ -1,8 +1,11 @@
+// Import shared i18n module (reuse the same I18n class used by popup/settings)
+import './js/i18n.js';
+
 // Set up context menu items when the extension is installed
 chrome.runtime.onInstalled.addListener(async () => {
   try {
-    // Load translations first
-    const translations = await loadTranslations();
+    // Initialize shared i18n
+    await self.i18n.init();
     
     // Clear existing items to prevent duplicates on update
     await new Promise(resolve => chrome.contextMenus.removeAll(resolve));
@@ -10,10 +13,9 @@ chrome.runtime.onInstalled.addListener(async () => {
     // Context menu for links
     chrome.contextMenus.create({
       id: 'shortenLink',
-      title: translations.contextMenuShortenLink || 'Shorten Link',
+      title: self.i18n.get('contextMenuShortenLink') || 'Shorten Link',
       contexts: ['link']
     }, () => {
-      // Check for creation error
       if (chrome.runtime.lastError) {
         console.error('Error creating shortenLink menu:', chrome.runtime.lastError);
       }
@@ -22,10 +24,9 @@ chrome.runtime.onInstalled.addListener(async () => {
     // Context menu for selected text
     chrome.contextMenus.create({
       id: 'shortenPage',
-      title: translations.contextMenuShortenPage || 'Shorten Page',
+      title: self.i18n.get('contextMenuShortenPage') || 'Shorten Page',
       contexts: ['selection']
     }, () => {
-      // Check for creation error
       if (chrome.runtime.lastError) {
         console.error('Error creating shortenPage menu:', chrome.runtime.lastError);
       }
@@ -34,56 +35,6 @@ chrome.runtime.onInstalled.addListener(async () => {
     console.error('Failed to set up context menu:', error);
   }
 });
-
-// Function to load translations
-async function loadTranslations() {
-  try {
-    // Get preferred language 
-    const { language = 'en' } = await new Promise(resolve => {
-      chrome.storage.sync.get(['language'], resolve);
-    });
-
-    // Handle potential invalid language value
-    let validLanguage = language;
-    
-    // Load translations - with fallback to English
-    try {
-      const response = await fetch(chrome.runtime.getURL(`/_locales/${validLanguage}/messages.json`));
-      // Check if file exists
-      if (!response.ok) {
-        throw new Error(`Could not load language ${validLanguage}`);
-      }
-      const data = await response.json();
-      
-      // Convert to simple key-value format
-      const translations = {};
-      Object.keys(data).forEach(key => {
-        translations[key] = data[key].message;
-      });
-      
-      return translations;
-    } catch (e) {
-      console.warn(`Error loading language ${validLanguage}, falling back to English:`, e);
-      // Fallback to English
-      const fallbackResponse = await fetch(chrome.runtime.getURL('/_locales/en/messages.json'));
-      const fallbackData = await fallbackResponse.json();
-      
-      const translations = {};
-      Object.keys(fallbackData).forEach(key => {
-        translations[key] = fallbackData[key].message;
-      });
-      
-      return translations;
-    }
-  } catch (e) {
-    console.error("Critical error loading translations:", e);
-    // Return minimal working translations for critical UI elements
-    return {
-      contextMenuShortenLink: 'Shorten Link',
-      contextMenuShortenPage: 'Shorten Page'
-    }; 
-  }
-}
 
 // Handle context menu item clicks
 chrome.contextMenus.onClicked.addListener((info, tab) => {
@@ -136,10 +87,11 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
 chrome.storage.onChanged.addListener(async (changes, area) => {
   if (area === 'sync' && changes.language) {
     try {
-      const translations = await loadTranslations();
+      // Re-initialize i18n with the new language
+      await self.i18n.init();
       
       chrome.contextMenus.update('shortenLink', {
-        title: translations.contextMenuShortenLink || 'Shorten Link'
+        title: self.i18n.get('contextMenuShortenLink') || 'Shorten Link'
       }, () => {
         if (chrome.runtime.lastError) {
           console.error('Error updating shortenLink menu:', chrome.runtime.lastError);
@@ -147,7 +99,7 @@ chrome.storage.onChanged.addListener(async (changes, area) => {
       });
       
       chrome.contextMenus.update('shortenPage', {
-        title: translations.contextMenuShortenPage || 'Shorten Page'
+        title: self.i18n.get('contextMenuShortenPage') || 'Shorten Page'
       }, () => {
         if (chrome.runtime.lastError) {
           console.error('Error updating shortenPage menu:', chrome.runtime.lastError);

@@ -311,11 +311,17 @@
   "topLinksTitle": {
     "message": "Bäst Presterande Länkar"
   },
+  "topLinksDescription": {
+    "message": "Dina mest klickade förkortade URL:er"
+  },
   "recentActivityTitle": {
     "message": "Senaste Aktivitet"
   },
   "serverInfoTitle": {
     "message": "Serverinformation"
+  },
+  "serverInfoDescription": {
+    "message": "Tekniska detaljer om din YOURLS-installation"
   },
   "loadingAnalytics": {
     "message": "Laddar analysdata..."

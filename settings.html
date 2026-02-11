@@ -8,23 +8,21 @@
 </head>
 <body>
   <div class="container">
-    <!-- Header -->
+    <!-- Header + Navigation -->
     <header class="header">
       <div class="header-content">
-        <img src="images/icon48.png" alt="YOURLS Icon" class="header-icon">
-        <h1 data-i18n="settingsTitle">YOURLS Settings</h1>
+        <div class="header-brand">
+          <img src="images/icon48.png" alt="YOURLS Icon" class="header-icon">
+          <h1 data-i18n="settingsTitle">YOURLS Settings</h1>
+        </div>
+        <nav class="tab-nav" role="tablist" aria-label="Settings sections">
+          <button class="tab-button active" data-tab="servers" data-i18n="serversTab" role="tab" aria-selected="true" aria-controls="servers">Servers</button>
+          <button class="tab-button" data-tab="dashboard" data-i18n="dashboardTab" role="tab" aria-selected="false" aria-controls="dashboard">Dashboard</button>
+          <button class="tab-button" data-tab="analytics" data-i18n="analyticsTab" role="tab" aria-selected="false" aria-controls="analytics">Analytics</button>
+          <button class="tab-button" data-tab="general" data-i18n="generalTab" role="tab" aria-selected="false" aria-controls="general">General</button>
+        </nav>
       </div>
     </header>
-    
-    <!-- Tab Navigation -->
-    <nav class="tab-navigation" role="tablist" aria-label="Settings sections">
-      <div class="tab-nav-content">
-        <button class="tab-button active" data-tab="servers" data-i18n="serversTab" role="tab" aria-selected="true" aria-controls="servers">Servers</button>
-        <button class="tab-button" data-tab="dashboard" data-i18n="dashboardTab" role="tab" aria-selected="false" aria-controls="dashboard">Dashboard</button>
-        <button class="tab-button" data-tab="analytics" data-i18n="analyticsTab" role="tab" aria-selected="false" aria-controls="analytics">Analytics</button>
-        <button class="tab-button" data-tab="general" data-i18n="generalTab" role="tab" aria-selected="false" aria-controls="general">General</button>
-      </div>
-    </nav>
     
     <!-- Servers Tab -->
     <main id="servers" class="tab-content active" role="tabpanel">

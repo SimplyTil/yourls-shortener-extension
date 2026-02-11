@@ -224,5 +224,5 @@ class I18n {
 // Create a singleton instance
 const i18n = new I18n();
 
-// Export the instance
-window.i18n = i18n;
+// Export the instance for both page and service worker contexts
+(typeof window !== 'undefined' ? window : self).i18n = i18n;

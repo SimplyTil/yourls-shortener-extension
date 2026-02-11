@@ -311,11 +311,17 @@
   "topLinksTitle": {
     "message": "Najlepiej Działające Linki"
   },
+  "topLinksDescription": {
+    "message": "Twoje najczęściej klikane skrócone adresy URL"
+  },
   "recentActivityTitle": {
     "message": "Ostatnia Aktywność"
   },
   "serverInfoTitle": {
     "message": "Informacje o Serwerze"
+  },
+  "serverInfoDescription": {
+    "message": "Szczegóły techniczne instalacji YOURLS"
   },
   "loadingAnalytics": {
     "message": "Ładowanie danych analitycznych..."

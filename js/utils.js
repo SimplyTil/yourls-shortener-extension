@@ -2,97 +2,6 @@
  * Utility functions for YOURLS Shortener Extension
  */
 
-// Safe storage access with error handling
-const storage = {
-  // Get items from Chrome storage
-  get: (keys) => {
-    // Missing validation for the keys parameter
-    if (keys === undefined) {
-      return Promise.reject(new Error('Keys parameter is required'));
-    }
-    
-    return new Promise((resolve, reject) => {
-      chrome.storage.sync.get(keys, (result) => {
-        if (chrome.runtime.lastError) {
-          reject(new Error(chrome.runtime.lastError.message));
-        } else {
-          resolve(result);
-        }
-      });
-    });
-  },
-  
-  // Set items in Chrome storage
-  set: (items) => {
-    // Missing validation to ensure items is an object
-    if (!items || typeof items !== 'object') {
-      return Promise.reject(new Error('Items must be a valid object'));
-    }
-    
-    return new Promise((resolve, reject) => {
-      chrome.storage.sync.set(items, () => {
-        if (chrome.runtime.lastError) {
-          reject(new Error(chrome.runtime.lastError.message));
-        } else {
-          resolve();
-        }
-      });
-    });
-  },
-  
-  // Remove items from Chrome storage
-  remove: (keys) => {
-    return new Promise((resolve, reject) => {
-      chrome.storage.sync.remove(keys, () => {
-        if (chrome.runtime.lastError) {
-          reject(new Error(chrome.runtime.lastError.message));
-        } else {
-          resolve();
-        }
-      });
-    });
-  },
-  
-  // Get items from local storage
-  local: {
-    get: (keys) => {
-      return new Promise((resolve, reject) => {
-        chrome.storage.local.get(keys, (result) => {
-          if (chrome.runtime.lastError) {
-            reject(new Error(chrome.runtime.lastError.message));
-          } else {
-            resolve(result);
-          }
-        });
-      });
-    },
-    
-    set: (items) => {
-      return new Promise((resolve, reject) => {
-        chrome.storage.local.set(items, () => {
-          if (chrome.runtime.lastError) {
-            reject(new Error(chrome.runtime.lastError.message));
-          } else {
-            resolve();
-          }
-        });
-      });
-    },
-    
-    remove: (keys) => {
-      return new Promise((resolve, reject) => {
-        chrome.storage.local.remove(keys, () => {
-          if (chrome.runtime.lastError) {
-            reject(new Error(chrome.runtime.lastError.message));
-          } else {
-            resolve();
-          }
-        });
-      });
-    }
-  }
-};
-
 // URL validation and formatting
 const url = {
   // Validate URL format
@@ -311,7 +220,6 @@ const api = {
 // Export utilities - needs check for window availability
 if (typeof window !== 'undefined') {
   window.utils = {
-    storage,
     url,
     clipboard,
     dom,
@@ -320,7 +228,6 @@ if (typeof window !== 'undefined') {
 } else {
   // For background contexts or service workers
   self.utils = {
-    storage,
     url,
     api
   };

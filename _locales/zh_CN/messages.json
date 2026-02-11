@@ -311,11 +311,17 @@
   "topLinksTitle": {
     "message": "热门链接"
   },
+  "topLinksDescription": {
+    "message": "您点击最多的短链接"
+  },
   "recentActivityTitle": {
     "message": "最近活动"
   },
   "serverInfoTitle": {
     "message": "服务器信息"
+  },
+  "serverInfoDescription": {
+    "message": "YOURLS 安装的技术详情"
   },
   "loadingAnalytics": {
     "message": "正在加载分析数据..."

@@ -17,19 +17,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.documentElement.setAttribute('dir', 'ltr');
   }
   
-  // Cache DOM queries for performance
-  const elements = {};
-  
-  // Helper function to get and cache DOM elements
-  function getElement(id) {
-    if (!elements[id]) {
-      elements[id] = document.getElementById(id);
-      if (!elements[id]) {
-        console.warn(`Element not found: ${id}`);
-      }
-    }
-    return elements[id];
-  }
+  // Use shared DOM utility for element access
+  const getElement = domUtils.getElement;
   
   // Helper function to get or create dynamic elements
   function getOrCreateElement(id, tagName = 'div', className = '') {

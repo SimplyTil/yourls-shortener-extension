@@ -311,11 +311,17 @@
   "topLinksTitle": {
     "message": "Κορυφαίοι Σύνδεσμοι"
   },
+  "topLinksDescription": {
+    "message": "Οι συντομευμένες διευθύνσεις URL με τα περισσότερα κλικ"
+  },
   "recentActivityTitle": {
     "message": "Πρόσφατη Δραστηριότητα"
   },
   "serverInfoTitle": {
     "message": "Πληροφορίες Διακομιστή"
+  },
+  "serverInfoDescription": {
+    "message": "Τεχνικές λεπτομέρειες σχετικά με την εγκατάσταση YOURLS"
   },
   "loadingAnalytics": {
     "message": "Φόρτωση δεδομένων αναλύσεων..."

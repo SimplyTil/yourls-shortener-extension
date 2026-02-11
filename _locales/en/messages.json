@@ -311,11 +311,17 @@
   "topLinksTitle": {
     "message": "Top Performing Links"
   },
+  "topLinksDescription": {
+    "message": "Your most clicked shortened URLs"
+  },
   "recentActivityTitle": {
     "message": "Recent Activity"
   },
   "serverInfoTitle": {
     "message": "Server Information"
+  },
+  "serverInfoDescription": {
+    "message": "Technical details about your YOURLS installation"
   },
   "loadingAnalytics": {
     "message": "Loading analytics data..."

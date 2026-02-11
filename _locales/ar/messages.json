@@ -311,11 +311,17 @@
   "topLinksTitle": {
     "message": "الروابط الأكثر أداءً"
   },
+  "topLinksDescription": {
+    "message": "الروابط المختصرة الأكثر نقرًا"
+  },
   "recentActivityTitle": {
     "message": "النشاط الحديث"
   },
   "serverInfoTitle": {
     "message": "معلومات الخادم"
+  },
+  "serverInfoDescription": {
+    "message": "التفاصيل التقنية حول تثبيت YOURLS الخاص بك"
   },
   "loadingAnalytics": {
     "message": "جارِ تحميل بيانات التحليلات..."

@@ -1,6 +1,33 @@
 {
   "versions": [
-    {      "version": "1.3.1",
+    {
+      "version": "1.3.2",
+      "date": "Februar 2026",
+      "changes": [
+        {
+          "type": "fixed",
+          "emoji": "🧹",
+          "text": "Code-Duplizierung und ungenutzten Code in Erweiterungsmodulen entfernt"
+        },
+        {
+          "type": "fixed",
+          "emoji": "🔒",
+          "text": "Unnötige Freigabe von Web-Ressourcen entfernt"
+        },
+        {
+          "type": "fixed",
+          "emoji": "🛡️",
+          "text": "Favicons werden jetzt lokal bezogen für verbesserten Datenschutz"
+        },
+        {
+          "type": "improved",
+          "emoji": "🎨",
+          "text": "Einstellungs-Header mit einheitlicher Navigationsleiste neu gestaltet"
+        }
+      ]
+    },
+    {
+      "version": "1.3.1",
       "date": "Dezember 2025",
       "changes": [
         {

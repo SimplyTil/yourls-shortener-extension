@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   });
   
   // Use shared utils for DOM access
-  const { dom, clipboard, url: urlUtils } = window.utils;
+  const { dom, clipboard, url: urlUtils, api } = window.utils;
   const getElement = dom.getElement;
   
   const urlElement = getElement('currentUrl');
@@ -153,29 +153,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   });
   
-  // Function to get and display favicon
+  // Function to get and display favicon (uses tab favicon only to avoid leaking URLs to third parties)
   function getFaviconUrl(url, tabFavicon = null) {
     if (!faviconElement) return;
     
-    // Try to use the tab's favicon first
     if (tabFavicon && tabFavicon !== '') {
       faviconElement.src = tabFavicon;
       faviconElement.style.display = 'block';
-      return;
-    }
-    
-    // Otherwise, construct favicon URL from domain
-    try {
-      const urlObj = new URL(url);
-      const domain = urlObj.hostname;
-      
-      // Use Google's favicon service directly - more reliable
-      const googleFavicon = `https://www.google.com/s2/favicons?domain=${domain}&sz=16`;
-      faviconElement.src = googleFavicon;
-      faviconElement.style.display = 'block';
-    } catch (e) {
-      console.warn('Invalid URL for favicon:', e);
-      // Hide favicon if URL is invalid
+    } else {
       faviconElement.style.display = 'none';
     }
   }
@@ -310,32 +295,22 @@ document.addEventListener('DOMContentLoaded', async () => {
       const apiUrl = `${sanitizedBaseUrl}/yourls-api.php`;
       
       // Create API request parameters
-      const params = new URLSearchParams();
-      params.append('signature', apiKey);
-      params.append('action', 'shorturl');
-      params.append('format', 'json');
-      params.append('url', url);
+      const apiParams = {
+        signature: apiKey,
+        action: 'shorturl',
+        format: 'json',
+        url: url
+      };
       
       if (keyword) {
-        params.append('keyword', keyword);
+        apiParams.keyword = keyword;
       }
       
-      // Try to use background script to bypass CORS
-      chrome.runtime.sendMessage({
-        action: 'makeApiRequest',
-        url: apiUrl,
-        method: 'POST',
-        body: params.toString(),
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-          'Accept': 'application/json'
-        }
-      }, response => {
-        // Reset button state
-        resetShortenButton();
-        
-        if (response && response.success) {
-          const data = response.data;
+      // Use shared API utility with timeout handling
+      api.request(apiUrl, apiParams)
+        .then(data => {
+          resetShortenButton();
+          
           if (data && data.status === 'success' && data.shorturl) {
             showResult(data.shorturl);
             
@@ -350,26 +325,27 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
           } else {
             // Localize common YOURLS error messages
-            let errorMessage = data && data.message ? data.message : i18n.get('errorNetwork');
+            let errMsg = data && data.message ? data.message : i18n.get('errorNetwork');
             
             // Check for known error messages and replace with localized versions
-            if (errorMessage.includes('Missing or malformed URL')) {
-              errorMessage = i18n.get('apiErrorMissingUrl');
-            } else if (errorMessage.includes('Keyword already exists')) {
-              errorMessage = i18n.get('apiErrorKeywordExists');
-            } else if (errorMessage.includes('already exists')) {
-              errorMessage = i18n.get('apiErrorUrlExists');
+            if (errMsg.includes('Missing or malformed URL')) {
+              errMsg = i18n.get('apiErrorMissingUrl');
+            } else if (errMsg.includes('Keyword already exists')) {
+              errMsg = i18n.get('apiErrorKeywordExists');
+            } else if (errMsg.includes('already exists')) {
+              errMsg = i18n.get('apiErrorUrlExists');
             } else if (data && data.status === 'fail') {
-              errorMessage = i18n.get('apiErrorUnknown', { message: errorMessage });
+              errMsg = i18n.get('apiErrorUnknown', { message: errMsg });
             }
             
-            showError(errorMessage);
+            showError(errMsg);
           }
-        } else {
-          console.error('API error:', response ? response.error : 'No response');
+        })
+        .catch(error => {
+          resetShortenButton();
+          console.error('API error:', error);
           showError(i18n.get('errorCorsNetwork') || 'Network error connecting to YOURLS server');
-        }
-      });
+        });
     });
   }
   

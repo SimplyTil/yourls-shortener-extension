@@ -311,11 +311,17 @@
   "topLinksTitle": {
     "message": "Top-Links"
   },
+  "topLinksDescription": {
+    "message": "Ihre meistgeklickten verkürzten URLs"
+  },
   "recentActivityTitle": {
     "message": "Letzte Aktivität"
   },
   "serverInfoTitle": {
     "message": "Server-Informationen"
+  },
+  "serverInfoDescription": {
+    "message": "Technische Details zu Ihrer YOURLS-Installation"
   },
   "loadingAnalytics": {
     "message": "Analysedaten werden geladen..."
