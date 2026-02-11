@@ -366,6 +366,23 @@
     "message": "ユニッククリック"
   },
   "averageDaily": {
-    "message": "日平均"
+    "message": "日平均"  },
+  "changelogLoadError": {
+    "message": "変更履歴の読み込みに失敗しました"
+  },
+  "noChangelogEntries": {
+    "message": "変更履歴が見つかりません"
+  },
+  "versionUnknown": {
+    "message": "バージョン不明"
+  },
+  "apiError": {
+    "message": "APIエラー"
+  },
+  "toggleDescription": {
+    "message": "異なるYOURLSインスタンスを切り替えるために2番目のサーバーを追加"
+  },
+  "supportOnKofi": {
+    "message": "Ko-fiでサポート"
   }
 }

@@ -367,5 +367,23 @@
   },
   "averageDaily": {
     "message": "dagligt genomsnitt"
+  },
+  "changelogLoadError": {
+    "message": "Kunde inte ladda ändringsloggen"
+  },
+  "noChangelogEntries": {
+    "message": "Inga loggposter hittades"
+  },
+  "versionUnknown": {
+    "message": "Version okänd"
+  },
+  "apiError": {
+    "message": "API-fel"
+  },
+  "toggleDescription": {
+    "message": "Lägg till en andra server för att växla mellan olika YOURLS-instanser"
+  },
+  "supportOnKofi": {
+    "message": "Stöd på Ko-fi"
   }
 }

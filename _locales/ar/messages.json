@@ -367,5 +367,23 @@
   },
   "averageDaily": {
     "message": "المتوسط اليومي"
+  },
+  "changelogLoadError": {
+    "message": "فشل تحميل سجل التغييرات"
+  },
+  "noChangelogEntries": {
+    "message": "لم يتم العثور على إدخالات في سجل التغييرات"
+  },
+  "versionUnknown": {
+    "message": "الإصدار غير معروف"
+  },
+  "apiError": {
+    "message": "خطأ في API"
+  },
+  "toggleDescription": {
+    "message": "أضف خادمًا ثانيًا للتبديل بين مثيلات YOURLS المختلفة"
+  },
+  "supportOnKofi": {
+    "message": "ادعمنا على Ko-fi"
   }
 }

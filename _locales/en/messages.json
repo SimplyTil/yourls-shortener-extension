@@ -367,5 +367,23 @@
   },
   "averageDaily": {
     "message": "avg. daily"
+  },
+  "supportOnKofi": {
+    "message": "Support on Ko-fi"
+  },
+  "changelogLoadError": {
+    "message": "Failed to load changelog data"
+  },
+  "noChangelogEntries": {
+    "message": "No changelog entries found"
+  },
+  "versionUnknown": {
+    "message": "Version unknown"
+  },
+  "apiError": {
+    "message": "API Error"
+  },
+  "toggleDescription": {
+    "message": "Add a second server to switch between different YOURLS instances"
   }
 }

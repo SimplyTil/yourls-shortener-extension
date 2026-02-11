@@ -367,5 +367,23 @@
   },
   "averageDaily": {
     "message": "promedio diario"
+  },
+  "changelogLoadError": {
+    "message": "Error al cargar el registro de cambios"
+  },
+  "noChangelogEntries": {
+    "message": "No se encontraron entradas en el registro"
+  },
+  "versionUnknown": {
+    "message": "Versión desconocida"
+  },
+  "apiError": {
+    "message": "Error de API"
+  },
+  "toggleDescription": {
+    "message": "Añade un segundo servidor para alternar entre diferentes instancias YOURLS"
+  },
+  "supportOnKofi": {
+    "message": "Apoya en Ko-fi"
   }
 }

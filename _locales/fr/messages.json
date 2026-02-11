@@ -367,5 +367,23 @@
   },
   "averageDaily": {
     "message": "moyenne quotidienne"
+  },
+  "changelogLoadError": {
+    "message": "Échec du chargement du journal des modifications"
+  },
+  "noChangelogEntries": {
+    "message": "Aucune entrée de journal trouvée"
+  },
+  "versionUnknown": {
+    "message": "Version inconnue"
+  },
+  "apiError": {
+    "message": "Erreur API"
+  },
+  "toggleDescription": {
+    "message": "Ajouter un deuxième serveur pour basculer entre différentes instances YOURLS"
+  },
+  "supportOnKofi": {
+    "message": "Soutenir sur Ko-fi"
   }
 }

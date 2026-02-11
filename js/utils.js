@@ -139,7 +139,7 @@ const url = {
 
 // Clipboard functions with Clipboard API fallback
 const clipboard = {
-  // Copy text to clipboard
+  // Copy text to clipboard - returns a Promise
   copy: (text) => {
     // Validate text input
     if (typeof text !== 'string') {
@@ -152,12 +152,18 @@ const clipboard = {
     } 
     
     // Fallback to execCommand
-    return clipboard.fallbackCopy(text);
+    return new Promise((resolve, reject) => {
+      const success = clipboard.fallbackCopy(text);
+      if (success) {
+        resolve();
+      } else {
+        reject(new Error('Fallback copy failed'));
+      }
+    });
   },
   
   // Fallback copy method using execCommand
   fallbackCopy: (text) => {
-    // No check if running in a context where document is available
     if (typeof document === 'undefined') {
       return false;
     }
@@ -168,6 +174,7 @@ const clipboard = {
     // Style the textarea to be invisible
     textArea.style.position = 'fixed';
     textArea.style.opacity = '0';
+    textArea.style.left = '-9999px';
     
     document.body.appendChild(textArea);
     textArea.focus();
@@ -176,13 +183,32 @@ const clipboard = {
     let successful = false;
     try {
       successful = document.execCommand('copy');
-      // execCommand is deprecated - should have a warning
     } catch (err) {
       console.error('Fallback copy failed:', err);
     }
     
     document.body.removeChild(textArea);
     return successful;
+  },
+  
+  // Copy with button feedback - handles the full copy UX flow
+  copyWithFeedback: (text, button, successText, defaultText, duration = 2000) => {
+    if (!text || !button) return Promise.reject(new Error('Text and button required'));
+    
+    return clipboard.copy(text)
+      .then(() => {
+        button.textContent = successText;
+        button.classList.add('copied');
+        setTimeout(() => {
+          button.textContent = defaultText;
+          button.classList.remove('copied');
+        }, duration);
+        return true;
+      })
+      .catch(err => {
+        console.error('Copy failed:', err);
+        return false;
+      });
   }
 };
 
@@ -288,6 +314,7 @@ if (typeof window !== 'undefined') {
     storage,
     url,
     clipboard,
+    dom,
     api
   };
 } else {

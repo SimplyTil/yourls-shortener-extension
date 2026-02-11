@@ -367,5 +367,23 @@
   },
   "averageDaily": {
     "message": "media giornaliera"
+  },
+  "changelogLoadError": {
+    "message": "Impossibile caricare il registro delle modifiche"
+  },
+  "noChangelogEntries": {
+    "message": "Nessuna voce del registro trovata"
+  },
+  "versionUnknown": {
+    "message": "Versione sconosciuta"
+  },
+  "apiError": {
+    "message": "Errore API"
+  },
+  "toggleDescription": {
+    "message": "Aggiungi un secondo server per passare tra diverse istanze YOURLS"
+  },
+  "supportOnKofi": {
+    "message": "Supporta su Ko-fi"
   }
 }

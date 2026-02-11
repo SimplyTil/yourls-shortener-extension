@@ -1,6 +1,32 @@
 {
   "versions": [
     {
+      "version": "1.3.1",
+      "date": "Dezembro de 2025",
+      "changes": [
+        {
+          "type": "improved",
+          "emoji": "🔧",
+          "text": "Refatoração de código com funções utilitárias compartilhadas para melhor manutenibilidade"
+        },
+        {
+          "type": "improved",
+          "emoji": "🌍",
+          "text": "Adicionadas chaves de tradução ausentes em todos os 14 idiomas suportados"
+        },
+        {
+          "type": "improved",
+          "emoji": "📋",
+          "text": "Funcionalidade de área de transferência unificada com comportamento consistente"
+        },
+        {
+          "type": "fixed",
+          "emoji": "🐛",
+          "text": "Corrigidos padrões de código duplicados nas páginas de popup e configurações"
+        }
+      ]
+    },
+    {
       "version": "1.3.0",
       "date": "Outubro de 2025",
       "changes": [

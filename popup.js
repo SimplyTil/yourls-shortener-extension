@@ -26,14 +26,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     element.setAttribute('placeholder', i18n.get(key));
   });
   
-  // Safely get DOM elements with error handling
-  const getElement = (id) => {
-    const element = document.getElementById(id);
-    if (!element) {
-      console.warn(`Element not found: ${id}`);
-    }
-    return element;
-  };
+  // Use shared utils for DOM access
+  const { dom, clipboard, url: urlUtils } = window.utils;
+  const getElement = dom.getElement;
   
   const urlElement = getElement('currentUrl');
   const faviconElement = getElement('siteFavicon');
@@ -197,18 +192,17 @@ document.addEventListener('DOMContentLoaded', async () => {
         return;
       }
       
-      try {
-        // Basic URL validation
-        new URL(currentUrl);
-        const keyword = keywordInput ? keywordInput.value.trim() : '';
-        shortenUrl(currentUrl, keyword);
-      } catch (e) {
+      // Use shared URL validation
+      if (!urlUtils.isValid(currentUrl)) {
         showError(i18n.get('errorInvalidUrl') || 'Invalid URL format');
+        return;
       }
+      const keyword = keywordInput ? keywordInput.value.trim() : '';
+      shortenUrl(currentUrl, keyword);
     });
   }
   
-  // Handle copy button click with modern Clipboard API
+  // Handle copy button click using shared clipboard utility
   if (copyButton && shortUrlInput) {
     copyButton.addEventListener('click', () => {
       const textToCopy = shortUrlInput.value;
@@ -218,46 +212,16 @@ document.addEventListener('DOMContentLoaded', async () => {
         return;
       }
       
-      // Use Clipboard API with fallbacks
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(textToCopy)
-          .then(() => {
-            copyButton.textContent = i18n.get('copiedButton');
-            copyButton.classList.add('copied');
-            setTimeout(() => {
-              copyButton.textContent = i18n.get('copyButton');
-              copyButton.classList.remove('copied');
-            }, 2000);
-          })
-          .catch(err => {
-            console.error('Clipboard API error:', err);
-            fallbackCopy();
-          });
-      } else {
-        fallbackCopy();
-      }
-      
-      // Fallback copy method
-      function fallbackCopy() {
-        shortUrlInput.select();
-        try {
-          const success = document.execCommand('copy');
-          if (success) {
-            copyButton.textContent = i18n.get('copiedButton');
-            copyButton.classList.add('copied');
-            setTimeout(() => {
-              copyButton.textContent = i18n.get('copyButton');
-              copyButton.classList.remove('copied');
-            }, 2000);
-          } else {
-            console.error('execCommand failed to copy');
-            showError(i18n.get('errorCopy') || 'Failed to copy. Please select and copy manually.');
-          }
-        } catch (err) {
-          console.error('execCommand error:', err);
+      clipboard.copyWithFeedback(
+        textToCopy,
+        copyButton,
+        i18n.get('copiedButton'),
+        i18n.get('copyButton')
+      ).then(success => {
+        if (!success) {
           showError(i18n.get('errorCopy') || 'Failed to copy. Please select and copy manually.');
         }
-      }
+      });
     });
   }
   
@@ -375,38 +339,14 @@ document.addEventListener('DOMContentLoaded', async () => {
           if (data && data.status === 'success' && data.shorturl) {
             showResult(data.shorturl);
             
-            // Auto-copy if enabled
-            if (settings.auto_copy && shortUrlInput) {
-              const textToCopy = data.shorturl;
-              
-              // Modern clipboard API
-              if (navigator.clipboard && navigator.clipboard.writeText) {
-                navigator.clipboard.writeText(textToCopy)
-                  .then(() => {
-                    if (copyButton) {
-                      copyButton.textContent = i18n.get('copiedButton');
-                      copyButton.classList.add('copied');
-                      setTimeout(() => {
-                        copyButton.textContent = i18n.get('copyButton');
-                        copyButton.classList.remove('copied');
-                      }, 2000);
-                    }
-                  })
-                  .catch(err => {
-                    console.error('Auto-copy failed:', err);
-                    // Fallback to old method
-                    if (shortUrlInput) {
-                      shortUrlInput.select();
-                      document.execCommand('copy');
-                    }
-                  });
-              } else {
-                // Fallback for browsers without Clipboard API
-                if (shortUrlInput) {
-                  shortUrlInput.select();
-                  document.execCommand('copy');
-                }
-              }
+            // Auto-copy if enabled using shared clipboard utility
+            if (settings.auto_copy && copyButton) {
+              clipboard.copyWithFeedback(
+                data.shorturl,
+                copyButton,
+                i18n.get('copiedButton'),
+                i18n.get('copyButton')
+              );
             }
           } else {
             // Localize common YOURLS error messages

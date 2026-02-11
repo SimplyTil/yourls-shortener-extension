@@ -367,5 +367,23 @@
   },
   "averageDaily": {
     "message": "gemiddeld dagelijks"
+  },
+  "changelogLoadError": {
+    "message": "Kan wijzigingslogboek niet laden"
+  },
+  "noChangelogEntries": {
+    "message": "Geen logboekitems gevonden"
+  },
+  "versionUnknown": {
+    "message": "Versie onbekend"
+  },
+  "apiError": {
+    "message": "API-fout"
+  },
+  "toggleDescription": {
+    "message": "Voeg een tweede server toe om te schakelen tussen verschillende YOURLS-instanties"
+  },
+  "supportOnKofi": {
+    "message": "Steun op Ko-fi"
   }
 }

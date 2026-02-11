@@ -1,6 +1,32 @@
 {
   "versions": [
     {
+      "version": "1.3.1",
+      "date": "Grudzień 2025",
+      "changes": [
+        {
+          "type": "improved",
+          "emoji": "🔧",
+          "text": "Refaktoryzacja kodu z współdzielonymi funkcjami pomocniczymi dla lepszej konserwacji"
+        },
+        {
+          "type": "improved",
+          "emoji": "🌍",
+          "text": "Dodano brakujące klucze tłumaczenia we wszystkich 14 obsługiwanych językach"
+        },
+        {
+          "type": "improved",
+          "emoji": "📋",
+          "text": "Ujednolicona funkcjonalność schowka ze spójnym zachowaniem"
+        },
+        {
+          "type": "fixed",
+          "emoji": "🐛",
+          "text": "Naprawiono zduplikowane wzorce kodu na stronach popup i ustawień"
+        }
+      ]
+    },
+    {
       "version": "1.3.0",
       "date": "Październik 2025",
       "changes": [

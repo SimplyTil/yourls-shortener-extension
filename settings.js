@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', async () => {
+  // Use shared utilities
+  const { clipboard: clipboardUtils, dom: domUtils } = window.utils;
+  
   // Initialize i18n
   try {
     await i18n.init();
@@ -174,7 +177,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     } catch (error) {
       console.error('Failed to load changelog:', error);
       if (changelogContent) {
-        changelogContent.innerHTML = '<div class="loading-state error-state">Failed to load changelog data</div>';
+        changelogContent.innerHTML = `<div class="loading-state error-state">${i18n.get('changelogLoadError') || 'Failed to load changelog data'}</div>`;
       }
     }
     
@@ -184,7 +187,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       
       // Generate changelog HTML
       if (!data.versions || !Array.isArray(data.versions) || data.versions.length === 0) {
-        changelogContent.innerHTML = '<div class="loading-state">No changelog entries found</div>';
+        changelogContent.innerHTML = `<div class="loading-state">${i18n.get('noChangelogEntries') || 'No changelog entries found'}</div>`;
         return;
       }
       
@@ -244,7 +247,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       })
       .catch(error => {
         console.error('Error loading manifest:', error);
-        versionInfoElement.textContent = 'v?.?.?';
+        versionInfoElement.textContent = i18n.get('versionUnknown') || 'v?.?.?';
       });
   }
   
@@ -847,65 +850,34 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   }
   
-  // Copy to clipboard function with modern API
+  // Copy to clipboard function using shared utility
   function copyToClipboard(text, button) {
     if (!button || !text) return;
     
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text)
-        .then(() => {
-          showCopiedFeedback(button);
-        })
-        .catch(err => {
-          console.error('Clipboard API failed:', err);
-          fallbackCopyMethod();
-        });
-    } else {
-      fallbackCopyMethod();
-    }
+    const copyIcon = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+    </svg>`;
+    const checkIcon = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="20,6 9,17 4,12"></polyline>
+    </svg>`;
     
-    function fallbackCopyMethod() {
-      const textArea = document.createElement('textarea');
-      textArea.value = text;
-      textArea.style.position = 'fixed'; // Avoid scrolling to bottom
-      document.body.appendChild(textArea);
-      textArea.focus();
-      textArea.select();
-      
-      try {
-        document.execCommand('copy');
-        showCopiedFeedback(button);
-      } catch (err) {
-        console.error('execCommand failed:', err);
-      }
-      
-      document.body.removeChild(textArea);
-    }
-    
-    function showCopiedFeedback(button) {
-      // Visual feedback
-      button.classList.add('copied');
-      button.innerHTML = `
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <polyline points="20,6 9,17 4,12"></polyline>
-        </svg>
-      `;
-      button.setAttribute('aria-label', `${i18n.get('copiedLinkTitle') || 'Copied'} ${text}`);
-      
-      // Reset after 2 seconds
-      setTimeout(() => {
-        if (!button || !button.classList) return; // Safety check in case element is removed
+    clipboardUtils.copy(text)
+      .then(() => {
+        button.classList.add('copied');
+        button.innerHTML = checkIcon;
+        button.setAttribute('aria-label', `${i18n.get('copiedLinkTitle') || 'Copied'} ${text}`);
         
-        button.classList.remove('copied');
-        button.innerHTML = `
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-          </svg>
-        `;
-        button.setAttribute('aria-label', `${i18n.get('copyLinkTitle') || 'Copy'} ${text}`);
-      }, 2000);
-    }
+        setTimeout(() => {
+          if (!button || !button.classList) return;
+          button.classList.remove('copied');
+          button.innerHTML = copyIcon;
+          button.setAttribute('aria-label', `${i18n.get('copyLinkTitle') || 'Copy'} ${text}`);
+        }, 2000);
+      })
+      .catch(err => {
+        console.error('Copy failed:', err);
+      });
   }
   
   // Load settings

@@ -367,5 +367,23 @@
   },
   "averageDaily": {
     "message": "ημερήσιος μέσος όρος"
+  },
+  "changelogLoadError": {
+    "message": "Αποτυχία φόρτωσης ιστορικού αλλαγών"
+  },
+  "noChangelogEntries": {
+    "message": "Δεν βρέθηκαν καταχωρήσεις ιστορικού"
+  },
+  "versionUnknown": {
+    "message": "Άγνωστη έκδοση"
+  },
+  "apiError": {
+    "message": "Σφάλμα API"
+  },
+  "toggleDescription": {
+    "message": "Προσθέστε δεύτερο διακομιστή για εναλλαγή μεταξύ διαφορετικών YOURLS"
+  },
+  "supportOnKofi": {
+    "message": "Υποστηρίξτε στο Ko-fi"
   }
 }

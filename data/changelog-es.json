@@ -1,6 +1,32 @@
 {
   "versions": [
     {
+      "version": "1.3.1",
+      "date": "Diciembre de 2025",
+      "changes": [
+        {
+          "type": "improved",
+          "emoji": "🔧",
+          "text": "Refactorización de código con funciones de utilidad compartidas para mejor mantenimiento"
+        },
+        {
+          "type": "improved",
+          "emoji": "🌍",
+          "text": "Añadidas claves de traducción faltantes en los 14 idiomas soportados"
+        },
+        {
+          "type": "improved",
+          "emoji": "📋",
+          "text": "Funcionalidad de portapapeles unificada con comportamiento consistente"
+        },
+        {
+          "type": "fixed",
+          "emoji": "🐛",
+          "text": "Corregidos patrones de código duplicados en páginas de popup y configuración"
+        }
+      ]
+    },
+    {
       "version": "1.3.0",
       "date": "Octubre de 2025",
       "changes": [

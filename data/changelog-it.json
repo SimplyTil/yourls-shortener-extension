@@ -1,6 +1,32 @@
 {
   "versions": [
     {
+      "version": "1.3.1",
+      "date": "Dicembre 2025",
+      "changes": [
+        {
+          "type": "improved",
+          "emoji": "🔧",
+          "text": "Refactoring del codice con funzioni di utilità condivise per una migliore manutenibilità"
+        },
+        {
+          "type": "improved",
+          "emoji": "🌍",
+          "text": "Aggiunte chiavi di traduzione mancanti in tutte le 14 lingue supportate"
+        },
+        {
+          "type": "improved",
+          "emoji": "📋",
+          "text": "Funzionalità degli appunti unificata con comportamento coerente"
+        },
+        {
+          "type": "fixed",
+          "emoji": "🐛",
+          "text": "Corretti pattern di codice duplicati nelle pagine popup e impostazioni"
+        }
+      ]
+    },
+    {
       "version": "1.3.0",
       "date": "Ottobre 2025",
       "changes": [

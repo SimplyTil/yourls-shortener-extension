@@ -367,5 +367,23 @@
   },
   "averageDaily": {
     "message": "täglich im Durchschnitt"
+  },
+  "changelogLoadError": {
+    "message": "Changelog konnte nicht geladen werden"
+  },
+  "noChangelogEntries": {
+    "message": "Keine Changelog-Einträge gefunden"
+  },
+  "versionUnknown": {
+    "message": "Version unbekannt"
+  },
+  "apiError": {
+    "message": "API-Fehler"
+  },
+  "toggleDescription": {
+    "message": "Zweiten Server hinzufügen, um zwischen verschiedenen YOURLS-Instanzen zu wechseln"
+  },
+  "supportOnKofi": {
+    "message": "Auf Ko-fi unterstützen"
   }
 }

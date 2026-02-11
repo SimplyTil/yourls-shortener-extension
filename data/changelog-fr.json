@@ -1,6 +1,32 @@
 {
   "versions": [
     {
+      "version": "1.3.1",
+      "date": "Décembre 2025",
+      "changes": [
+        {
+          "type": "improved",
+          "emoji": "🔧",
+          "text": "Refactorisation du code avec des fonctions utilitaires partagées pour une meilleure maintenabilité"
+        },
+        {
+          "type": "improved",
+          "emoji": "🌍",
+          "text": "Ajout des clés de traduction manquantes dans les 14 langues prises en charge"
+        },
+        {
+          "type": "improved",
+          "emoji": "📋",
+          "text": "Fonctionnalité de presse-papiers unifiée avec un comportement cohérent"
+        },
+        {
+          "type": "fixed",
+          "emoji": "🐛",
+          "text": "Correction des modèles de code dupliqués dans les pages popup et paramètres"
+        }
+      ]
+    },
+    {
       "version": "1.3.0",
       "date": "Octobre 2025",
       "changes": [

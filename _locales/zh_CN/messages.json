@@ -367,5 +367,23 @@
   },
   "averageDaily": {
     "message": "日均"
+  },
+  "changelogLoadError": {
+    "message": "加载更新日志失败"
+  },
+  "noChangelogEntries": {
+    "message": "未找到更新日志条目"
+  },
+  "versionUnknown": {
+    "message": "版本未知"
+  },
+  "apiError": {
+    "message": "API错误"
+  },
+  "toggleDescription": {
+    "message": "添加第二个服务器以在不同YOURLS实例之间切换"
+  },
+  "supportOnKofi": {
+    "message": "在Ko-fi上支持"
   }
 }

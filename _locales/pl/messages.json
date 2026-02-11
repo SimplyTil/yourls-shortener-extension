@@ -367,5 +367,23 @@
   },
   "averageDaily": {
     "message": "średnio dziennie"
+  },
+  "changelogLoadError": {
+    "message": "Nie udało się załadować dziennika zmian"
+  },
+  "noChangelogEntries": {
+    "message": "Nie znaleziono wpisów dziennika"
+  },
+  "versionUnknown": {
+    "message": "Wersja nieznana"
+  },
+  "apiError": {
+    "message": "Błąd API"
+  },
+  "toggleDescription": {
+    "message": "Dodaj drugi serwer, aby przełączać się między różnymi instancjami YOURLS"
+  },
+  "supportOnKofi": {
+    "message": "Wesprzyj na Ko-fi"
   }
 }
